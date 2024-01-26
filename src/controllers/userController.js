@@ -26,7 +26,7 @@ let handleLoging = async (req, res) => {
 };
 
 let handleGetAllUsers = async (req, res) => {
-  let id = req.body.id; //all or id
+  let id = req.query.id; //all or id
 
   //check valid - >validate on server
   if (!id) {

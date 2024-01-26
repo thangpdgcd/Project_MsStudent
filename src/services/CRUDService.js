@@ -1,6 +1,6 @@
 import bcrypt from "bcryptjs";
 import db from "../models/index";
-
+import destroy from "destroy";
 const salt = bcrypt.genSaltSync(10);
 
 let createNewUser = async (data) => {
@@ -42,6 +42,10 @@ let getAllUser = () => {
   return new Promise(async (resolve, reject) => {
     try {
       let users = await db.User.findAll({
+        attributes: {
+          exclude: ["password"],
+          //exclude password you shound remove it in userdb
+        },
         raw: true,
       });
       resolve(users);
@@ -88,7 +92,7 @@ let updateUserData = (data) => {
         resolve();
       }
     } catch (e) {
-      console.log(e);
+      reject(e);
     }
   });
 };
@@ -100,15 +104,29 @@ let deleteUserById = (userId) => {
         where: { id: userId },
       });
       if (user) {
-        await user.destroy();
+        // Gọi phương thức destroy ở đây
+        await db.User.destroy({
+          where: {
+            id: userId,
+          },
+        });
       }
-
-      resolve();
+      resolve(user);
     } catch (e) {
       reject(e);
     }
   });
 };
+
+// const deleteUser = async (req, res) => {
+//   const user = await req.params.id;
+//   const userId = await user.destroy({
+//     where: {
+//       id: userId,
+//     },
+//   });
+//   console.log("delete by id user successfully");
+//   return deleteUser;
 
 module.exports = {
   createNewUser: createNewUser,

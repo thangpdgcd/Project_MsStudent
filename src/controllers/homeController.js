@@ -65,7 +65,7 @@ let deleteCRUD = async (req, res) => {
   let id = req.query.id;
   if (id) {
     await CRUDService.deleteUserById(id);
-    return res.send("delete user succeed");
+    return res.send("delete user successed");
   } else {
     return res.send("user not found");
   }
