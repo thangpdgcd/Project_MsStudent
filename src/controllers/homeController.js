@@ -71,6 +71,8 @@ let deleteCRUD = async (req, res) => {
   }
 };
 
+//
+
 module.exports = {
   getHomePage: getHomePage,
   getAboutPage: getAboutPage,

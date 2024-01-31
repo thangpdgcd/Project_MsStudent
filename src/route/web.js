@@ -16,11 +16,12 @@ let initWebRoutes = (app) => {
   router.post("/put-crud", homeController.putCRUD);
   router.get("/delete-crud", homeController.deleteCRUD);
 
+  //api login
   router.post("/api/login", userController.handleLoging);
 
   //get all user -> after get link api
   router.get("/api/get-all-users", userController.handleGetAllUsers);
-
+  router.post("/api/create-new-user", userController.handleCreateNewUser);
   return app.use("/", router);
 };
 

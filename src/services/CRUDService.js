@@ -1,7 +1,6 @@
 import bcrypt from "bcryptjs";
 import db from "../models/index";
-import destroy from "destroy";
-import { raw } from "body-parser";
+
 const salt = bcrypt.genSaltSync(10);
 
 let createNewUser = async (data) => {

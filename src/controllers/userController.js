@@ -1,4 +1,3 @@
-import user from "../models/user";
 import userService from "../services/userService";
 
 let handleLoging = async (req, res) => {
@@ -46,8 +45,14 @@ let handleGetAllUsers = async (req, res) => {
   }); //after run postman from /api/get-all-users ->log
   // {   errCode: 0, errMessage: "Ok",}
 };
+let handleCreateNewUser = async (res, req) => {
+  let message = await userService.CreateNewUser(req.body);
+  console.log(message);
+  return res.status(200).json(message);
+};
 
 module.exports = {
   handleLoging: handleLoging,
   handleGetAllUsers: handleGetAllUsers,
+  handleCreateNewUser: handleCreateNewUser,
 };
