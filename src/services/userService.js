@@ -76,6 +76,8 @@ let checkUserEmail = (userEmail) => {
     }
   });
 };
+
+//get a list users
 let getAllUsers = (userId) => {
   return new Promise(async (resolve, reject) => {
     try {
@@ -127,8 +129,76 @@ let CreateNewUser = (data) => {
   });
 };
 
+
+//delete
+let deleteUser = (userId) => {
+  return new Promise(async (resolve, reject) => {
+    let foundUser = await db.User.findOne({
+      where: { id: userId },
+    });
+    if (!foundUser) {
+      resolve({
+        errCode: 2,
+        errMessage: "The user does not exist",
+      });
+    }
+    await db.User.destroy({
+      where: { id: userId },
+    });
+    resolve({
+      errCode: 0,
+      errMessage: "The user is deleted successfully",
+    });
+  });
+};
+
+//update
+let updateUserData =(data)=>
+{
+  return new Promise(async(resolve,reject)=>
+  {
+    //check valid if not id user can not update
+    if(!data.id)
+    {
+      resolve({
+        errCode:1,
+        errMessage:"Can not Search User"
+      })
+    }
+    let user = await db.User.findOne({
+      where: {
+        id: data.id,
+      },
+      //set raw
+      raw:false
+    });
+
+    if (user) {
+   user.firstName =data.firstName;
+   user.lastName= data.lastName;
+   user.address= data.address;
+   await user.save();
+      resolve(
+        {
+          errCode:0,
+          errMessage:`Update users successfully!`
+        }
+      );
+    } else {
+      resolve({
+        errCode:1,
+        errMessage:`Update users not found`
+      });
+    }
+  })}
+
+
+
 module.exports = {
   handleUserLogin: handleUserLogin,
   getAllUsers: getAllUsers,
   CreateNewUser: CreateNewUser,
+  deleteUser:deleteUser,
+  updateUserData:updateUserData,
+  
 };
