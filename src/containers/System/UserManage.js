@@ -7,10 +7,14 @@ import ModalConfirmUser from "./ModalConfirmUser";
 
 class UserManage extends Component {
   //create new object
+
+  //log ->get data in function contructor
   constructor(props) {
     super(props);
     this.state = {
       arrayUsers: [],
+      isOpenModalUser: false,
+
     };
   }
 
@@ -30,8 +34,18 @@ class UserManage extends Component {
     }
   }
 
-  handleAddNewUser = () => {
-    alert("click me")
+  handleAddNewUser = () => {//setstate for isopenmodal if hidden formmodal
+    this.setState({
+      isOpenModalUser: true,
+    })
+  }
+
+
+  toggleUserModal = () => {
+    this.setState({
+      isOpenModalUser: !this.state.isOpenModalUser,
+    })
+
   }
   /**
    * life cycle
@@ -43,10 +57,15 @@ class UserManage extends Component {
   render() {
     console.log("check render", this.state);
     let arrayUsers = this.state.arrayUsers;
+    //properties, nested -> prop get components  
     return (
 
       <div className="user-container">
-        <ModalConfirmUser></ModalConfirmUser>
+        <ModalConfirmUser
+          isOpen={this.state.isOpenModalUser}
+          toggleFromParent={this.toggleUserModal} //truyen  tu thang cha toggle vao
+
+        />
         <div className="title text-center"> Manage Users With Dev</div>
         <div className="mx-1 px3">
           <button
@@ -71,7 +90,7 @@ class UserManage extends Component {
             {/* for map of javascript */}
             {arrayUsers &&
               arrayUsers.map((item, index) => {
-                console.log("check map", item, index);
+                console.log("check map get data from backend -> api", item, index);
                 return (
                   <tr>
                     <td>{item.email}</td>

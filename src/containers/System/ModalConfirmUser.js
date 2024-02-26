@@ -3,31 +3,59 @@ import React, { Component } from 'react';
 import { FormattedMessage } from 'react-intl';
 import { connect } from 'react-redux';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
-class ModalConfirmUsert extends Component {
+import '../System/ModalConfirmUser.scss'
+class ModalConfirmUser extends Component {
     constructor(props) {
         super(props);
         this.state = {};
     }
+
     componentDidMount() {
     }
 
     toggle = () => {
+        this.props.toggleFromParent();
     }
     render() {
+        console.log("check props", this.props);
+        console.log("check props open modal", this.props.isOpen)
         return (
-            <Modal isOpen={true} toggle={() => { this.toggle() }} className={"classname"} >
-                <ModalHeader toggle={() => { this.toggle() }}> Modal title</ModalHeader>
+            <Modal isOpen={this.props.isOpen}
+                toggle={() => { this.toggle() }}
+                className={"classname"}
+                size="sm"
+                centered
+            >
+                <ModalHeader toggle={() => { this.toggle() }}> Sign Up</ModalHeader>
                 <ModalBody>
-                    <b>Look at the top right of the page/viewport!</b><br />
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    <div className="container">
+                        <div className="row">
+                            <div className="col-6  from-group">
+                                <label>Email <i className='icon'>*</i></label>
+                                <input type="text" />
+                            </div>
+                            <div className="col-6  from-group">
+                                <label>Password<i className='icon'>*</i></label>
+                                <input type="text" />
+                            </div>
+                            <div className="col-6  from-group">
+                                <label>First Name<i className='icon'>*</i></label>
+                                <input type="text" />
+                            </div>
+                            <div className="col-6  from-group">
+                                <label>Last Name<i className='icon'>*</i></label>
+                                <input type="text" />
+                            </div>
+                            <div className="col-6  from-group">
+                                <label>Address<i className='icon'>*</i></label>
+                                <input type="text" />
+                            </div>
+                        </div>
+                    </div>
                 </ModalBody>
                 <ModalFooter>
                     <Button color="primary" onClick={() => { this.toggle() }}>Do Something</Button>{' '}
-                    <Button color="secondary" onClick={() => { this.toggle() }}>Cancel</Button>
+                    <Button color="secondary" onClick={() => { this.toggle(false) }}>Cancel</Button>
                 </ModalFooter>
             </Modal>)
     }
@@ -42,4 +70,4 @@ const mapDispatchToProps = dispatch => {
     };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(ModalConfirmUsert);
+export default connect(mapStateToProps, mapDispatchToProps)(ModalConfirmUser);

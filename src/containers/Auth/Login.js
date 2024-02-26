@@ -118,8 +118,8 @@ class Login extends Component {
               <span className="">Or login with:</span>
             </div>
             <div className="col-12 social-login">
-            <a href="https://www.facebook.com/profile.php?id=61553258036500"><i className="fab fa-facebook social-icon fb"></i></a>  
-             <a href="https://react.dev/"><i className="fab fa-google-plus social-icon gg"></i></a>
+              <a href="https://www.facebook.com/profile.php?id=61553258036500"><i className="fab fa-facebook social-icon fb"></i></a>
+              <a href="https://react.dev/"><i className="fab fa-google-plus social-icon gg"></i></a>
             </div>
           </div>
         </div>
