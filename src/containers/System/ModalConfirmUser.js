@@ -7,40 +7,68 @@ class ModalConfirmUser extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      lastName: "",
-      firstName: "",
-      email: "",
-      password: "",
-      address: "",
+      lastName: '',
+      firstName: '',
+      email: '',
+      password: '',
+      address: '',
     };
   }
 
-  componentDidMount() {}
+  componentDidMount() { }
 
   toggle = () => {
     this.props.toggleFromParent();
   };
   //log input email
   handleOnchangeInputFormModal = (event, id) => {
-    console.log(event.target.value, id);
-  };
-  //   //log input password
-  //   handleOnchangeInputPassword = (eventpassword) => {
-  //     console.log(eventpassword.target.value);
-  //   };
-  //   //log input firstname
-  //   handleOnchangeInputFirstname = (eventfirstname) => {
-  //     console.log(eventfirstname.target.value);
-  //   };
-  //   //lop input lastname
-  //   handleOnchangeInputLastname = (eventlastname) => {
-  //     console.log(eventlastname.target.value);
-  //   };
-  //   //log input address
-  //   handleOnchangeInputAddress = (eventaddress) => {
-  //     console.log(eventaddress.target.value);
-  //   };
-
+    //badcode.modify state
+    this.state[id] = event.target.value;
+    /**
+     * {
+     * email:''
+     * password:''
+     * firstname:''
+     * lastname:''
+     * address:''}
+     */
+    //luu vao object nhu tren 
+    this.setState({
+      ...this.state
+    }, () => {
+      console.log('check bad state: ', this.state)
+    });
+    //good code
+    let coppyState = { ...this.state };
+    coppyState[id] = event.target.value;
+    this.setState({
+      ...coppyState
+    })
+    console.log('event1:', event.target.value, id)
+  }
+  checkValidInput = () => {
+    let isValid = true;
+    let arrayinput = ['email', 'password', 'firstName', 'lastName', 'address'];
+    for (let i = 0; i < arrayinput.length; i++) {
+      console.log('check inside loop', this.state[arrayinput[i]], arrayinput[i])
+      if (!this.state[arrayinput[i]]) {
+        isValid = false;
+        alert('missing parameter' + arrayinput[i])
+        break;
+      }
+    }
+    return isValid;
+  }
+  handleAddnewUser = () => {
+    //check validate
+    let isValid = this.checkValidInput();
+    if (isValid === true) {
+      //call api create modal
+      // console.log("checkprop", this.props) //truyen tu ben cha qua
+      this.props.createNewuser();
+      // console.log("data model", this.state);
+    }
+  }
   render() {
     console.log("check props", this.props);
     console.log("check props open modal", this.props.isOpen);
@@ -72,8 +100,9 @@ class ModalConfirmUser extends Component {
                 <input
                   type="text"
                   onChange={(event) => {
-                    this.handleOnchangeInputFormModal(event, "EMAIL");
+                    this.handleOnchangeInputFormModal(event, "email");
                   }}
+                  value={this.state.email}
                 />
               </div>
               <div className="col-6  from-group">
@@ -83,8 +112,9 @@ class ModalConfirmUser extends Component {
                 <input
                   type="text"
                   onChange={(event) => {
-                    this.handleOnchangeInputFormModal(event, "PASSWORD");
+                    this.handleOnchangeInputFormModal(event, "password");
                   }}
+                  value={this.state.password}
                 />
               </div>
               <div className="col-6  from-group">
@@ -94,8 +124,9 @@ class ModalConfirmUser extends Component {
                 <input
                   type="text"
                   onChange={(event) => {
-                    this.handleOnchangeInputFormModal(event, "FIRSTNAME");
+                    this.handleOnchangeInputFormModal(event, "firstName");
                   }}
+                  value={this.state.firstName}
                 />
               </div>
               <div className="col-6  from-group">
@@ -105,8 +136,9 @@ class ModalConfirmUser extends Component {
                 <input
                   type="text"
                   onChange={(event) => {
-                    this.handleOnchangeInputFormModal(event, "LASTNAME");
+                    this.handleOnchangeInputFormModal(event, "lastName");
                   }}
+                  value={this.state.lastName}
                 />
               </div>
               <div className="col-6  from-group">
@@ -116,8 +148,9 @@ class ModalConfirmUser extends Component {
                 <input
                   type="text"
                   onChange={(event) => {
-                    this.handleOnchangeInputFormModal(event, "ADDRESS");
+                    this.handleOnchangeInputFormModal(event, "address");
                   }}
+                  value={this.state.address}
                 />
               </div>
             </div>
@@ -127,7 +160,7 @@ class ModalConfirmUser extends Component {
           <Button
             color="primary"
             onClick={() => {
-              this.toggle();
+              this.handleAddnewUser();
             }}
           >
             Add New

@@ -47,6 +47,10 @@ class UserManage extends Component {
     })
 
   }
+  createNewuser = (data) => {
+    alert("call me")
+    console.log("check data form child", data)
+  }
   /**
    * life cycle
    * run component:
@@ -64,7 +68,7 @@ class UserManage extends Component {
         <ModalConfirmUser
           isOpen={this.state.isOpenModalUser}
           toggleFromParent={this.toggleUserModal} //truyen  tu thang cha toggle vao
-
+          createNewuser={this.createNewuser} //truyen tu functioncreate
         />
         <div className="title text-center"> Manage Users With Dev</div>
         <div className="mx-1 px3">
@@ -82,8 +86,6 @@ class UserManage extends Component {
               <th>LastName</th>
               <th>Address</th>
               <th>PhoneNumber</th>
-              <th>Gender</th>
-              <th>RoleId</th>
               <th>Action</th>
             </tr>
 
@@ -98,16 +100,17 @@ class UserManage extends Component {
                     <td>{item.lastName}</td>
                     <td>{item.address}</td>
                     <td>{item.phonenumber}</td>
-                    <td>{item.gender}</td>
-                    <td>{item.roleId}</td>
-                    <td>{item.Action}</td>
+                    <td>{item.Action}
+                      <button className="btn-edit"><i className="fas fa-pencil-alt"></i></button>
+                      <button className="btn-delete"><i className="fas fa-trash-alt"></i></button>
+                    </td>
                   </tr>
                 );
               })}
           </table>
-        </div>
+        </div >
 
-      </div>
+      </div >
     );
   }
 }
