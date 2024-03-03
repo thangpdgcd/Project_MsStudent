@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { FormattedMessage } from "react-intl";
 import { connect } from "react-redux";
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from "reactstrap";
-import "../System/ModalConfirmUser.scss";
+import "./ModalConfirmUser.scss";
 class ModalConfirmUser extends Component {
   constructor(props) {
     super(props);
@@ -22,24 +22,9 @@ class ModalConfirmUser extends Component {
   };
   //log input email
   handleOnchangeInputFormModal = (event, id) => {
-    //badcode.modify state
-    this.state[id] = event.target.value;
-    /**
-     * {
-     * email:''
-     * password:''
-     * firstname:''
-     * lastname:''
-     * address:''}
-     */
-    //luu vao object nhu tren 
-    this.setState({
-      ...this.state
-    }, () => {
-      console.log('check bad state: ', this.state)
-    });
+
     //good code
-    let coppyState = { ...this.state };
+    let coppyState = { ...this.state }; // gan all data cho coppystate
     coppyState[id] = event.target.value;
     this.setState({
       ...coppyState
@@ -65,7 +50,7 @@ class ModalConfirmUser extends Component {
     if (isValid === true) {
       //call api create modal
       // console.log("checkprop", this.props) //truyen tu ben cha qua
-      this.props.createNewuser();
+      this.props.createNewuser(this.state, "code");
       // console.log("data model", this.state);
     }
   }
@@ -107,19 +92,7 @@ class ModalConfirmUser extends Component {
               </div>
               <div className="col-6  from-group">
                 <label>
-                  Password<i className="icon">*</i>
-                </label>
-                <input
-                  type="text"
-                  onChange={(event) => {
-                    this.handleOnchangeInputFormModal(event, "password");
-                  }}
-                  value={this.state.password}
-                />
-              </div>
-              <div className="col-6  from-group">
-                <label>
-                  First Name<i className="icon">*</i>
+                  FirstName<i className="icon">*</i>
                 </label>
                 <input
                   type="text"
@@ -131,7 +104,7 @@ class ModalConfirmUser extends Component {
               </div>
               <div className="col-6  from-group">
                 <label>
-                  Last Name<i className="icon">*</i>
+                  LastName<i className="icon">*</i>
                 </label>
                 <input
                   type="text"
@@ -139,6 +112,18 @@ class ModalConfirmUser extends Component {
                     this.handleOnchangeInputFormModal(event, "lastName");
                   }}
                   value={this.state.lastName}
+                />
+              </div>
+              <div className="col-6  from-group">
+                <label>
+                  Password<i className="icon">*</i>
+                </label>
+                <input
+                  type="text"
+                  onChange={(event) => {
+                    this.handleOnchangeInputFormModal(event, "password");
+                  }}
+                  value={this.state.password}
                 />
               </div>
               <div className="col-6  from-group">
