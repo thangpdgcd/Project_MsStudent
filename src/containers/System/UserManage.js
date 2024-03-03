@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { FormattedMessage } from "react-intl";
 import { connect } from "react-redux";
 import "./UserManage.scss";
-import { getAllUsers } from "../../services/userService";
+import { getAllUsers, createNewUserService } from "../../services/userService";
 import ModalConfirmUser from "./ModalConfirmUser";
 
 class UserManage extends Component {
@@ -14,11 +14,14 @@ class UserManage extends Component {
     this.state = {
       arrayUsers: [],
       isOpenModalUser: false,
-
     };
   }
 
   async componentDidMount() {
+    await this.getAllUserFormReact();
+  }
+
+  getAllUserFormReact = async () => {
     //get from nodejs go to Reacjs and testing postman
     let response = await getAllUsers("All");
     if (response && response.errCode === 0) {
@@ -33,23 +36,28 @@ class UserManage extends Component {
       console.log("check state user 1", this.state.arrayUsers); //[]
     }
   }
-
   handleAddNewUser = () => {//setstate for isopenmodal if hidden formmodal
     this.setState({
       isOpenModalUser: true,
     })
   }
-
-
   toggleUserModal = () => {
     this.setState({
       isOpenModalUser: !this.state.isOpenModalUser,
     })
-
   }
-  createNewuser = (data) => {
-    alert("call me")
-    console.log("check data form child", data)
+  createNewuser = async (data) => {
+    try {
+      let response = await createNewUserService(data)
+      if (response && response.errCode != 0) {
+        alert(response.errMessage)
+      } else {
+        await this.getAllUserFormReact()
+      }
+    } catch (error) {
+      console.log("Error:", error)
+    }
+    // console.log("check data form child", data)
   }
   /**
    * life cycle
@@ -94,17 +102,22 @@ class UserManage extends Component {
               arrayUsers.map((item, index) => {
                 console.log("check map get data from backend -> api", item, index);
                 return (
-                  <tr>
-                    <td>{item.email}</td>
-                    <td>{item.firstName}</td>
-                    <td>{item.lastName}</td>
-                    <td>{item.address}</td>
-                    <td>{item.phonenumber}</td>
-                    <td>{item.Action}
-                      <button className="btn-edit"><i className="fas fa-pencil-alt"></i></button>
-                      <button className="btn-delete"><i className="fas fa-trash-alt"></i></button>
-                    </td>
-                  </tr>
+                  <table>
+                    <tbody>
+                      <tr key={index}>
+                        <td>{item.email}</td>
+                        <td>{item.firstName}</td>
+                        <td>{item.lastName}</td>
+                        <td>{item.address}</td>
+                        <td>{item.phonenumber}</td>
+                        <td>{item.Action}
+                          <button className="btn-edit"><i className="fas fa-pencil-alt"></i></button>
+                          <button className="btn-delete"><i className="fas fa-trash-alt"></i></button>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+
                 );
               })}
           </table>
