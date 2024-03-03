@@ -111,6 +111,14 @@ let getAllUsers = (userId) => {
 let CreateNewUser = (data) => {
   return new Promise(async (resolve, reject) => {
     try {
+      //check email is exist
+      let check = await checkUserEmail(data.email)
+      if (check === true) {
+        resolve({
+          errCode: 1,
+          errMessage: 'your email is already in used, please try another email!'
+        })
+      }
       let hashPassWordFromBcrypt = await hashUserPassword(data.password);
       await db.User.create({
         email: data.email,
@@ -153,16 +161,13 @@ let deleteUser = (userId) => {
 };
 
 //update
-let updateUserData =(data)=>
-{
-  return new Promise(async(resolve,reject)=>
-  {
+let updateUserData = (data) => {
+  return new Promise(async (resolve, reject) => {
     //check valid if not id user can not update
-    if(!data.id)
-    {
+    if (!data.id) {
       resolve({
-        errCode:1,
-        errMessage:"Can not Search User"
+        errCode: 1,
+        errMessage: "Can not Search User"
       })
     }
     let user = await db.User.findOne({
@@ -170,27 +175,28 @@ let updateUserData =(data)=>
         id: data.id,
       },
       //set raw
-      raw:false
+      raw: false
     });
 
     if (user) {
-   user.firstName =data.firstName;
-   user.lastName= data.lastName;
-   user.address= data.address;
-   await user.save();
+      user.firstName = data.firstName;
+      user.lastName = data.lastName;
+      user.address = data.address;
+      await user.save();
       resolve(
         {
-          errCode:0,
-          errMessage:`Update users successfully!`
+          errCode: 0,
+          errMessage: `Update users successfully!`
         }
       );
     } else {
       resolve({
-        errCode:1,
-        errMessage:`Update users not found`
+        errCode: 1,
+        errMessage: `Update users not found`
       });
     }
-  })}
+  })
+}
 
 
 
@@ -198,7 +204,7 @@ module.exports = {
   handleUserLogin: handleUserLogin,
   getAllUsers: getAllUsers,
   CreateNewUser: CreateNewUser,
-  deleteUser:deleteUser,
-  updateUserData:updateUserData,
-  
+  deleteUser: deleteUser,
+  updateUserData: updateUserData,
+
 };
