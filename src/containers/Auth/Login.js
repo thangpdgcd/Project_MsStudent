@@ -112,7 +112,8 @@ class Login extends Component {
               </button>
             </div>
             <div className="col-12">
-              <span className="forgot-password">Forgot your password?</span>
+              <a className="forgot-password" href="">Forgot your password?</a>
+              <a href="" className="Create-newaccount"> Create New Account</a>
             </div>
             <div className="col-12 text-center login-with mt-3">
               <span className="">Or login with:</span>

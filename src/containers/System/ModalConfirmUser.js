@@ -7,10 +7,10 @@ class ModalConfirmUser extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      email: 'thang@gmail.com',
       lastName: '',
       firstName: '',
-      email: '',
-      password: '',
+      password: '123456789',
       address: '',
     };
   }
@@ -33,16 +33,16 @@ class ModalConfirmUser extends Component {
   }
   checkValidInput = () => {
     let isValid = true;
-    let arrayinput = ['email', 'password', 'firstName', 'lastName', 'address'];
-    for (let i = 0; i < arrayinput.length; i++) {
-      console.log('check inside loop', this.state[arrayinput[i]], arrayinput[i])
-      if (!this.state[arrayinput[i]]) {
+    let arrInput = ['email', 'password', 'firstName', 'lastName', 'address'];
+    for (let i = 0; i < arrInput.length; i++) {
+      console.log('check inside loop', this.state[arrInput[i]], arrInput[i])
+      if (!this.state[arrInput[i]]) {
         isValid = false;
-        alert('missing parameter' + arrayinput[i])
+        alert('missing parameter' + arrInput[i])
         break;
       }
     }
-    return isValid;
+return isValid;
   }
   handleAddnewUser = () => {
     //check validate
