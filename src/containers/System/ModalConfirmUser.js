@@ -7,11 +7,11 @@ class ModalConfirmUser extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      email: 'thang@gmail.com',
-      lastName: '',
-      firstName: '',
-      password: '123456789',
-      address: '',
+      email: "",
+      lastName: "",
+      firstName: "",
+      password: "",
+      address: "",
     };
   }
 
@@ -31,32 +31,29 @@ class ModalConfirmUser extends Component {
     })
     console.log('event1:', event.target.value, id)
   }
-  checkValidInput = () => {
+  checkValidaInput = () => {
     let isValid = true;
-    let arrInput = ['email', 'password', 'firstName', 'lastName', 'address'];
-    for (let i = 0; i < arrInput.length; i++) {
-      console.log('check inside loop', this.state[arrInput[i]], arrInput[i])
+    let arrInput = ["email", "password", "firstName", "lastName", "address"];
+    for (let i = 0; i < arrInput.length; i++) { 
       if (!this.state[arrInput[i]]) {
         isValid = false;
-        alert('missing parameter' + arrInput[i])
+        alert("Missing parameter: " + arrInput[i]);
         break;
       }
     }
-return isValid;
-  }
+    return true;
+  };
   handleAddnewUser = () => {
-    //check validate
-    let isValid = this.checkValidInput();
+    //check validateq
+    let isValid = this.checkValidaInput();
     if (isValid === true) {
       //call api create modal
       // console.log("checkprop", this.props) //truyen tu ben cha qua
       this.props.createNewuser(this.state, "code");
-      // console.log("data model", this.state);
+
     }
   }
   render() {
-    console.log("check props", this.props);
-    console.log("check props open modal", this.props.isOpen);
     return (
       <Modal
         isOpen={this.props.isOpen}
@@ -83,7 +80,7 @@ return isValid;
                   Email <i className="icon">*</i>
                 </label>
                 <input
-                  type="text"
+                  type="email"
                   onChange={(event) => {
                     this.handleOnchangeInputFormModal(event, "email");
                   }}
@@ -119,7 +116,7 @@ return isValid;
                   Password<i className="icon">*</i>
                 </label>
                 <input
-                  type="text"
+                  type="password"
                   onChange={(event) => {
                     this.handleOnchangeInputFormModal(event, "password");
                   }}
@@ -131,7 +128,7 @@ return isValid;
                   Address<i className="icon">*</i>
                 </label>
                 <input
-                  type="text"
+                  type="address"
                   onChange={(event) => {
                     this.handleOnchangeInputFormModal(event, "address");
                   }}

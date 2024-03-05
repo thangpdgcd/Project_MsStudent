@@ -11,9 +11,7 @@ const getAllUsers = (inputId) => {
 
 //create
 const createNewUserService = (data) => {
-  console.log("check data form service:", data)
-  return axios.post(`/api/create-new-user`, data);
-
-}
+  return axios.post("api/create-new-user",data );
+};
 
 export { handleLoginApi, getAllUsers, createNewUserService };
