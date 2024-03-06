@@ -46,38 +46,35 @@ let handleGetAllUsers = async (req, res) => {
   }); //after run postman from /api/get-all-users ->log
   // {   errCode: 0, errMessage: "Ok",}
 };
-let handleCreateNewUser = async (res, req) => {
+let handleCreateNewUser = async (req, res) => {
   let message = await userService.CreateNewUser(req.body);
   console.log(message);
   return res.status(200).json(message);
 };
-let handleDeleteUser =async(req,res)=>
-{
-  if(!req.body.id)
-  {
+let handleDeleteUser = async (req, res) => {
+  if (!req.body.id) {
     return res.status(200).json({
-      errCode:1,
-      errMessage:"Missing required parameter",
+      errCode: 1,
+      errMessage: "Missing required parameter",
     })
   }
   let message = await userService.deleteUser(req.body.id);
   return res.status(200).json(message);
 
 }
-let handleEditUser = async(req,res)=>
-{
+let handleEditUser = async (req, res) => {
   let data = req.body;
   let message = await userService.updateUserData(data);
 
   return res.status(200).json(message);
-   
-  
+
+
 }
 
 module.exports = {
   handleLoging: handleLoging,
   handleGetAllUsers: handleGetAllUsers,
   handleCreateNewUser: handleCreateNewUser,
-  handleEditUser:handleEditUser,
-  handleDeleteUser:handleDeleteUser,
+  handleEditUser: handleEditUser,
+  handleDeleteUser: handleDeleteUser,
 };
