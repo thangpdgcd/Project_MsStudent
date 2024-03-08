@@ -12,10 +12,13 @@ class ModalConfirmUser extends Component {
       firstName: "",
       password: "",
       address: "",
+      phonenumber:"",
     };
   }
 
-  componentDidMount() { }
+  componentDidMount() { 
+    console.log("check modal")
+  }
 
   toggle = () => {
     this.props.toggleFromParent();
@@ -33,7 +36,7 @@ class ModalConfirmUser extends Component {
   }
   checkValidaInput = () => {
     let isValid = true;
-    let arrInput = ["email", "password", "firstName", "lastName", "address"];
+    let arrInput = ["email", "password", "firstName", "lastName", "address","phonenumber"];
     for (let i = 0; i < arrInput.length; i++) { 
       if (!this.state[arrInput[i]]) {
         isValid = false;
@@ -133,6 +136,18 @@ class ModalConfirmUser extends Component {
                     this.handleOnchangeInputFormModal(event, "address");
                   }}
                   value={this.state.address}
+                />
+              </div>
+              <div className="col-6  from-group">
+                <label>
+                  Phone Number<i className="icon">*</i>
+                </label>
+                <input
+                  type="phonenumber"
+                  onChange={(event) => {
+                    this.handleOnchangeInputFormModal(event, "phonenumber");
+                  }}
+                  value={this.state.phonenumber}
                 />
               </div>
             </div>

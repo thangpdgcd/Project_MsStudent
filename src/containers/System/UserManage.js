@@ -2,7 +2,8 @@ import React, { Component } from "react";
 import { FormattedMessage } from "react-intl";
 import { connect } from "react-redux";
 import "./UserManage.scss";
-import { getAllUsers, createNewUserService } from "../../services/userService";
+import axios from "axios";
+import { getAllUsers, createNewUserService, deleteUserService } from "../../services/userService";
 import ModalConfirmUser from "./ModalConfirmUser";
 
 class UserManage extends Component {
@@ -59,6 +60,20 @@ class UserManage extends Component {
     }
     // console.log("check data form child", data)
   }
+  //delete
+  handleDeleteUser = async (user) => {
+    console.log("click delete", user)
+    try {
+      let res = await deleteUserService(user.id)
+      if (res && res.errCode === 0) {
+        await this.getAllUserFormReact();
+      } else {
+        alert(res.errMessage)
+      }
+    } catch (e) {
+      console.log(e);
+    }
+  }
   /**
    * life cycle
    * run component:
@@ -88,36 +103,35 @@ class UserManage extends Component {
         </div>
         <div className="users-table mt-3 mx-1">
           <table id="customers">
-            <tr>
-              <th>Email</th>
-              <th>FirstName</th>
-              <th>LastName</th>
-              <th>Address</th>
-              <th>PhoneNumber</th>
-              <th>Action</th>
-            </tr>
+            <thead>
+              <tr>
+                <th>Email</th>
+                <th>FirstName</th>
+                <th>LastName</th>
+                <th>Address</th>
+                <th>PhoneNumber</th>
+                <th>Action</th>
+              </tr>
+            </thead>
 
             {/* for map of javascript */}
             {arrayUsers &&
               arrayUsers.map((item, index) => {
                 console.log("check map get data from backend -> api", item, index);
                 return (
-                  <table>
-                    <tbody>
-                      <tr key={index}>
-                        <td>{item.email}</td>
-                        <td>{item.firstName}</td>
-                        <td>{item.lastName}</td>
-                        <td>{item.address}</td>
-                        <td>{item.phonenumber}</td>
-                        <td>{item.Action}
-                          <button className="btn-edit"><i className="fas fa-pencil-alt"></i></button>
-                          <button className="btn-delete"><i className="fas fa-trash-alt"></i></button>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-
+                  <tbody>
+                    <tr key={index}>
+                      <td>{item.email}</td>
+                      <td>{item.firstName}</td>
+                      <td>{item.lastName}</td>
+                      <td>{item.address}</td>
+                      <td>{item.phonenumber}</td>
+                      <td>{item.Action}
+                        <button className="btn-edit"><i className="fas fa-pencil-alt"></i></button>
+                        <button className="btn-delete" onClick={() => { this.handleDeleteUser() }}><i className="fas fa-trash-alt"></i></button>
+                      </td>
+                    </tr>
+                  </tbody>
                 );
               })}
           </table>
