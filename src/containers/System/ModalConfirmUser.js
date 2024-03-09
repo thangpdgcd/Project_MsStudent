@@ -3,6 +3,7 @@ import { FormattedMessage } from "react-intl";
 import { connect } from "react-redux";
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from "reactstrap";
 import "./ModalConfirmUser.scss";
+import { emitter } from "../../utils/emitter";
 class ModalConfirmUser extends Component {
   constructor(props) {
     super(props);
@@ -12,11 +13,25 @@ class ModalConfirmUser extends Component {
       firstName: "",
       password: "",
       address: "",
-      phonenumber:"",
-    };
-  }
+      phonenumber: "",
+    }
 
-  componentDidMount() { 
+    this.listenToEmitter();
+  }
+  listenToEmitter() {
+    emitter.on('EVENT_CLEAR_MODAL_DATA', () => {
+      //reset state
+      this.setState({
+        email: "",
+        lastName: "",
+        firstName: "",
+        password: "",
+        address: "",
+        phonenumber: "",
+      })
+    });
+  }
+  componentDidMount() {
     console.log("check modal")
   }
 
@@ -36,8 +51,8 @@ class ModalConfirmUser extends Component {
   }
   checkValidaInput = () => {
     let isValid = true;
-    let arrInput = ["email", "password", "firstName", "lastName", "address","phonenumber"];
-    for (let i = 0; i < arrInput.length; i++) { 
+    let arrInput = ["email", "password", "firstName", "lastName", "address", "phonenumber"];
+    for (let i = 0; i < arrInput.length; i++) {
       if (!this.state[arrInput[i]]) {
         isValid = false;
         alert("Missing parameter: " + arrInput[i]);

@@ -11,20 +11,16 @@ const getAllUsers = (inputId) => {
 
 //create
 const createNewUserService = (data) => {
+  console.log("Data Create Successfully!", data)
   return axios.post("api/create-new-user", data);
 };
 
-const deleteUserService = (userId) => {
-  // return axios.delete('/api/delete-user',{
-  //   data:{
-  //     id:userId
-  //   }
-  // });
-  return axios.delete("/api/delete-user",
-    {
-      where: {
-        id: userId,
-      }
-    })
+const deleteUserService = (userid) => {
+  return axios.delete("/api/delete-user", {
+    data: {
+      id: userid
+    }
+  });
+
 }
 export { handleLoginApi, getAllUsers, createNewUserService, deleteUserService };
