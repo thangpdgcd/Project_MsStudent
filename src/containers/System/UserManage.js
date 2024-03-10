@@ -3,7 +3,7 @@ import { FormattedMessage } from "react-intl";
 import { connect } from "react-redux";
 import "./UserManage.scss";
 import axios from "axios";
-import { getAllUsers, createNewUserService, deleteUserService } from "../../services/userService";
+import { getAllUsers, createNewUserService, deleteUserService, editUserServices } from "../../services/userService";
 import ModalConfirmUser from "./ModalConfirmUser";
 import { emitter } from "../../utils/emitter";
 import ModalConfirmEditUser from "./ModalConfirmEditUser";
@@ -95,6 +95,25 @@ class UserManage extends Component {
     })
     console.log("check edit user", user)
   }
+  doEditUser = async (user) => {
+    try {
+      let res = await editUserServices(user)
+      if (res && res.errCode === 0) {
+        this.setState(
+          {
+            isOpenModalEditUser: false,
+          }
+        )
+        await this.getAllUserFormReact()
+      } else {
+        alert(res.errCode)
+      }
+      console.log(res, "Data Update Successfully!")
+    } catch (e) {
+      console.log(e)
+    }
+    //get information of user after add new
+  }
   /**
    * life cycle
    * run component:
@@ -119,6 +138,7 @@ class UserManage extends Component {
             isOpen={this.state.isOpenModalEditUser}
             toggleFromParent={this.toggleUserEditModal}
             currentUser={this.state.userEdit}// truyen gia tri nay cho thang con
+            editUser={this.doEditUser} //truyen prop sang thang con
           />
         }
         <div className="title text-center"> Manage Users With Dev</div>

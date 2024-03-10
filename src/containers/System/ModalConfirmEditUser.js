@@ -4,12 +4,13 @@ import { FormattedMessage } from "react-intl";
 import { connect } from "react-redux";
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from "reactstrap";
 // import "./ModalConfirmEditUser.scss";
-import { _ } from "lodash"
+import _ from "lodash";
 import { emitter } from "../../utils/emitter";
 class ModalConfirmEditUser extends Component {
     constructor(props) {
         super(props);
         this.state = {
+            id:"",
             email: "",
             lastName: "",
             firstName: "",
@@ -36,17 +37,17 @@ class ModalConfirmEditUser extends Component {
     componentDidMount() {
         let user = this.props.currentUser;
         if (user && !_.isEmpty(user)) {
-            this.setState({
-                email: user.email,
-                lastName: user.lastName,
-                firstName: user.firstName,
-                password: "harcode",
-                address: user.address,
-                phonenumber: user.phonenumber,
-            })
+          this.setState({
+            id: user.id,
+            email: user.email,
+            password: "harcode",
+            firstName: user.firstName,
+            lastName: user.lastName,
+            address: user.address,
+            phonenumber: user.phonenumber,
+          });
         }
-        console.log("Didmount Edit Modal", this.props.currentUser)
-    }
+      }
 
     toggle = () => {
         this.props.toggleFromParent();
@@ -74,16 +75,15 @@ class ModalConfirmEditUser extends Component {
         }
         return true;
     };
-    handleAddnewUser = () => {
-        //check validateq
+    handleSaveUser = () => {
         let isValid = this.checkValidaInput();
         if (isValid === true) {
-            //call api create modal
-            // console.log("checkprop", this.props) //truyen tu ben cha qua
-            this.props.createNewuser(this.state, "code");
-
+          //call api edit user function
+          this.props.editUser(this.state);
+          console.log(this.props.editUser(this.state))
         }
-    }
+      };
+    
     render() {
         console.log("check props parent:", this.props)
         return (
@@ -117,6 +117,7 @@ class ModalConfirmEditUser extends Component {
                                         this.handleOnchangeInputFormModal(event, "email");
                                     }}
                                     value={this.state.email}
+                                    disabled//can not edit 
                                 />
                             </div>
                             <div className="col-6  from-group">
@@ -153,6 +154,7 @@ class ModalConfirmEditUser extends Component {
                                         this.handleOnchangeInputFormModal(event, "password");
                                     }}
                                     value={this.state.password}
+                                    disabled //can not edit 
                                 />
                             </div>
                             <div className="col-6  from-group">
@@ -186,7 +188,7 @@ class ModalConfirmEditUser extends Component {
                     <Button
                         color="primary"
                         onClick={() => {
-                            this.handleAddnewUser();
+                            this.handleSaveUser();
                         }}
                     >
                         Add New
