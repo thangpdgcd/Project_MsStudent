@@ -4,38 +4,118 @@
     box-sizing: border-box;
 }
 
+
 .home-header-container {
     height: 60px;
-    border: 1px solid red;
+    border: none;
     width: 100%;
     height: 100px;
+    position: fixed;
+    background-color: aliceblue;
 
     .home-header-content {
         width: 100%;
-        height: 120%;
+        height: 100%;
         display: flex;
 
         .left-content {
             width: 33%;
-            border: 1px solid green;
+            border: none;
+            padding: 5px;
+            cursor: pointer;
+            padding-left: 50px;
+
+
 
             .Header-logo {
-                background: url(../../assets/images/iconlogo.svg.png) center center no-repeat;
-                width: 100%;
-                height: 150%;
+                background: url(../../assets/images/Booking.com-Logo.wine.svg) center no-repeat;
+                width: 50%;
+                height: 50%;
                 color: black;
-
+                background-size: cover;
+                margin-left: 100px;
             }
         }
 
         .center-content {
             width: 50%;
-            border: 1px solid orange;
+            border: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .child-content b {
+
+                font-size: 14px;
+            }
+
         }
 
         .right-content {
             width: 25%;
-            border: 1px solid grey;
+            border: none;
+            padding: 10px;
+            float: right;
+
         }
+
+
+
+
+        // 
+        //     align-items: center;
+
+        // }
+
     }
+}
+
+.content-right {
+    color: black;
+    text-decoration: none;
+    text-align: center;
+    margin-left: 40%;
+
+}
+
+.fas {
+
+    font-size: 30px;
+
+    text-align: center;
+
+
+}
+
+.fas:hover {
+    color: rgb(57, 58, 58);
+}
+
+.home-header-banner {
+    background-image: url(../../assets/images/ic_banner.6b9cdab4.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 1200px;
+    background-position: center;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    padding: 15px 0;
+
+    .title-1 {
+        margin-top: 250px;
+        font-size: 70px;
+        text-align: center;
+        color: #918a8a;
+        font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
+    }
+
+    .title-2 {
+        text-align: center;
+        color: #918a8a;
+        font-size: 20px;
+        font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
+    }
+
+    .search {}
+
+    .options {}
 }

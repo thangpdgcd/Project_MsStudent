@@ -1,0 +1,1825 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang=VI><head><link rel=dns-prefetch href="https://cdn.bookingcare.vn" /><link rel=preload as=font href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap" /><link rel=preload as=script href="https://www.google-analytics.com/analytics.js" /><link rel=dns-prefetch href="https://googleads.g.doubleclick.net" /><link rel=dns-prefetch href="https://www.facebook.com" /><link rel=preload as=script href="https://connect.facebook.net/signals/config/1543851749062293?v=2.9.39&r=stable" /><link rel=preload as=script href="https://connect.facebook.net/en_US/fbevents.js" /><link rel=preload as=image href="https://i.ytimg.com/vi/FyDQljKtWnI/hqdefault.jpg" /><link rel=preload as=script href="https://www.googletagmanager.com/gtm.js?id=GTM-WBQRVM" /><link rel=dns-prefetch href="https://thongke.bookingcare.vn" /><link rel=preload as=script href="https://thongke.bookingcare.vn/tk.js" /><meta charset=UTF-8 /><meta charset=UTF-8 /><meta name=viewport content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=0" /><meta http-equiv=X-UA-Compatible content="IE=edge" /><meta property="fb:app_id" content=268914112668312 /><meta name="p:domain_verify" content=2cbe6ae80ca38352fe00a3cfb42434e3 /><meta property="bc:pi" content="" /><meta property="bc:pc" content="" /><meta property="bc:pm" content=blog /><meta property="bc:cv" content="" /><meta property="bc:u" content=/danh-cho-bac-si /><meta property="bc:ru" content="https://www.google.com.vn/" /><meta property="bc:rd" content="www.google.com.vn" /><meta property="bc:msg" content=off /><meta property="bc:front_url" content="https://bookingcare.vn" /><meta property=dl-bs-tg content=1710214858 /><meta property=dl-lk-tg content=1710214827 /><meta property=dl-nk-tg content=1710214153 /><link /><style type=text/css>/*<![CDATA[*/
+.smartbanner{position:absolute;top:0;left:0;overflow-x:hidden;width:100%;height:84px;background:#f3f3f3;font-family:Helvetica,sans,sans-serif}.smartbanner__exit{position:absolute;top:calc(50% - 6px);left:9px;display:block;margin:0;width:12px;height:12px;border:0;text-align:center}.smartbanner__exit::before,.smartbanner__exit::after{position:absolute;width:1px;height:12px;background:#767676;content:" "}.smartbanner__exit::before{transform:rotate(45deg)}.smartbanner__exit::after{transform:rotate(-45deg)}.smartbanner__icon{position:absolute;top:10px;left:30px;width:64px;height:64px;border-radius:15px;background-size:64px 64px}.smartbanner__info{position:absolute;top:10px;left:104px;display:flex;overflow-y:hidden;width:60%;height:64px;align-items:center;color:#000}.smartbanner__info__title{font-size:14px}.smartbanner__info__author,.smartbanner__info__price{font-size:12px}.smartbanner__button{position:absolute;top:32px;right:10px;z-index:1;display:block;padding:0
+10px;min-width:10%;border-radius:5px;background:#f3f3f3;color:#1474fc;font-size:18px;text-align:center;text-decoration:none}.smartbanner__button__label{text-align:center}.smartbanner.smartbanner--android{background:#3d3d3d url("data:image/gif;base64,R0lGODlhCAAIAIABAFVVVf///yH5BAEHAAEALAAAAAAIAAgAAAINRG4XudroGJBRsYcxKAA7");box-shadow:inset 0 4px 0 #88b131}.smartbanner.smartbanner--android
+.smartbanner__exit{left:6px;margin-right:7px;width:17px;height:17px;border-radius:14px;background:#1c1e21;box-shadow:0 1px 2px rgba(0,0,0,.8) inset,0 1px 1px rgba(255,255,255,.3);color:#b1b1b3;font-family:"ArialRoundedMTBold",Arial;font-size:20px;line-height:17px;text-shadow:0 1px 1px #000}.smartbanner.smartbanner--android .smartbanner__exit::before,.smartbanner.smartbanner--android .smartbanner__exit::after{top:3px;left:8px;width:2px;height:11px;background:#b1b1b3}.smartbanner.smartbanner--android .smartbanner__exit:active,.smartbanner.smartbanner--android .smartbanner__exit:hover{color:#eee}.smartbanner.smartbanner--android
+.smartbanner__icon{background-color:rgba(0,0,0,0);box-shadow:none}.smartbanner.smartbanner--android
+.smartbanner__info{color:#ccc;text-shadow:0 1px 2px #000}.smartbanner.smartbanner--android
+.smartbanner__info__title{color:#fff;font-weight:bold}.smartbanner.smartbanner--android
+.smartbanner__button{top:30px;right:20px;padding:0;min-width:12%;border-radius:0;background:none;box-shadow:0 0 0 1px #333,0 0 0 2px #dddcdc;color:#d1d1d1;font-size:14px;font-weight:bold}.smartbanner.smartbanner--android .smartbanner__button:active,.smartbanner.smartbanner--android .smartbanner__button:hover{background:none}.smartbanner.smartbanner--android
+.smartbanner__button__label{display:block;padding:0
+10px;background:#42b6c9;background:linear-gradient(to bottom, #42b6c9, #39a9bb);box-shadow:none;line-height:24px;text-align:center;text-shadow:none;text-transform:none}.smartbanner.smartbanner--android .smartbanner__button__label:active,.smartbanner.smartbanner--android .smartbanner__button__label:hover{background:#2ac7e1}/*]]>*/</style><script type=text/javascript src="/assets/thuvien/jquery-3.6.0.min.js"></script><script type=text/javascript src="/assets/thuvien/lazyload-2.x/lazyload.min.js"></script><script type=text/javascript src="/themes/app1912/assets/js/main.js?t=29"></script><title>Dành cho bác sĩ</title><link rel="shortcut icon" type=image/x-icon href="/bookingcare.png" /><link rel=manifest href="/manifest.json" /><link rel=apple-touch-icon href="/assets/icon/bookingcare-apple-touch-icon.png" /><meta name=description content="" /><meta name=keywords content="" /><meta property="og:url" content="https://bookingcare.vn/cam-nang" /><link rel=canonical href="https://bookingcare.vn/cam-nang" /><meta property="og:title" content="Dành cho bác sĩ" /><meta property="og:description" content="" /><!-- Chrome, Firefox OS and Opera --><meta name=theme-color content="#45c3d2" /><!-- Windows Phone --><meta name=msapplication-navbutton-color content="#45c3d2" /><!-- iOS Safari --><meta name=apple-mobile-web-app-status-bar-style content="#45c3d2" /><!-- iOS smart banner --><meta name=apple-itunes-app content="app-id=1347700144, app-argument=https://bookingcare.vn/danh-cho-bac-si"><!-- Custom smart banner --><meta name="smartbanner:title" content=BookingCare><meta name="smartbanner:author" content=BookingCare><meta name="smartbanner:price" content="Miễn phí"><meta name="smartbanner:price-suffix-apple" content=" - Tải từ App Store"><meta name="smartbanner:price-suffix-google" content=" - Tải từ Google Play"><meta name="smartbanner:icon-apple" content="/assets/icon/smart-banner.png"><meta name="smartbanner:icon-google" content="/assets/icon/smart-banner.png"><meta name="smartbanner:button" content="MỞ"><meta name="smartbanner:button-url-apple" content="https://bookingcare.page.link/?link=https%3A%2F%2Fbookingcare.vn%2Fdanh-cho-bac-si&ibi=vn.bookingcare.bookingcare&imv=190&apn=vn.bookingcare.bookingcare&amv=190"><meta name="smartbanner:button-url-google" content="https://bookingcare.page.link/?link=https%3A%2F%2Fbookingcare.vn%2Fdanh-cho-bac-si&ibi=vn.bookingcare.bookingcare&imv=190&apn=vn.bookingcare.bookingcare&amv=190"><meta name="smartbanner:close-label" content="Đóng"><meta name="smartbanner:disable-positioning" content=true><meta name="smartbanner:exclude-user-agent-regex" content="((\s|^)AppleWebKit/[\d\.]+\s+\(.+\)\s+Version/(1[0-9]|[2-9][0-9]|\d{3,})(\.|$|\s)|.*Googlebot.*)"><meta name="smartbanner:enabled-platforms" content="android,ios"><meta name="smartbanner:hide-ttl" content=600000><meta name="smartbanner:parent-selector" content=body><meta name="smartbanner:next-sibling-selector" content=""><!-- Google Tag Manager --><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WBQRVM');</script><!-- End Google Tag Manager --><!-- Meta Pixel Code --><script>!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '377822247854223');
+fbq('track', 'PageView');</script><noscript><img height=1 width=1 style="display:none"
+src="https://www.facebook.com/tr?id=377822247854223&ev=PageView&noscript=1"
+/></noscript><!-- End Meta Pixel Code --><script> var BASE_URL = "https://bookingcare.vn";
+</script><style> @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap');
+:root {
+--nen-xam: #f9f9f9;
+--nen-trang: #fff;
+--nen-am: #FCFAF6;
+--mau-bc-16: #45c3d2;
+--mau-sam: #333;
+--mau-chu-dieuhuong: #fff;
+--nen-dieuhuong: var(--mau-bc-16);
+--chieucao-dieuhuong: 60px;
+--mau-duongke: #eee;
+--mau-cta: #FFC419;
+}/* Mac dinh */
+* {
+margin: 0px;
+padding: 0px;
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+}*:before,
+*:after {
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+}/* scroll bar */
+html *::-webkit-scrollbar {
+border-radius: 0;
+width: 6px;
+}html *::-webkit-scrollbar-thumb {
+border-radius: 4px;
+background-color: rgba(22, 24, 35, 0.3);
+}html *::-webkit-scrollbar-track {
+border-radius: 0;
+background-color: rgba(0, 0, 0, 0);
+}body {
+overflow: overlay;
+}body,
+input,
+button,
+option,
+textarea,
+label,
+select,
+legend,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+font: 14px/1.5 'Montserrat', sans-serif;
+outline: none
+}p {
+margin: 5px 0;
+}a {
+color: var(--mau-bc-16);
+text-decoration: none;
+}ul,
+ol {
+margin: 10px 0px 10px 25px;
+}.vung-bao {
+padding-right: 15px;
+padding-left: 15px;
+margin-right: auto;
+margin-left: auto;
+}.d-none {
+display: none !important;
+}.d-inline {
+display: inline !important;
+}.d-inline-block {
+display: inline-block !important;
+}.d-block {
+display: block !important;
+}.d-table {
+display: table !important;
+}.d-table-row {
+display: table-row !important;
+}.d-table-cell {
+display: table-cell !important;
+}.d-flex {
+display: -ms-flexbox !important;
+display: flex !important;
+}.d-inline-flex {
+display: -ms-inline-flexbox !important;
+display: inline-flex !important;
+}@media (min-width: 576px){.d-sm-none {
+display: none !important;
+}.d-sm-inline {
+display: inline !important;
+}.d-sm-inline-block {
+display: inline-block !important;
+}.d-sm-block {
+display: block !important;
+}.d-sm-table {
+display: table !important;
+}.d-sm-table-row {
+display: table-row !important;
+}.d-sm-table-cell {
+display: table-cell !important;
+}.d-sm-flex {
+display: -ms-flexbox !important;
+display: flex !important;
+}.d-sm-inline-flex {
+display: -ms-inline-flexbox !important;
+display: inline-flex !important;
+}}@media (min-width: 768px){.d-md-none {
+display: none !important;
+}.d-md-inline {
+display: inline !important;
+}.d-md-inline-block {
+display: inline-block !important;
+}.d-md-block {
+display: block !important;
+}.d-md-table {
+display: table !important;
+}.d-md-table-row {
+display: table-row !important;
+}.d-md-table-cell {
+display: table-cell !important;
+}.d-md-flex {
+display: -ms-flexbox !important;
+display: flex !important;
+}.d-md-inline-flex {
+display: -ms-inline-flexbox !important;
+display: inline-flex !important;
+}}@media (min-width: 992px){.d-lg-none {
+display: none !important;
+}.d-lg-inline {
+display: inline !important;
+}.d-lg-inline-block {
+display: inline-block !important;
+}.d-lg-block {
+display: block !important;
+}.d-lg-table {
+display: table !important;
+}.d-lg-table-row {
+display: table-row !important;
+}.d-lg-table-cell {
+display: table-cell !important;
+}.d-lg-flex {
+display: -ms-flexbox !important;
+display: flex !important;
+}.d-lg-inline-flex {
+display: -ms-inline-flexbox !important;
+display: inline-flex !important;
+}}@media (min-width: 1200px){.d-xl-none {
+display: none !important;
+}.d-xl-inline {
+display: inline !important;
+}.d-xl-inline-block {
+display: inline-block !important;
+}.d-xl-block {
+display: block !important;
+}.d-xl-table {
+display: table !important;
+}.d-xl-table-row {
+display: table-row !important;
+}.d-xl-table-cell {
+display: table-cell !important;
+}.d-xl-flex {
+display: -ms-flexbox !important;
+display: flex !important;
+}.d-xl-inline-flex {
+display: -ms-inline-flexbox !important;
+display: inline-flex !important;
+}}@media (min-width: 768px){.vung-bao {
+width: 750px;
+}}@media (min-width: 992px){.vung-bao {
+width: 970px;
+}}@media (min-width: 1200px){.vung-bao {
+width: 1170px;
+}}.table {
+background-color: transparent;
+border-spacing: 0;
+border-collapse: collapse;
+margin-bottom: 20px;
+width: 100%;
+max-width: 100%;
+}.table-bordered td {
+border: 1px solid #ddd;
+padding: 8px;
+vertical-align: top;
+}.table>thead>tr>th {
+vertical-align: bottom;
+border-bottom: 2px solid #ddd;
+}.table>thead>tr>th,
+.table>tbody>tr>th,
+.table>tfoot>tr>th,
+.table>thead>tr>td,
+.table>tbody>tr>td,
+.table>tfoot>tr>td {
+padding: 8px;
+line-height: 1.42857143;
+vertical-align: top;
+border-top: 1px solid #ddd;
+}th {
+text-align: left;
+}/* Dinh dang theo cot va hang */
+.cot-nho-1 {
+width: 8.33%;
+}.cot-nho-2 {
+width: 16.66%;
+}.cot-nho-3 {
+width: 25%;
+}.cot-nho-4 {
+width: 33.33%;
+}.cot-nho-5 {
+width: 41.66%;
+}.cot-nho-6 {
+width: 50%;
+}.cot-nho-7 {
+width: 58.33%;
+}.cot-nho-8 {
+width: 66.66%;
+}.cot-nho-9 {
+width: 75%;
+}.cot-nho-10 {
+width: 83.33%;
+}.cot-nho-11 {
+width: 91.66%;
+}.cot-nho-12 {
+width: 100%;
+}[class*="cot-nho-"] {
+float: left;
+position: relative;
+min-height: 1px;
+}@media (min-width: 768px){.cot-1 {
+width: 8.33%;
+}.cot-2 {
+width: 16.66%;
+}.cot-3 {
+width: 25%;
+}.cot-4 {
+width: 33.33%;
+}.cot-5 {
+width: 41.66%;
+}.cot-6 {
+width: 50%;
+}.cot-7 {
+width: 58.33%;
+}.cot-8 {
+width: 66.66%;
+}.cot-9 {
+width: 75%;
+}.cot-10 {
+width: 83.33%;
+}.cot-11 {
+width: 91.66%;
+}.cot-12 {
+width: 100%;
+}.cot-1_5 {
+width: 20%;
+}.cot-2_5 {
+width: 40%;
+}[class*="cot-"] {
+float: left;
+position: relative;
+min-height: 1px;
+}}.hang::after {
+content: "";
+clear: both;
+display: block;
+}/* Nut bam */
+.nut {
+padding: 6px 12px;
+border: 1px solid #ccc;
+border-radius: 4px;
+text-align: center;
+font-size: 14px;
+cursor: pointer;
+margin-top: 20px;
+}.nut+.nut {
+margin-left: 10px;
+}.nut-nho {
+padding: 4px 8px;
+font-size: 12px;
+line-height: 1.5;
+border-radius: 3px;
+}.nut-ngang {
+display: block;
+}.nut-trang {
+color: #333;
+background-color: #fff;
+border-color: #ccc;
+}.nut-xanh {
+background: var(--mau-cta);
+color: #fff;
+border: 1px solid transparent;
+font-weight: 700;
+font-size: 16px;
+}.nut-chinh {
+background: #45c3d2;
+color: #fff;
+border: 1px solid transparent;
+}/* Nhãn */
+.nhan {
+display: inline;
+padding: .2em .6em .3em;
+font-size: 75%;
+font-weight: 700;
+line-height: 1;
+color: #fff;
+text-align: center;
+white-space: nowrap;
+vertical-align: baseline;
+border-radius: .25em;
+}.nhan-thuong {
+background-color: #777;
+}.nhan-chinh {
+background: #45c3d2;
+}.nhan-thanhcong {
+background-color: #5cb85c;
+}.nhan-thongtin {
+background-color: #5bc0de;
+}.nhan-canhbao {
+background-color: #f0ad4e;
+}.nhan-nguyhiem {
+background-color: #d9534f;
+}/* Bieu tuong */
+@font-face {
+font-family: 'Glyphicons Halflings';
+src: url('/assets/fonts/glyphicons-halflings-regular.eot');
+src: url('/assets/fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'),url('/assets/fonts/glyphicons-halflings-regular.woff2') format('woff2'),url('/assets/fonts/glyphicons-halflings-regular.woff') format('woff'),url('/assets/fonts/glyphicons-halflings-regular.ttf') format('truetype'),url('/assets/fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
+font-display: swap;
+}.bt-g {
+position: relative;
+top: 1px;
+display: inline-block;
+font-family: 'Glyphicons Halflings';
+font-style: normal;
+font-weight: normal;
+line-height: 1;
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+}.bt-g-trangchu:before {
+content: "\e021";
+}.bt-g-tamgiac-trai:before {
+content: "\e251";
+}.bt-g-tamgiac-phai:before {
+content: "\e250";
+}.bt-g-tamgiac-duoi:before {
+content: "\e252";
+}.bt-g-tamgiac-tren:before {
+content: "\e253";
+}.bt-g-didong:before {
+content: "\e145";
+}.bt-g-dienthoai:before {
+content: "\e182";
+}.bt-g-dienthoai-2:before {
+content: "\e183";
+}.bt-g-tainghe:before,
+.bt-g-headphones:before {
+content: "\e035";
+}.bt-g-phongbi:before {
+content: "\2709";
+}.bt-g-hopthu:before {
+content: "\e028";
+}.bt-g-binhluan:before {
+content: "\e111";
+}.bt-g-diadiem:before {
+content: "\e062";
+}.bt-g-lich:before {
+content: "\e109";
+}.bt-g-dongho:before,
+.bt-g-time:before {
+content: "\e023";
+}.bt-g-chuv-phai:before {
+content: "\e080";
+}.bt-g-chuv-trai:before {
+content: "\e079";
+}.bt-g-chitay-xuong:before {
+content: "\e130";
+}.bt-g-dongy:before {
+content: "\e013";
+}.bt-g-dongy-tron:before,
+.bt-g-ok-circle:before {
+content: "\e084";
+}.bt-g-xoa:before {
+content: "\e014";
+}.bt-g-flash::before {
+content: "\e162";
+}.bt-g-cong:before {
+content: "\002b";
+}.bt-g-cong-tron:before {
+content: "\e081";
+}.bt-g-tim:before {
+content: "\e003";
+}.bt-g-trai:before {
+content: "\e257";
+}.bt-g-phai:before {
+content: "\e258";
+}.bt-g-duoi:before {
+content: "\e259";
+}.bt-g-tren:before {
+content: "\e260";
+}.bt-g-menu-trai:before {
+content: "\e257";
+}.bt-g-menu-phai:before {
+content: "\e258";
+}.bt-g-menu-duoi:before {
+content: "\e259";
+}.bt-g-menu-tren:before {
+content: "\e260";
+}.bt-g-menu-ngang:before {
+content: "\e236";
+}.bt-g-nguoi:before,
+.bt-g-user:before {
+content: "\e008";
+}.bt-g-chitay-phai:before {
+content: "\e127";
+}.bt-g-chitay-trai:before {
+content: "\e128";
+}.bt-g-chitay-tren:before {
+content: "\e129";
+}.bt-g-chitay-duoi:before {
+content: "\e130";
+}.bt-g-danhsach:before {
+content: "\e056";
+}.bt-g-gui:before {
+content: "\e171";
+}.bt-g-the:before {
+content: "\e041";
+}.bt-g-the-nhieu:before {
+content: "\e042";
+}.bt-g-ngoncai-len:before {
+content: "\e125";
+}.bt-g-ngoncai-xuong:before {
+content: "\e126";
+}.bt-g-chuong:before {
+content: "\e123";
+}.bt-g-muiten-trai:before {
+content: "\e091";
+}.bt-g-lua:before {
+content: "\e104";
+}.bt-g-dauhoi:before {
+content: "\e085";
+}.bt-g-download::before {
+content: "\e025";
+}.bt-g-giohang:before {
+content: "\e116";
+}.bt-g-video:before {
+content: "\e059";
+}/* Tien ich */
+.ds a+a:before {
+color: #000;
+content: " – ";
+}ul.ds-ngang {
+list-style: none;
+margin: 0;
+}ul.ds-ngang li {
+float: left;
+margin-right: 10px;
+padding: 5px 0;
+}ul.ds-ngang li+li:before {
+content: "\02022";
+padding-right: 10px;
+}.an-hien {
+display: none;
+}.an-hien.hien {
+display: block;
+transition: display 1s;
+}.mu {
+display: inline-block;
+width: 0;
+height: 0;
+margin-left: 2px;
+vertical-align: middle;
+border-top: 4px dashed;
+border-right: 4px solid transparent;
+border-left: 4px solid transparent;
+}.hien .mu,
+.mo .mu {
+content: "";
+border-top: 0;
+border-bottom: 4px solid;
+}.tamgiac {
+display: inline-block;
+width: 0;
+height: 0;
+margin-left: 2px;
+vertical-align: middle;
+border-left: 4px dashed;
+border-top: 4px solid transparent;
+border-bottom: 4px solid transparent;
+}.hien .tamgiac,
+.mo .tamgiac {
+content: "";
+border-left: 0;
+border-bottom: 4px dashed;
+border-right: 4px solid transparent;
+border-left: 4px solid transparent;
+}.codinh {
+position: fixed;
+}.khong-cuon {
+overflow: hidden;
+}/* Định dạng Chữ */
+.chu-mo {
+color: #ccc;
+}.chu-chinh {
+color: #337ab7;
+}.chu-thanhcong {
+color: #3c763d;
+}.chu-thongtin {
+color: #31708f;
+}.chu-canhbao {
+color: #8a6d3b;
+}.chu-nguyhiem {
+color: #a94442;
+}.chu-giua {
+text-align: center;
+}.chu-haiben {
+text-align: justify;
+}.chu-trai {
+text-align: left;
+}.chu-phai {
+text-align: right;
+}@media (min-width: 768px){.chu-phai-vua {
+text-align: right;
+}}.gioi-thieu-ngan {
+background: #aedee0;
+padding: 15px;
+}.gioi-thieu-ngan ul {
+margin-left: 25px;
+margin-top: 10px;
+}.xeplai {
+clear: both;
+}/* Tai trang */
+#dangtai {
+position: fixed;
+width: 100%;
+/*height: 100%;*/
+z-index: 999;
+/* background-color: rgba(255,255,255,0.5);*/
+}#dangtai .nut {
+margin: 30px;
+font-weight: bold;
+background-color: rgba(0, 0, 0, 0.7);
+color: #fff;
+border: 1px solid transparent;
+}#dangtai img {
+width: 32px;
+margin-bottom: -10px;
+margin-right: 5px;
+}/* Nhung tuong thich */
+.nhung-tuongthich {
+position: relative;
+display: block;
+height: 0;
+padding: 0;
+overflow: hidden;
+}.nhung-tuongthich .nhung-tuongthich-phantu,
+.nhung-tuongthich iframe,
+.nhung-tuongthich embed,
+.nhung-tuongthich object,
+.nhung-tuongthich video {
+position: absolute;
+top: 0;
+bottom: 0;
+left: 0;
+width: 100%;
+height: 100%;
+border: 0;
+}.nhung-tuongthich-16-9 {
+padding-bottom: 56.25%;
+}.nhung-tuongthich-4-3 {
+padding-bottom: 75%;
+}/* Bảng thông báo */
+.bang-hien {
+overflow: hidden;
+}.bang-hien .bang {
+overflow-x: hidden;
+overflow-y: auto;
+}.bang,
+.bang-nho {
+position: fixed;
+top: 0;
+right: 0;
+bottom: 0;
+left: 0;
+z-index: 1050;
+display: none;
+overflow: hidden;
+-webkit-overflow-scrolling: touch;
+outline: 0;
+}.bang.hien {
+display: block;
+opacity: 1;
+}.bang-nho.hien {
+display: flex;
+opacity: 1;
+align-items: center;
+justify-content: center;
+}.bang-nho div {
+background: #fff04b;
+color: #00234b;
+padding: 1em;
+border-radius: 5px;
+box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, .2);
+font-weight: bold;
+max-width: 80%;
+}.bang-nho div.ok {
+background: var(--nen-dieuhuong);
+color: #fff;
+}@keyframes blink {
+50% {
+color: transparent
+}}.bang-nho div i {
+animation: 1s blink infinite;
+font-style: normal
+}.bang-nho div i:nth-child(2){animation-delay: 250ms
+}.bang-nho div i:nth-child(3){animation-delay: 500ms
+}.bang-khung {
+margin: 15px auto;
+max-width: 500px;
+}.bang-noidung {
+position: relative;
+background-color: #fff;
+-webkit-background-clip: padding-box;
+background-clip: padding-box;
+border: 1px solid #999;
+border: 1px solid rgba(0, 0, 0, .2);
+border-radius: 6px;
+outline: 0;
+-webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, .5);
+box-shadow: 0 3px 9px rgba(0, 0, 0, .5);
+}.bang-dau {
+padding: 15px;
+border-bottom: 1px solid #e5e5e5;
+}.bang-tieude {
+margin: 0;
+line-height: 1.5;
+font-size: 18px;
+}.bang-dau .dong {
+margin-top: -2px;
+}.bang-than {
+position: relative;
+padding: 15px;
+}.bang-chan {
+padding: 15px;
+text-align: right;
+border-top: 1px solid #e5e5e5;
+}.bang-nen {
+position: fixed;
+top: 0;
+right: 0;
+bottom: 0;
+left: 0;
+z-index: 1040;
+background-color: #000;
+display: none;
+}.bang-nen.hien,
+.bang-nen.hien.modan {
+opacity: .5;
+display: block;
+}/* Nút đóng */
+button.dong {
+-webkit-appearance: none;
+padding: 0;
+cursor: pointer;
+background: 0 0;
+border: 0;
+}.dong {
+float: right;
+font-size: 21px;
+font-weight: 700;
+line-height: 1;
+color: #000;
+text-shadow: 0 1px 0 #fff;
+filter: alpha(opacity=20);
+opacity: .2;
+}/* Hiệu ứng */
+.modan {
+opacity: 0;
+-webkit-transition: opacity .15s linear;
+-o-transition: opacity .15s linear;
+transition: opacity .15s linear;
+}.modan.hien {
+opacity: 1;
+}/* Dau trang */
+header {
+background: rgba(255, 255, 255, 1);
+z-index: 2;
+width: 100%;
+padding: 10px 0;
+box-shadow: 0px 1px 1px rgb(0 0 0 / 18%);
+}header .vung-bao .hang {
+display: flex;
+align-items: center;
+}@media (min-width: 960px) and (max-width: 1199px){header .vung-bao .hang {
+display: block;
+}}header .bt-dautrang {
+padding-top: 5px;
+height: 40px;
+}header .duongdaynong {
+display: inline-block;
+margin-top: 9px;
+font-size: 11px;
+}header .duongdaynong a {
+color: #45c3d2;
+display: block;
+text-align: right;
+}header .duongdaynong a div {
+color: #fff04b;
+font-weight: 700;
+font-size: 14px;
+}header .hotro {
+/* margin-top: 8px; */
+display: flex;
+justify-content: end;
+align-items: center;
+gap: 20px;
+}.hotro-congtac {
+background-color: transparent;
+border: none;
+display: flex;
+flex-direction: column;
+align-items: center;
+cursor: pointer;
+}header .hotro .download-header {
+margin-right: 10px;
+}header .hotro a,
+header .hotro span {
+text-align: right;
+font-weight: bold;
+display: flex;
+flex-direction: column;
+align-items: center;
+color: #45c3d2;
+line-height: 19px;
+font-size: 14px;
+margin-top: 2px;
+}@media (max-width: 576px){header .hotro img {
+width: 20px;
+height: 20px;
+}header .hotro span {
+font-size: 12px;
+font-weight: 100;
+}}header .hotro.nen-xanh a {
+color: white
+}header .hotro.nen-xanh span {
+color: white
+}/* header .hotro a span {
+line-height: 30px;
+}*/
+header .hotro a .bieutuong {
+color: #45c3d2;
+}header .hotro a .chu {
+color: #969495;
+}header .hotro a.phone {
+font-size: 12px;
+}header .hotro a+a {
+margin-left: 10px;
+}@media (max-width: 321px){header .hotro {
+letter-spacing: -1px;
+}header .bt-dautrang {
+padding-top: 12px;
+}}body {
+margin: 0px auto;
+/*padding-top: 50px;*/
+}body.cuon-len {}/*.cuon-len header, .cuon-xuong header {
+background: rgba(255, 255, 255, 1);
+box-shadow: 0px 1px 10px #ccc;
+}*/
+/*.cuon-xuong header {
+position: fixed;
+width: 100%;
+z-index: 2;
+top: -60px;
+}*/
+header .trinhdon-congtac {
+position: relative;
+padding: 10px 8px 10px 0;
+margin-left: 0px;
+background-color: transparent;
+background-image: none;
+border: 1px solid transparent;
+display: block;
+float: left;
+}header .trinhdon-congtac .duong-ke {
+display: block;
+width: 22px;
+height: 3px;
+border-radius: 1px;
+background-color: #969495;
+}header .trinhdon-congtac .duong-ke+.duong-ke {
+margin-top: 4px;
+}.trinhdon {
+position: fixed;
+height: 100%;
+left: 0;
+top: 0;
+display: none;
+z-index: 3;
+width: 260px;
+max-width: 90%;
+background-color: #fff;
+overflow-y: auto;
+cursor: pointer;
+}.trinhdon.phai {
+right: 0;
+left: auto;
+}.trinhdon.phai .mxh-nhom a {
+display: flex;
+align-items: center;
+justify-content: center;
+}.trinhdon.phai .nut-mxh {
+border-radius: 9px;
+object-fit: cover;
+width: 165px;
+height: 46px;
+}.trinhdon.mo {
+display: block;
+-webkit-transition: display 0s .4s;
+-moz-transition: display 0s .4s;
+transition: display 0s .4s;
+}.trinhdon-nhom {
+padding: 0px;
+margin: 0px;
+}.trinhdon-nhom {
+margin: 0;
+padding: 0px;
+list-style: none;
+}.trinhdon-nhom h4 {
+padding: 5px 15px;
+background-color: #f1f1f1;
+color: #555;
+font-size: 12px;
+text-transform: uppercase;
+}.trinhdon-nhom>li {
+border-bottom: 1px solid #eee;
+margin: 0;
+}.trinhdon-nhom>li>a {
+padding: 10px 15px;
+display: block;
+font-size: 16px;
+}.trinhdon-co-nhanh>a span {
+float: right;
+display: inline-block;
+}.trinhdon-co-nhanh>a span.bt-mo {
+display: none;
+}.trinhdon-co-nhanh.mo>a span.bt-mo {
+display: inline;
+}.trinhdon-co-nhanh.mo>a span.bt-dong {
+display: none;
+}.trinhdon-nhanh {
+display: none;
+margin: 0px;
+background: #f9f9f9;
+}.trinhdon-co-nhanh.mo .trinhdon-nhanh {
+display: block;
+-webkit-transition: display 0s .4s;
+-moz-transition: display 0s .4s;
+transition: display 0s .4s;
+}.trinhdon-co-nhanh.mo>a {
+background: #f1f1f1;
+}.trinhdon-nhanh li {
+list-style: none;
+}.trinhdon-nhanh li a {
+padding: 7px 10px 7px 25px;
+display: block;
+color: #666;
+}.trinhdon-nhanh li:nth-child(odd) a {
+background: #fff;
+}.trinhdon-mxh {
+margin: 20px 0;
+padding: 10px;
+}.trinhdon-mxh a+a {
+margin-left: 10px;
+}.trinhdon-mxh>a>img {
+width: 32px;
+}ul.menu-dautrang {
+display: none;
+float: right;
+}@media (min-width: 960px){ul.menu-dautrang {
+display: inline;
+}}ul.menu-dautrang li {
+display: inline-block;
+}ul.menu-dautrang li+li {
+margin-left: 25px;
+}ul.menu-dautrang li a {
+color: #333;
+font-weight: bold;
+font-size: 12px;
+}ul.menu-dautrang li a span {
+font-weight: lighter;
+font-size: 10px;
+display: block;
+}#dieuhuong {
+line-height: 48px;
+background: var(--nen-dieuhuong);
+position: fixed;
+top: 0;
+/*border-bottom: 1px solid var(--mau-duongke);*/
+}#dieuhuong,
+#dieuhuong a {
+color: var(--mau-chu-dieuhuong);
+}#dieuhuong .vung-bao {
+display: flex;
+position: relative;
+justify-content: space-between;
+align-items: center;
+}#dieuhuong h2 {
+font-weight: normal;
+display: inline;
+position: absolute;
+line-height: 48px;
+max-width: 50%;
+overflow: hidden;
+text-overflow: ellipsis;
+white-space: nowrap;
+margin-left: 24px;
+font-size: 16px;
+visibility: hidden;
+color: var(--mau-chu-dieuhuong);
+}@media(max-width: 400px){#dieuhuong h2 {
+max-width: 30%;
+}}header#dieuhuong {
+padding: 5px 0;
+}header#dieuhuong .dieuhuong-phai {
+display: inline-flex;
+position: absolute;
+right: 0;
+}header#dieuhuong .trinhdon-congtac .duong-ke {
+background-color: var(--mau-chu-dieuhuong);
+}.cuon-len #dieuhuong,
+.cuon-xuong #dieuhuong {
+background: var(--nen-dieuhuong);
+box-shadow: 1px 1px 1px #999;
+border-bottom: none;
+}.cuon-len #dieuhuong h2,
+.cuon-xuong #dieuhuong h2 {
+visibility: visible;
+}.dieuhuong-nut {
+background: transparent;
+border: none;
+outline: none;
+box-shadow: none;
+color: var(--mau-chu-dieuhuong);
+font-size: 9px;
+margin-top: 0px;
+margin-right: 10px;
+text-transform: uppercase;
+text-align: center;
+}.dieuhuong-nut span {
+font-size: 15px;
+}.dieuhuong-nut div {
+margin-top: -10px;
+line-height: 0px;
+}.dieuhuong-nut.hotline {
+font-size: 12px;
+}/* Chan trang */
+footer {
+background: #efefef;
+padding: 30px 0;
+}footer .hang {
+display: flex;
+flex-direction: column;
+}footer h4 {
+font-weight: bolder;
+}footer a {}.nut-mxh {
+width: 32px;
+margin: 10px 10px 10px 0;
+}footer .nut-bct {
+height: 40px;
+max-width: 49%;
+}footer hr {
+border: none;
+border-top: 1px solid #ccc;
+margin: 10px 0;
+}.chantrang-lienhe {
+padding-top: 10px;
+font-size: 13px;
+}footer ul {
+list-style: none;
+margin: 0px 0px 10px 0;
+overflow-x: hidden;
+}footer li {
+padding: 5px 0;
+}footer .phone-number {
+color: black;
+text-decoration: underline;
+}footer .business-number {
+color: black;
+}footer .block {
+margin-top: 16px;
+}footer .block-link {
+display: flex;
+flex-direction: row;
+}footer .block-link .group-1,
+footer .block-link .group-2 {
+width: 50%;
+}footer .cot-thongtin {
+order: 2;
+}footer .cot-link {
+order: 1;
+}footer .cot-doitac {
+order: 3;
+margin-top: 8px;
+}@media (min-width: 768px){footer .hang {
+flex-direction: row;
+}footer .block-link {
+flex-direction: column;
+margin-left: 0;
+}footer .block-link .group-1,
+footer .block-link .group-2 {
+width: 100%;
+}footer .cot-thongtin {
+order: 1;
+}footer .cot-link {
+order: 2;
+margin-left: 8px;
+}footer .cot-doitac {
+margin-left: 8px;
+margin-top: 0;
+}}footer .block-item {
+display: flex;
+align-items: start;
+}footer .block-item img {
+margin-right: 4px;
+}.chantrang-logo {
+max-width: 200px;
+}.changtrang-congty h2 {
+font-weight: bold;
+margin: 5px 0;
+}.chantrang-2 {
+background: #64b9e5;
+color: #fff;
+padding: 10px;
+}.chantrang-2 a {
+color: #fff;
+}.nut-google-cong {
+display: inline-block;
+position: relative;
+top: 4px;
+}.trang-loi {
+padding: 15px;
+min-height: 380px;
+max-width: 800px;
+margin: 20px auto;
+}.trang-loi h1 {
+font-size: 18px;
+font-weight: bold;
+}.trang-loi p {
+margin: 15px 0;
+}.trang-loi .thongbao-loi {
+margin: 20px 0;
+max-width: 100%;
+overflow-y: scroll;
+border: 1px solid #ccc;
+border-radius: 4px;
+padding: 10px;
+}code {
+padding: 2px 4px;
+font-size: 90%;
+color: #c7254e;
+background-color: #f9f2f4;
+border-radius: 4px;
+}pre {
+display: block;
+padding: 9.5px;
+margin: 10px 0;
+font-size: 13px;
+line-height: 1.42857143;
+color: #333;
+word-break: break-all;
+word-wrap: break-word;
+background-color: #f7f7f7;
+border: 1px solid #eee;
+border-radius: 4px;
+overflow-wrap: break-word;
+width: 100%;
+}.nen-mo {
+display: none;
+background-color: rgba(0, 0, 0, 0.5);
+z-index: 2;
+height: 100%;
+left: 0;
+position: fixed;
+top: 0;
+width: 100%;
+}.nen-mo.hien {
+display: block;
+-webkit-transition: display 0s .6s;
+-moz-transition: display 0s .6s;
+transition: display 0s .6s;
+}.hethong-cauhoithuonggap {
+background-color: #006e6f;
+padding: 15px;
+color: #fff;
+}.hethong-cauhoithuonggap a {
+color: #FFF04B;
+font-weight: bold;
+}.doitac-gioithieu {
+background: #006e6f;
+padding: 15px;
+color: #fff;
+text-align: center;
+}.doitac-gioithieu h2 {
+font-weight: bold;
+font-size: 16px;
+}.doitac-gioithieu p {}.doitac-gioithieu .nut {
+border: 1px solid #FFF04B;
+color: #FFF04B;
+border-radius: 0;
+display: block;
+padding: 10px 15px;
+}.hien-ud,
+.hien-android,
+.hien-ios {
+display: none;
+}.utms-android .an-ud,
+.utms-android .an-android {
+display: none;
+}.utms-ios .an-ud,
+.utms-ios .an-ios {
+display: none;
+}.utms-android .hien-ud,
+.utms-ios .hien-ud,
+.utms-android .hien-android,
+.utms-ios .hien-ios {
+display: inherit;
+}/*// Lựa chọn*/
+.luachon {
+background-image: linear-gradient(rgba(255, 255, 255, 0.1),rgba(255, 255, 255, 0.9),rgba(255, 255, 255, 1));
+padding-top: 30px;
+padding-bottom: 20px;
+}.luachon ul {
+list-style: none;
+margin: 0;
+padding: 0;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-wrap: wrap;
+}.luachon ul li {
+margin: 0;
+padding: 5px;
+}.luachon a {
+text-align: center;
+padding: 5px 5px;
+color: #333;
+display: inline-block;
+position: relative;
+font-size: 12px;
+font-weight: bold;
+}.dt-footer {
+display: flex;
+color: black;
+align-items: center;
+}.dt-detail {
+margin-left: 8px;
+}@media(max-width: 1439px){.luachon ul li a {
+width: 230px;
+text-align: center;
+}}@media(max-width: 1199px){.luachon ul li a {
+width: 190px;
+}}@media(max-width: 999px){.luachon ul li a {
+width: 157px;
+}}@media(max-width: 834px){.luachon ul li a {
+width: 130px;
+}}@media(max-width: 768px){.luachon ul li {
+width: 30%;
+text-align: center;
+}}@media(min-width: 960px){.luachon a {
+min-width: 150px;
+font-size: 16px;
+}}.luachon a div {
+background: #fff;
+border-radius: 50%;
+-moz-box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.5);
+-webkit-box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+box-shadow: 0px 1px 2px rgba(0, 0, 0, .5);
+width: 50px;
+height: 50px;
+margin: 2px auto;
+background-size: 32px;
+background-repeat: no-repeat;
+background-position: center;
+}.luachon a div img {
+max-height: 40px;
+max-width: 40px;
+}.luachon a:hover {
+color: #45c3d2;
+}.cuaso {
+display: none;
+}body.cuaso-dangmo {
+overflow: hidden;
+}.cuaso-mo {
+display: block;
+}.cuaso-vung {
+height: 100vh;
+z-index: 2000;
+position: fixed;
+background: #fff;
+top: 0;
+left: 0;
+width: 100%;
+padding-top: 50px;
+overflow-y: scroll;
+}.cuaso-vung.cuaso-co-timkiem {
+padding-top: 100px;
+}.hide-nav .cuaso-vung.cuaso-co-timkiem {
+padding-top: 50px;
+}.cuaso-dau {
+background: #fff;
+position: fixed;
+width: 100%;
+height: 50px;
+top: 0;
+left: 0;
+padding-left: 50px;
+-moz-box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.5);
+-webkit-box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+z-index: 2;
+}.cuaso-dong,
+.nut-dong {
+position: absolute;
+height: 50px;
+width: 50px;
+top: 0;
+left: 0;
+line-height: 50px;
+text-align: center;
+border: none;
+background: transparent;
+box-shadow: none;
+outline: none;
+cursor: pointer;
+}.cuaso-tieude {
+line-height: 50px;
+font-size: 20px;
+text-overflow: ellipsis;
+white-space: nowrap;
+overflow: hidden;
+padding-right: 15px;
+}.cuaso-timkiem {
+position: fixed;
+width: 100%;
+left: 0;
+background: #f5f5f5;
+top: 50px;
+height: 50px;
+padding: 10px 15px;
+z-index: 1;
+}.hide-nav .cuaso-timkiem {
+top: 0;
+}.cuaso-timkiem input {
+width: 100%;
+height: 30px;
+padding: 10px 15px;
+background: rgba(255, 255, 255, 0.7);
+width: 100%;
+border: 1px solid #ccc;
+border-radius: 20px;
+}.cuaso-timkiem input:focus {
+background: rgba(255, 255, 255, 0.9);
+}.cuaso-daumuc {
+padding: 10px 15px;
+font-weight: bold;
+}.cuaso .chuyenkhoa-ds ul,
+.cuaso .bacsi-ds ul,
+.cuaso .csyt-ds ul,
+.cuaso .goikham-ds ul {
+list-style-type: none;
+padding: 0;
+margin: 0;
+}.cuaso .bacsi-ds ul li,
+.cuaso .csyt-ds ul li,
+.cuaso .chuyenkhoa-ds ul li,
+.cuaso .goikham-ds ul li {
+display: block;
+overflow: hidden;
+padding: 15px;
+border-bottom: 1px solid #eee;
+position: relative;
+}.cuaso .bacsi-ds ul li img,
+.cuaso .csyt-ds ul li img,
+.cuaso .chuyenkhoa-ds ul li img,
+.cuaso .goikham-ds ul li img {
+float: left;
+margin-right: 10px;
+}.cuaso .bacsi-ds ul li img {
+width: 50px;
+border-radius: 50%;
+}.cuaso .csyt-ds ul li img,
+.cuaso .chuyenkhoa-ds ul li img,
+.cuaso .goikham-ds ul li img {
+width: 100px;
+}.cuaso .bacsi-ds li h3,
+.cuaso .csyt-ds li h3,
+.cuaso .chuyenkhoa-ds li h3,
+.cuaso .goikham-ds li h3 {
+display: block;
+line-height: 1.3em;
+font-size: 14px;
+color: #333;
+}.cuaso .bacsi-ds li h4,
+.cuaso .csyt-ds li h4,
+.cuaso .goikham-ds li h4 {
+color: #666;
+font-size: 12px;
+margin-top: 5px;
+}.cuaso .bacsi-ds li h4 span+span:before,
+.cuaso .goikham-ds li h4 span+span:before {
+content: " - ";
+}.cuaso .bacsi-ds-noibat {
+font-size: 12px;
+margin-top: 5px;
+}.cuaso .bacsi-ds-noibat span {
+background: #eee;
+padding: 3px 7px;
+border-radius: 5px;
+}.cuaso .bacsi-ds-noibat span+span {
+margin-left: 5px;
+}.khamtuxa {
+position: relative;
+display: block;
+}.khamtuxa::before {
+display: inline-block;
+font-family: 'Glyphicons Halflings';
+font-style: normal;
+font-weight: normal;
+line-height: 1;
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+content: "\e059";
+position: absolute;
+top: 5px;
+left: 5px;
+color: #fff;
+background: #388E3C;
+padding: 5px;
+border-radius: 50%;
+font-size: .7rem;
+}.py-0 {
+padding-top: 0;
+padding-bottom: 0;
+}.py-1 {
+padding-top: 10px;
+padding-bottom: 10px;
+}.py-2 {
+padding-top: 15px;
+padding-bottom: 15px;
+}.pt-0 {
+padding-top: 0;
+}.pt-1 {
+padding-top: 10px;
+}.pt-2 {
+padding-top: 15px;
+}.px-0 {
+padding-left: 0px;
+padding-right: 0px;
+}.px-2 {
+padding-left: 10px;
+padding-right: 10px;
+}.px-3 {
+padding-left: 15px;
+padding-right: 15px;
+}.pl-3 {
+padding-left: 15px;
+}@media(min-width: 768px){.pl-sm-3 {
+padding-left: 15px;
+}}.mt-0 {
+padding-top: 0;
+}.mt-1 {
+padding-top: 10px;
+}.mt-2 {
+padding-top: 15px;
+}.mt-3 {
+padding-top: 20px;
+}#dangtai2 {
+position: fixed;
+left: 50%;
+top: 20px;
+z-index: 10000;
+border: 5px solid #f3f3f3;
+/* Light grey */
+border-top: 5px solid #3498db;
+/* Blue */
+border-radius: 50%;
+width: 32px;
+height: 32px;
+margin-left: -16px;
+animation: spin 2s linear infinite;
+}@keyframes spin {
+0% {
+transform: rotate(0deg);
+}100% {
+transform: rotate(360deg);
+}}.visible-xs {
+display: none !important;
+}@media (max-width: 767px){.hide-xs {
+display: none;
+}.visible-xs {
+display: block !important;
+}table.visible-xs {
+display: table !important;
+}tr.visible-xs {
+display: table-row !important;
+}th.visible-xs,
+td.visible-xs {
+display: table-cell !important;
+}}@media (max-width: 576px){.bt-show-download {
+display: none !important;
+}.bt-download-mobile {
+display: block !important;
+}.noidung-km img {
+width: 100% !important;
+height: auto;
+}}/*Lite Youtube embed*/
+lite-youtube {
+background-color: #000;
+position: relative;
+display: block;
+contain: content;
+background-position: center center;
+background-size: cover;
+cursor: pointer;
+max-width: 720px;
+}/* gradient */
+lite-youtube::before {
+content: '';
+display: block;
+position: absolute;
+top: 0;
+background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAADGCAYAAAAT+OqFAAAAdklEQVQoz42QQQ7AIAgEF/T/D+kbq/RWAlnQyyazA4aoAB4FsBSA/bFjuF1EOL7VbrIrBuusmrt4ZZORfb6ehbWdnRHEIiITaEUKa5EJqUakRSaEYBJSCY2dEstQY7AuxahwXFrvZmWl2rh4JZ07z9dLtesfNj5q0FU3A5ObbwAAAABJRU5ErkJggg==);
+background-position: top;
+background-repeat: repeat-x;
+height: 60px;
+padding-bottom: 50px;
+width: 100%;
+transition: all 0.2s cubic-bezier(0, 0, 0.2, 1);
+}/* responsive iframe with a 16:9 aspect ratio
+thanks https://css-tricks.com/responsive-iframes/
+*/
+lite-youtube::after {
+content: "";
+display: block;
+padding-bottom: calc(100% / (16 / 9));
+}lite-youtube>iframe {
+width: 100%;
+height: 100%;
+position: absolute;
+top: 0;
+left: 0;
+border: 0;
+}/* play button */
+lite-youtube>.lty-playbtn {
+width: 68px;
+height: 48px;
+position: absolute;
+cursor: pointer;
+transform: translate3d(-50%, -50%, 0);
+top: 50%;
+left: 50%;
+z-index: 1;
+background-color: transparent;
+/* YT's actual play button svg */
+background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 68 48"><path fill="%23f00" fill-opacity="0.8" d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z"></path><path d="M 45,24 27,14 27,34" fill="%23fff"></path></svg>');
+filter: grayscale(100%);
+transition: filter .1s cubic-bezier(0, 0, 0.2, 1);
+border: none;
+}lite-youtube:hover>.lty-playbtn,
+lite-youtube .lty-playbtn:focus {
+filter: none;
+}/* Post-click styles */
+lite-youtube.lyt-activated {
+cursor: unset;
+}lite-youtube.lyt-activated::before,
+lite-youtube.lyt-activated>.lty-playbtn {
+opacity: 0;
+pointer-events: none;
+}.lyt-visually-hidden {
+clip: rect(0 0 0 0);
+clip-path: inset(50%);
+height: 1px;
+overflow: hidden;
+position: absolute;
+white-space: nowrap;
+width: 1px;
+}.btn-download {
+color: '#45c3d2';
+border: none;
+cursor: pointer;
+padding-right: 5px;
+}#dropdown-header {
+display: none;
+}.bt-show-download:hover #dropdown-header {
+display: block;
+}.dropdown {
+position: relative;
+display: inline-block;
+}.dropdown-content {
+display: none;
+position: absolute;
+background-color: white;
+min-width: 160px;
+right: 0px;
+overflow: auto;
+box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+z-index: 1;
+padding-top: 10px;
+}.show {
+display: block;
+}.QR-img {
+display: block;
+margin: auto;
+padding-bottom: 10px;
+}.bt-show-download {
+display: block;
+margin-right: 5px;
+}.bt-download-mobile {
+display: none;
+}.bottom-image {
+margin-left: 0px !important;
+}.image-download-app {
+display: block;
+width: 300px;
+margin: 10px auto;
+}.bo-khuyenmai {
+display: flex;
+align-items: center;
+}.bo-khuyenmai p {
+margin: 0 5px;
+color: rgba(255, 169, 3, 0.91);
+}.bo-khuyenmai .icon-khuyenmai {
+font-size: 20px;
+border-radius: 50%;
+background-color: rgba(255, 169, 3, 0.91);
+color: white;
+margin-bottom: 2px;
+}.noidung-km {
+font-size: 16px;
+}.noidung-km img {
+display: block;
+width: 622px;
+margin: auto;
+height: auto;
+}.lichkham-ct-khuyenmai .lichkham-modal>div>h3 {
+background-color: white;
+border-bottom: 1px solid black;
+}.lichkham-ct-khuyenmai .lichkham-modal>div>h3>a {
+font-weight: bold;
+font-size: 18px;
+text-transform: none;
+}.lichkham-ct-khuyenmai .lichkham-modal>div>span {
+color: black;
+cursor: pointer;
+}.lichkham-ct-khuyenmai .lichkham-modal {
+background-color: white;
+}.khuyen-mai {
+display: flex;
+align-items: flex-end;
+flex-wrap: wrap;
+}.khuyen-mai p {
+margin: 0 !important;
+}.gia-goc {
+display: flex;
+font-size: 12px;
+}.gia-goc p {
+background-color: rgba(255, 180, 34, 0.42);
+border-radius: 2px;
+padding: 1px;
+color: #E8A92F;
+}.gia-goc span {
+text-decoration: line-through;
+margin-right: 4px;
+}.gia-giam {
+color: #FFB422;
+font-weight: bold;
+font-size: 16px;
+}.bo-gia,
+.bo-gia1 {
+margin-bottom: -2px;
+}.bo-gia1 {
+text-align: start;
+}.gach,
+.gach1 {
+margin: 0 3px 0 3px !important
+}</style></head><body class=""><div id=dangtai2></div><style> .smartbanner {
+z-index: 2;
+position: fixed;
+top: auto;
+bottom: 0;
+}</style><!-- Google Tag Manager (noscript) --><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WBQRVM"
+height=0 width=0 style="display:none;visibility:hidden"></iframe></noscript><!-- End Google Tag Manager (noscript) --><header><div class=vung-bao><div class=hang><div class="cot-nho-7 cot-9"><button class=trinhdon-congtac><span class=duong-ke></span><span class=duong-ke></span><span class=duong-ke></span></button><a href=/><img class=bt-dautrang height=40 width=160 src="/assets/icon/bookingcare-2020.svg" alt=BookingCare /></a><ul class=menu-dautrang><li><a href=/kham-chuyen-khoa class=mo-cuaso dl-cuaso=chuyenkhoa> Chuyên khoa
+<span>Tìm bác sĩ theo chuyên khoa</span></a><li><a href=/co-so-y-te/tat-ca> Cơ sở y tế
+<span>Chọn bệnh viện phòng khám</span></a><li><a href=/danh-sach/bac-si/noi-bat class=mo-cuaso dl-cuaso=bacsi> Bác sĩ
+<span>Chọn bác sĩ giỏi</span></a><li><a href=/dich-vu-y-te/kham-tong-quat> Gói khám
+<span>Khám sức khỏe tổng quát</span></a></ul></div><div class="cot-nho-5 cot-3 chu-phai"><div class=hotro><a href=/lich-hen><img src="/assets/icon/history.svg" alt=History width=24 height=24 /><span>Lịch hẹn</span></a><a href=/hotro><img src="/assets/icon/support_agent.svg" alt=Support width=24 height=24 /><span>Hỗ trợ</span></a></div></div></div></div></header><main><style> .about-cta-2{
+background-color: transparent;
+border: 1px solid #fff04b;
+color: #fff04b;
+font-weight: bold;
+text-align: center;
+padding: 7px 10px;
+text-transform: uppercase;
+margin: 0px;
+margin-top: 10px;
+display: inline-block;
+}.about-cta-2:hover{
+background-color: #fff04b;
+text-decoration: none;
+color: #00234b;
+}.for-doctor{
+background-image: url('/assets/anh/bookingcare_bg.jpg');
+padding: 20px;
+color: #fff;
+}.for-doctor h1{
+font-size: 32px;
+font-weight: bold;
+}.for-doctor p{
+margin: 10px 0;
+font-size: 16px;
+color: #ddd;
+}.blog-list{
+padding: 20px;
+}.blog-item{
+margin-bottom: 35px;
+}.blog-item .blog-thumb img{
+width: 100%;
+height: auto;
+display: inline-block;
+}.blog-title{
+padding: 5px 0;
+}.blog-title h2{
+font-size: 20px;
+font-weight: 700;
+font-weight: bold;
+}.blog-summary{
+color: #666;
+}ul.pager{
+list-style: none;
+text-align: center;
+}ul.pager li{
+display: inline;
+}ul.pager li.hidden{
+display: none;
+}ul.pager li a{
+display: inline-block;
+padding: 5px 14px;
+background-color: #fff;
+border: 1px solid #ddd;
+border-radius: 15px;
+}ul.pager li.next:after{
+clear: both;
+}.clearfix{
+clear: both;
+}@media (min-width: 767px){.for-doctor{
+padding: 55px 0 45px
+}.for-doctor h1{
+font-size: 44px;
+}.blog-list{
+margin-left: -15px;
+margin-right: -15px;
+padding: 25px 0;
+}.blog-item-wrap{
+width: 50%;
+float: left;
+padding-left: 15px;
+padding-right: 15px;
+}.blog-item{
+margin-bottom: 35px;
+background: #fff;
+border: 1px solid #e6e5e5;
+border-radius: 5px;
+height: 420px;
+overflow: hidden;
+}.blog-item .blog-thumb{
+text-align: center;
+background: #f4f3f2;
+display: block;
+}.blog-thumb img{
+max-height: 220px;
+overflow: hidden;
+display: block;
+}.blog-title a h2{
+display: block;
+font-size: 20px;
+line-height: 28px;
+font-weight: 700;
+color: #3e3d3c;
+padding: 0 25px;
+background: #fff;
+}.blog-summary{
+padding: 0 25px;
+height: 60px;
+overflow: hidden;
+}}@media (min-width: 992px){.blog-item-wrap{
+width: 33.33333333%;
+}}.doctor-app{
+background: #eee;
+padding: 15px;
+color: #333;
+}.doctor-app h3{
+font-size: 16px;
+margin: 0;
+padding: 0;
+margin-bottom: 5px;
+}.doctor-app h2{
+font-size: 20px;
+font-weight: bold;
+margin: 0;
+padding: 0;
+margin-bottom: 15px;
+}.app-feature{
+margin: 0;
+padding: 0;
+}.app-feature li{
+list-style: none;
+padding-left: 30px;
+position: relative;
+margin-bottom: 5px;
+}.app-feature li:before{
+content: "";
+position: absolute;
+height: 7px;
+width: 13px;
+top: 6px;
+left: 3px;
+border: 2px solid #45c3d2;
+border-right: none;
+border-top: none;
+-webkit-transform: rotate(-45deg);
+transform: rotate(-45deg);
+}.app-link{
+margin-top: 15px;
+}.app-link a{
+margin-right: 10px;
+}.app-link a:hover{
+text-decoration: none;
+}.app-link img{
+height: 40px;
+}</style><div class=for-doctor><div class=vung-bao><h1> Dành cho bác sĩ
+</h1><p> Xây dựng uy tín và thương hiệu online <br/> Tăng số lượng bệnh nhân và quản lý hiệu quả.
+</p><a href=/hop-tac-voi-bookingcare class=about-cta-2>Liên hệ hợp tác</a></div></div><div class=doctor-app><div class=vung-bao><div class=doctor-app-wrap><h3>Tải ứng dụng</h3><h2>DMS - BookingCare dành cho bác sĩ</h2><ul class=app-feature><li>Nhận thông báo khi bệnh nhân đặt lịch<li>Quản lý bệnh nhân<li>Thay đổi lịch khám</ul><p>... và nhiều tính năng khác</p><div class=app-link><a target=_blank href="https://bookingcare.vn/dms/android"><img alt="Tải ứng dụng DMS trên Android"
+src="/assets/icon/google-play-badge.svg" /></a><a target=_blank href="https://bookingcare.vn/dms/ios"><img alt="Tải ứng dụng DMS trên iOS"
+src="/assets/icon/app-store-badge-black.svg" /></a></div></div></div></div><div class=vung-bao><div class=blog-list><div class=blog-item-wrap><div class=blog-item><a href="/cam-nang/giao-tiep-giua-bac-si-va-benh-nhan-duoi-goc-nhin-truyen-thong-chanh-niem-p97.html" class=blog-thumb><img
+src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEX6+vqsEtnpAAAACklEQVQI12NgAAAAAgAB4iG8MwAAAABJRU5ErkJggg=="
+data-src="https://cdn.bookingcare.vn/fo/w640/2017/09/05/231104giao-tiep-bac-si-benh-nhan-2.jpg" class=luoi alt="Giao tiếp giữa bác sĩ và bệnh nhân dưới góc nhìn truyền thông chánh niệm"></a><div class=blog-title><a href="/cam-nang/giao-tiep-giua-bac-si-va-benh-nhan-duoi-goc-nhin-truyen-thong-chanh-niem-p97.html"><h2>Giao tiếp giữa bác sĩ và bệnh nhân dưới góc nhìn truyền thông chánh niệm</h2></a></div><div class=blog-summary> Bác sĩ lắng nghe một cách sâu sắc và giải thích một cách rõ ràng, dễ hiểu. Bệnh nhân giải thích vấn đề của mình một cách rõ ràng, mạch lạc. Lắng nghe, thấu hiểu những dặn dò của bác sĩ để hợp tác trong khám và điều trị đạt hiệu quả. </div></div></div><div class=blog-item-wrap><div class=blog-item><a href="/cam-nang/10x-content-la-gi-cach-xay-dung-content-seo-y-te-theo-10x-content-p2943.html" class=blog-thumb><img
+src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEX6+vqsEtnpAAAACklEQVQI12NgAAAAAgAB4iG8MwAAAABJRU5ErkJggg=="
+data-src="https://cdn.bookingcare.vn/fo/w640/2022/11/13/132939-10x-content-seo-y-te.png" class=luoi alt="10X Content là gì? Cách xây dựng Content SEO Y tế theo 10X Content"></a><div class=blog-title><a href="/cam-nang/10x-content-la-gi-cach-xay-dung-content-seo-y-te-theo-10x-content-p2943.html"><h2>10X Content là gì? Cách xây dựng Content SEO Y tế theo 10X Content</h2></a></div><div class=blog-summary> Sản xuất nội dung thực sự chất lượng theo 10X Content là cách bệnh viện, phòng khám có thể áp dụng để có được nội dung SEO y tế chất lượng, lên top Google. </div></div></div><div class=blog-item-wrap><div class=blog-item><a href="/cam-nang/cach-su-dung-google-keyword-planner-de-chon-tu-khoa-bai-viet-p2939.html" class=blog-thumb><img
+src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEX6+vqsEtnpAAAACklEQVQI12NgAAAAAgAB4iG8MwAAAABJRU5ErkJggg=="
+data-src="https://cdn.bookingcare.vn/fo/w640/2022/11/10/175657-cach-su-dung-google-keyword-planner.png" class=luoi alt="Cách sử dụng Google Keyword Planner để chọn từ khóa bài viết"></a><div class=blog-title><a href="/cam-nang/cach-su-dung-google-keyword-planner-de-chon-tu-khoa-bai-viet-p2939.html"><h2>Cách sử dụng Google Keyword Planner để chọn từ khóa bài viết</h2></a></div><div class=blog-summary> Với các đơn vị đang muốn sản xuất Content SEO y tế, quan tâm đến việc sử dụng Google Keyword Planner để chọn từ khóa triển khai viết bài có thể tham khảo bài viết dưới đây. </div></div></div><div class=blog-item-wrap><div class=blog-item><a href="/cam-nang/cac-module-quan-trong-trong-thiet-ke-website-phong-kham-p2796.html" class=blog-thumb><img
+src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEX6+vqsEtnpAAAACklEQVQI12NgAAAAAgAB4iG8MwAAAABJRU5ErkJggg=="
+data-src="https://cdn.bookingcare.vn/fo/w640/2022/11/09/172027-module-thiet-ke-website-phong-kham.jpg" class=luoi alt="Các Module quan trọng trong thiết kế Website phòng khám"></a><div class=blog-title><a href="/cam-nang/cac-module-quan-trong-trong-thiet-ke-website-phong-kham-p2796.html"><h2>Các Module quan trọng trong thiết kế Website phòng khám</h2></a></div><div class=blog-summary> Bài viết dưới đây sẽ gợi ý cho bạn một số cách triển khai nội dung hướng đến người dùng trên website của bệnh viện, phòng khám. </div></div></div><div class=blog-item-wrap><div class=blog-item><a href="/cam-nang/marketing-phong-kham--phan-1-chien-luoc-tap-trung-vao-chat-luong-kham-chua-benh-p2927.html" class=blog-thumb><img
+src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEX6+vqsEtnpAAAACklEQVQI12NgAAAAAgAB4iG8MwAAAABJRU5ErkJggg=="
+data-src="https://cdn.bookingcare.vn/fo/w640/2022/11/08/134643-marketing-phong-kham-1.png" class=luoi alt="Marketing phòng khám - Phần 1: Chiến lược tập trung vào chất lượng khám chữa bệnh"></a><div class=blog-title><a href="/cam-nang/marketing-phong-kham--phan-1-chien-luoc-tap-trung-vao-chat-luong-kham-chua-benh-p2927.html"><h2>Marketing phòng khám - Phần 1: Chiến lược tập trung vào chất lượng khám chữa bệnh</h2></a></div><div class=blog-summary> Trong Marketing phòng khám, để tạo được lợi thế cạnh tranh với các cơ sở y tế tư nhân khác, thu hút khách hàng hãy bắt đầu từ nâng cao chất lượng khám chữa bệnh. </div></div></div><div class=blog-item-wrap><div class=blog-item><a href="/cam-nang/7-sang-kien-giup-giam-thoi-gian-cho-trong-benh-vien-phong-kham-p2923.html" class=blog-thumb><img
+src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEX6+vqsEtnpAAAACklEQVQI12NgAAAAAgAB4iG8MwAAAABJRU5ErkJggg=="
+data-src="https://cdn.bookingcare.vn/fo/w640/2022/11/06/172415-sang-kien-giam-thoi-gian-cho-trong-benh-vien.png" class=luoi alt="7 sáng kiến giúp giảm thời gian chờ trong bệnh viện, phòng khám "></a><div class=blog-title><a href="/cam-nang/7-sang-kien-giup-giam-thoi-gian-cho-trong-benh-vien-phong-kham-p2923.html"><h2>7 sáng kiến giúp giảm thời gian chờ trong bệnh viện, phòng khám </h2></a></div><div class=blog-summary> Các đơn vị có thể tham khảo, áp dụng các sáng kiến giảm thời gian chờ trong bệnh viện, phòng khám dưới đây để hạn chế thời gian chờ cho khách hàng, nâng cao trải nghiệm. </div></div></div><div class=blog-item-wrap><div class=blog-item><a href="/cam-nang/dung-thu-bookingcare_dx-ban-mien-phi-co-nhung-tinh-nang-gi-p2921.html" class=blog-thumb><img
+src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEX6+vqsEtnpAAAACklEQVQI12NgAAAAAgAB4iG8MwAAAABJRU5ErkJggg=="
+data-src="https://cdn.bookingcare.vn/fo/w640/2022/11/04/150002-tinh-nang-dung-thu-bookingcare-dx.png" class=luoi alt="Dùng thử BookingCare_DX bản miễn phí, có những tính năng gì?"></a><div class=blog-title><a href="/cam-nang/dung-thu-bookingcare_dx-ban-mien-phi-co-nhung-tinh-nang-gi-p2921.html"><h2>Dùng thử BookingCare_DX bản miễn phí, có những tính năng gì?</h2></a></div><div class=blog-summary> Để giúp bệnh viện, phòng khám dễ dàng trải nghiệm Giải pháp Chuyển đổi số BookingCare_DX, BookingCare sẵn sàng bản dùng thử miễn phí cho các đơn vị. </div></div></div><div class=blog-item-wrap><div class=blog-item><a href="/cam-nang/4-loi-ich-giai-phap-chuyen-doi-so-phong-kham-bookingcare_dx-p2875.html" class=blog-thumb><img
+src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEX6+vqsEtnpAAAACklEQVQI12NgAAAAAgAB4iG8MwAAAABJRU5ErkJggg=="
+data-src="https://cdn.bookingcare.vn/fo/w640/2022/10/13/174911-chuyen-doi-so-bookingcare-dx.png" class=luoi alt="4 Lợi ích Giải pháp Chuyển đổi số Phòng khám BookingCare_DX "></a><div class=blog-title><a href="/cam-nang/4-loi-ich-giai-phap-chuyen-doi-so-phong-kham-bookingcare_dx-p2875.html"><h2>4 Lợi ích Giải pháp Chuyển đổi số Phòng khám BookingCare_DX </h2></a></div><div class=blog-summary> Với Giải pháp Chuyển đổi số Phòng khám BookingCare_DX, đơn vị có thể rút ngắn thời gian chuyển đổi số, đem lại hiệu quả vận hành, kinh doanh.  </div></div></div><div class=blog-item-wrap><div class=blog-item><a href="/cam-nang/lean-startup-la-gi-ung-dung-trong-marketing-phong-kham-p2801.html" class=blog-thumb><img
+src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEX6+vqsEtnpAAAACklEQVQI12NgAAAAAgAB4iG8MwAAAABJRU5ErkJggg=="
+data-src="https://cdn.bookingcare.vn/fo/w640/2022/10/11/120624-lean-startup-marketing-phong-kham.png" class=luoi alt="Lean Startup là gì? Ứng dụng trong Marketing phòng khám"></a><div class=blog-title><a href="/cam-nang/lean-startup-la-gi-ung-dung-trong-marketing-phong-kham-p2801.html"><h2>Lean Startup là gì? Ứng dụng trong Marketing phòng khám</h2></a></div><div class=blog-summary> Cùng BookingCare tìm hiểu về Lean Startup là gì? Tại sao bệnh viện, phòng khám nên ứng dụng mô hình này và làm thế nào để áp dụng Lean Startup trong Marketing phòng khám? </div></div></div><div class=clearfix></div></div><nav><ul class=pager id=yw0><li class="previous hidden"><a href=/danh-cho-bac-si>&lt; Trước</a><li class=next><a href="/danh-cho-bac-si?page=2">Tiếp theo &gt;</a></ul></nav></div></main><nav class="trinhdon trai"><ul class="trinhdon-nhom trinhdon-chinh"><li class=an-ud><a href=/>Trang chủ</a><li class=an-ud><a href=/cam-nang>Cẩm nang</a><li class=an-ud><a href=/hop-tac>Liên hệ hợp tác</a><li class=an-ud><a href=/suc-khoe-doanh-nghiep-sv10>Sức khỏe doanh nghiệp</a><li class=an-ud><a href=/goi-chuyen-doi-so>Gói chuyển đổi số doanh nghiệp</a><li class=an-ud><a href="https://tuyendung.bookingcare.vn">Tuyển dụng</a><li class=an-ud><h4>Về BookingCare</h4><li><a href="/danh-cho-benh-nhan?rel=home">Dành cho bệnh nhân</a><li><a href=/danh-cho-bac-si>Dành cho bác sĩ</a><li><a href=/vai-tro/bac-si-uy-tin-p9>Vai trò của BookingCare</a><li><a href=/page/lien-he-p2>Liên hệ</a><li><a href=/benh-nhan-thuong-hoi>Câu hỏi thường gặp</a><li><a href=/page/dieu-khoan-su-dung-p7>Điều khoản sử dụng</a><li><a href=/thong-tin/quy-trinh-ho-tro-giai-quyet-khieu-nai-p13>Quy trình hỗ trợ giải quyết khiếu nại</a><li><a href=/site/quyche>Quy chế hoạt động</a><li class=hien-ud><a href=/tk/dangnhap>Đăng nhập</a></ul><div class="trinhdon-mxh an-ud"><a target=_blank href="https://www.tiktok.com/@songkhoesuotdoi"><img class=nut-mxh1 width=32 height=32 src="/themes/app1912/assets/img/social/tiktok-square.svg" alt=Tiktok /></a><a href="https://facebook.com/bookingcare"><img class=nut-mxh1 width=32 height=32 src="/themes/app1912/assets/img/social/facebook-square.svg" alt=Facebook /></a><a href="https://www.youtube.com/channel/UC9l2RhMEPCIgDyGCH8ijtPQ"><img class=nut-mxh1 width=32 height=32 src="/themes/app1912/assets/img/social/youtube-square.svg" alt=Youtube /></a></div></nav><div class=nen-mo></div><footer><div class=vung-bao><div class=hang><div class="cot-2_5 cot-thongtin"><div class=changtrang-congty><h2>Công ty Cổ phần Công nghệ BookingCare</h2><p class=block-item><img class=luoi
+src="/themes/app1912/assets/img/distance.svg" /><span>Lô B4/D21, Khu đô thị mới Cầu Giấy, Phường Dịch Vọng Hậu, Quận Cầu Giấy, Thành phố Hà Nội, Việt Nam</span></p><p class=block-item><img class=luoi
+src="/themes/app1912/assets/img/beenhere.svg" /><span>ĐKKD số: <a class=business-number>0106790291</a>. Sở KHĐT Hà Nội cấp ngày 16/03/2015</span></p><p class=block-item><img class=luoi
+src="/themes/app1912/assets/img/add_call.svg" /><span><a class=phone-number href="tel:02473012468">024-7301-2468</a> (7h - 18h)</span></p><p class=block-item><img class=luoi
+src="/themes/app1912/assets/img/mail.svg" /><span><a class=business-number>support@bookingcare.vn</a> (7h -
+18h)</span></p></div><div class="an-ud block"><div class=ds><strong>Văn phòng tại TP Hồ Chí Minh</strong><p class=block-item><img class=luoi
+src="/themes/app1912/assets/img/distance.svg" /><span>Số 01, Hồ Bá Kiện, Phường 15, Quận 10</span></p></div></div><div><a class=an-ud target=_blank href="http://online.gov.vn/Home/WebDetails/68563"><img class="nut-bct luoi"
+src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEX6+vqsEtnpAAAACklEQVQI12NgAAAAAgAB4iG8MwAAAABJRU5ErkJggg=="
+width=94
+height=36
+data-src="/assets/icon/bo-cong-thuong.svg"
+alt="Đã thông báo với bộ công thương"/></a><a target=_blank href="http://online.gov.vn/Home/AppDetails/1101"><img class="nut-bct luoi"
+src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEX6+vqsEtnpAAAACklEQVQI12NgAAAAAgAB4iG8MwAAAABJRU5ErkJggg=="
+width=94
+height=36
+data-src="/assets/icon/bo-cong-thuong.svg"
+alt="Đã thông báo với bộ công thương"/></a></div></div><div class="cot-1_5 cot-link an-ud"><a href=/ class=an-ud><img class="chantrang-logo luoi"
+width=140
+src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEX6+vqsEtnpAAAACklEQVQI12NgAAAAAgAB4iG8MwAAAABJRU5ErkJggg=="
+data-src="/assets/icon/bookingcare-2020.svg"
+alt=BookingCare/></a><div class=block-link><ul class=group-1><li><a href="https://tuyendung.bookingcare.vn">Tuyển dụng</a><li><a href=/page/chinh-sach-bao-mat-p8>Chính sách bảo mật</a><li><a href=/site/quyche>Quy chế hoạt động</a></ul><ul class=group-2><li><a href=/hop-tac-voi-bookingcare>Liên hệ hợp tác</a><li><a href=/page/dieu-khoan-su-dung-p7>Điều khoản sử dụng</a><li><a href=/benh-nhan-thuong-hoi>Câu hỏi thường gặp</a></ul></div></div><div class="cot-2_5 cot-doitac an-ud"><h4>Đối tác bảo trợ nội dung</h4><ul><li><a href="https://hellodoctors.vn" target=_blank class=dt-footer><image src="https://cdn.bookingcare.vn/fo/w128/2023/09/08/093706-hellodoctorlogo.png" width='64px' height='40px'/><div class=dt-detail><h4>Hello Doctor</h4><p>Bảo trợ chuyên mục nội dung "sức khỏe tinh thần"</p></div></a><li><a href="https://bernard.vn" target=_blank class=dt-footer><image src="https://cdn.bookingcare.vn/fo/w128/2022/03/21/082316-logo-bernard.png" width='64px' height='64px'/><div class=dt-detail><h4>Hệ thống y khoa chuyên sâu quốc tế Bernard</h4><p>Bảo trợ chuyên mục nội dung "y khoa chuyên sâu"</p></div></a><li><a href="https://www.doctorcheck.vn" target=_blank class=dt-footer><image src="https://cdn.bookingcare.vn/fo/2023/11/29/110954-doctor-check.png" width='64px' height='64px'/><div class=dt-detail><h4>Trung Tâm Khám Sức Khỏe Tổng Quát Doctor Check</h4><p>Bảo trợ chuyên mục nội dung "sức khỏe tổng quát"</p></div></a></ul></div></div></div><div class="vung-bao an-ud"><hr/><div class=ds><i class="bt-g bt-g-didong"></i>&nbsp;Tải ứng dụng BookingCare
+cho điện thoại hoặc máy tính bảng:
+<a target=_blank href="https://bookingcare.page.link/download-footer">Android</a><a target=_blank href="https://bookingcare.page.link/download-footer">iPhone/iPad</a><a target=_blank href="https://bookingcare.page.link/download-footer">Khác</a></div></div></footer><div class=chantrang-2><div class=vung-bao><div class=hang><div class=cot-4><small>© 2024 BookingCare.</small></div><div class="cot-8 chu-phai-vua"><a target=_blank href="https://www.tiktok.com/@songkhoesuotdoi"><img class=nut-mxh width=32 height=32 src="/themes/app1912/assets/img/social/tiktok-square.svg" alt=Tiktok /></a><a target=_blank href="https://facebook.com/bookingcare"><img class=nut-mxh width=32 height=32 src="/themes/app1912/assets/img/social/facebook-square.svg" alt=Facebook/></a><a target=_blank href="https://www.youtube.com/channel/UC9l2RhMEPCIgDyGCH8ijtPQ"><img class=nut-mxh width=32 height=32 src="/themes/app1912/assets/img/social/youtube-square.svg" alt=Youtube/></a></div></div></div></div><noscript id=deferred-styles></noscript><script> var loadDeferredStyles = function(){var addStylesNode = document.getElementById("deferred-styles");
+var replacement = document.createElement("div");
+replacement.innerHTML = addStylesNode.textContent;
+document.body.appendChild(replacement)
+addStylesNode.parentElement.removeChild(addStylesNode);
+};
+var raf = requestAnimationFrame || mozRequestAnimationFrame ||
+webkitRequestAnimationFrame || msRequestAnimationFrame;
+if (raf)
+raf(function(){window.setTimeout(loadDeferredStyles, 0);
+});
+else
+window.addEventListener('load', loadDeferredStyles);
+</script><script type=text/javascript src="/assets/thuvien/smartbanner.js/smartbanner.min.js"></script><script type=text/javascript src="/assets/thuvien/youtube/lite-yt-embed.js"></script><script type=text/javascript async=async>/*<![CDATA[*/
+!function(e,n,t,c){a=n.createElement(t),m=n.getElementsByTagName(t)[0],a.async=1,a.src='https://thongke.bookingcare.vn/tk.js',m.parentNode.insertBefore(a,m)}(window,document,'script');
+/*]]>*/</script></body></html>
