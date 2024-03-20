@@ -2,14 +2,14 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+
 }
 
 
 .home-header-container {
-    height: 60px;
     border: none;
     width: 100%;
-    height: 100px;
+    height: 80px;
     position: fixed;
     background-color: aliceblue;
 
@@ -19,21 +19,29 @@
         display: flex;
 
         .left-content {
-            width: 33%;
+            width: 25%;
             border: none;
-            padding: 5px;
             cursor: pointer;
-            padding-left: 50px;
+            display: flex;
 
+
+            i {
+                font-size: 30px;
+                padding-top: 10px;
+                padding-left: 10px;
+            }
+
+            i:hover {
+                color: #918a8a;
+            }
 
 
             .Header-logo {
                 background: url(../../assets/images/Booking.com-Logo.wine.svg) center no-repeat;
-                width: 50%;
-                height: 50%;
+                width: 360px;
+                height: 70px;
                 color: black;
                 background-size: cover;
-                margin-left: 100px;
             }
         }
 
@@ -78,18 +86,7 @@
 
 }
 
-.fas {
 
-    font-size: 30px;
-
-    text-align: center;
-
-
-}
-
-.fas:hover {
-    color: rgb(57, 58, 58);
-}
 
 .home-header-banner {
     background-image: url(../../assets/images/ic_banner.6b9cdab4.jpg);
@@ -100,22 +97,55 @@
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     padding: 15px 0;
 
+
     .title-1 {
-        margin-top: 250px;
-        font-size: 70px;
+
+        margin-top: 350px;
+        font-size: 40px;
         text-align: center;
-        color: #918a8a;
-        font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
+        color: #adacac;
+        font-family: cursive;
     }
 
     .title-2 {
         text-align: center;
         color: #918a8a;
-        font-size: 20px;
+        font-size: 50px;
         font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
     }
 
-    .search {}
+    .search {
+        margin-left: 370px;
+        border: 1px solid transparent;
+        line-height: 46px;
+        border-radius: 25px;
+        padding-left: 10px;
+        padding-right: 150px;
+        position: relative;
+        height: 47px;
+        color: #000;
+        background-color: #f7d800;
+        width: 500px;
+
+    }
+
+    i {
+        font-size: 13px;
+
+    }
+
+    input {
+        padding-left: 10px;
+        outline: none;
+        cursor: pointer;
+        background-color: #f7d800;
+        border: none;
+        width: 300px;
+
+    }
+
+
+
 
     .options {}
 }

@@ -9,6 +9,7 @@ class HomeHeader extends Component {
         <div className="home-header-container">
           <div className="home-header-content">
             <div className="left-content">
+
               <i className="fas fa-bars"></i>
               <div className="Header-logo"></div>
             </div>
@@ -54,9 +55,10 @@ class HomeHeader extends Component {
         </div>
         <div className="home-header-banner">
           <div className="title-1">Nền Tản Sức Khỏe</div>
-          <div className="title-2">Chăm Sóc Sức Khỏe</div>
+          <div className="title-2">Chăm Sóc Sức Khỏe Toàn Diện</div>
           <div className="search">
-            <input type="text"></input>
+            <i className="fas fa-search"></i>
+            <input type="text" placeholder="Tìm Chuyên Khoa "></input>
           </div>
           <div className="options"></div>
         </div>
