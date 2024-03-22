@@ -59,7 +59,32 @@ class HomeHeader extends Component {
             <i className="fas fa-search"></i>
             <input type="text" placeholder="Tìm Chuyên Khoa "></input>
           </div>
-          <div className="options"></div>
+          <div className="options">
+            <div className="option-child">
+              <div className="icon-child"><i className="far fa-hospital"></i></div>
+              <div className="text-child">Khám Chuyên Khoa</div>
+            </div>
+            <div className="option-child">
+              <div className="icon-child"><i className="fas fa-mobile-alt"></i></div>
+              <div className="text-child">Khám Từ Xa</div>
+            </div>
+            <div className="option-child">
+              <div className="icon-child"><i className="fas fa-procedures"></i></div>
+              <div className="text-child">Khám Tổng Quát</div>
+            </div>
+            <div className="option-child">
+              <div className="icon-child"><i className="fas fa-microscope"></i></div>
+              <div className="text-child">Xét Nghiệm Y Học</div>
+            </div>
+            <div className="option-child">
+              <div className="icon-child"><i className="fas fa-user-md"></i></div>
+              <div className="text-child">Sức Khỏe Tinh Thần</div>
+            </div>
+            <div className="option-child">
+              <div className="icon-child"><i className="fas fa-tooth"></i></div>
+              <div className="text-child">Khám Nha Khoa</div>
+            </div>
+          </div>
         </div>
       </React.Fragment>
     );

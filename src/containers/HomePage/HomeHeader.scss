@@ -9,7 +9,7 @@
 .home-header-container {
     border: none;
     width: 100%;
-    height: ̀0px;
+
     position: fixed;
     background-color: aliceblue;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -38,6 +38,7 @@
 
 
             .Header-logo {
+
                 background: url(../../assets/images/Booking.com-Logo.wine.svg) center no-repeat;
                 width: 360px;
                 height: 70px;
@@ -117,7 +118,7 @@
     }
 
     .search {
-        margin-left: 370px;
+        margin-left: 450px;
         border: 1px solid transparent;
         line-height: 46px;
         border-radius: 25px;
@@ -128,7 +129,7 @@
         color: #000;
         background-color: #f7d800;
         width: 500px;
-        box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+        box-shadow: rgba(173, 168, 168, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
     }
 
     i {
@@ -149,5 +150,49 @@
 
 
 
-    .options {}
+    .options {
+
+        justify-content: center;
+        display: flex;
+        gap: 30px;
+        align-items: center;
+        display: flex;
+        cursor: pointer;
+
+
+        .option-child {
+            text-align: center;
+            padding: 10px;
+            margin: 10px;
+            font-size: 15px;
+
+        }
+
+
+
+        i {
+            font-size: 40px;
+            color: #00B9F7;
+        }
+
+        i:hover {
+            color: #a0c4d1;
+        }
+
+        .icon-child {
+            font-size: 30px;
+        }
+
+        .text-child {
+            font-size: 15px;
+        }
+
+        .text-child:hover {
+            color: #494848;
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+        }
+
+    }
+
+
 }
