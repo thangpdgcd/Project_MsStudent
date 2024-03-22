@@ -63,10 +63,11 @@
         }
 
         .right-content {
-            width: 30%;
+            width: 12%;
             border: none;
             padding: 10px;
             float: right;
+            height: 100px;
 
         }
 
@@ -185,5 +186,34 @@
             color: #494848;
             box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
         }
+
+
+
+
     }
+}
+
+.language-code {
+    display: flex;
+    margin-top: 5px;
+
+
+    .language-vi {
+        cursor: pointer;
+        padding: 5px;
+        margin-top: 10px;
+    }
+
+    .language-en {
+        margin-top: 10px;
+        padding: 5px;
+        cursor: pointer;
+    }
+
+
+
+}
+
+.child-right-content {
+    margin-top: 10px;
 }

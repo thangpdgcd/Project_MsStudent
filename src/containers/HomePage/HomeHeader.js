@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import "./HomeHeader.scss";
-import LANGUAGES from "../../utils";
+import { LANGUAGES } from "../../utils";
 class HomeHeader extends Component {
   changeLanguage = (language) => {
     alert(language);
@@ -41,6 +41,7 @@ class HomeHeader extends Component {
                 </div>
               </div>
             </div>
+
             <div className="right-content">
               <div className="child-right-content">
                 <a
@@ -51,15 +52,20 @@ class HomeHeader extends Component {
                   <i className="fas fa-question-circle"></i>
                   Hỗ Trợ
                 </a>
+
               </div>
+
+            </div>
+            <div className="language-code">
+
               <div className="language-vi">
                 <span onClick={() => this.changeLanguage(LANGUAGES.VI)}>VN</span>
               </div>
-
               <div className="language-en">
                 <span onClick={() => this.changeLanguage(LANGUAGES.EN)}>EN</span>
               </div>
             </div>
+
           </div>
         </div >
         <div className="home-header-banner">
