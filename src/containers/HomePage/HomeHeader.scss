@@ -9,9 +9,10 @@
 .home-header-container {
     border: none;
     width: 100%;
-    height: 80px;
+    height: ̀0px;
     position: fixed;
     background-color: aliceblue;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 
     .home-header-content {
         width: 100%;
@@ -19,7 +20,7 @@
         display: flex;
 
         .left-content {
-            width: 25%;
+            width: 30%;
             border: none;
             cursor: pointer;
             display: flex;
@@ -52,15 +53,16 @@
             justify-content: space-between;
             align-items: center;
 
-            .child-content b {
 
+            .child-content b {
+                font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
                 font-size: 14px;
             }
 
         }
 
         .right-content {
-            width: 25%;
+            width: 30%;
             border: none;
             padding: 10px;
             float: right;
@@ -94,7 +96,7 @@
     background-repeat: no-repeat;
     height: 1200px;
     background-position: center;
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
     padding: 15px 0;
 
 
@@ -126,7 +128,7 @@
         color: #000;
         background-color: #f7d800;
         width: 500px;
-
+        box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
     }
 
     i {
