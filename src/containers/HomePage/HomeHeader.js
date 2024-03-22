@@ -1,8 +1,11 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import "./HomeHeader.scss";
-import LANGUAGES from "../../utils/constant"
+import LANGUAGES from "../../utils";
 class HomeHeader extends Component {
+  changeLanguage = (language) => {
+    alert(language);
+  }
   render() {
     return (
       <React.Fragment>
@@ -49,9 +52,16 @@ class HomeHeader extends Component {
                   Hỗ Trợ
                 </a>
               </div>
+              <div className="language-vi">
+                <span onClick={() => this.changeLanguage(LANGUAGES.VI)}>VN</span>
+              </div>
+
+              <div className="language-en">
+                <span onClick={() => this.changeLanguage(LANGUAGES.EN)}>EN</span>
+              </div>
             </div>
           </div>
-        </div>
+        </div >
         <div className="home-header-banner">
           <div className="title-1">Nền Tản Sức Khỏe</div>
           <div className="title-2">Chăm Sóc Sức Khỏe Toàn Diện</div>
@@ -86,7 +96,7 @@ class HomeHeader extends Component {
             </div>
           </div>
         </div>
-      </React.Fragment>
+      </React.Fragment >
     );
   }
 }

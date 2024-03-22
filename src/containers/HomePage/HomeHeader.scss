@@ -147,9 +147,6 @@
 
     }
 
-
-
-
     .options {
 
         justify-content: center;
@@ -159,7 +156,6 @@
         display: flex;
         cursor: pointer;
 
-
         .option-child {
             text-align: center;
             padding: 10px;
@@ -167,8 +163,6 @@
             font-size: 15px;
 
         }
-
-
 
         i {
             font-size: 40px;
@@ -191,8 +185,5 @@
             color: #494848;
             box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
         }
-
     }
-
-
 }
