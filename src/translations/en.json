@@ -1,4 +1,26 @@
 {
+    "homeheader":
+    {
+       "speaciality":
+       "Medical speacialty",
+       "searchdoctor":
+       " Find a doctor by speacialty",
+       "health-facility":
+       "Health facilities",
+       "select-room":
+       "Select DiseaseInstitute of Clinics",
+       "doctor":
+       "Doctor",
+       "select-doctor":
+       "Select Doctor Better",
+       "fee":
+       "Examination Package",
+       "check-health":
+       "General health check",
+       "support":
+       "Support"
+    
+    },
     "common": {
         "add": "Add",
         "edit": "Edit",

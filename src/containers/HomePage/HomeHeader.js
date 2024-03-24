@@ -2,10 +2,11 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import "./HomeHeader.scss";
 import { LANGUAGES } from "../../utils";
+import { FormattedMessage } from "react-intl";
 class HomeHeader extends Component {
   changeLanguage = (language) => {
     alert(language);
-  }
+  };
   render() {
     return (
       <React.Fragment>
@@ -13,31 +14,55 @@ class HomeHeader extends Component {
           <div className="home-header-content">
             <div className="left-content">
               <i className="fas fa-bars"></i>
-              <div className="Header-logo" title="Uy Tín Chất Lượng Hàng Đầu"></div>
+              <div
+                className="Header-logo"
+                title="Uy Tín Chất Lượng Hàng Đầu"
+              ></div>
             </div>
             <div className="center-content">
               <div className="child-content">
                 <div>
-                  <b>Chuyên Khoa</b>
-                  <p>Tìm bác sĩ theo chuyên khoa</p>
+                  <b>
+                    {" "}
+                    <FormattedMessage id="homeheader.speaciality" />
+                  </b>
+                  <p>
+                    {" "}
+                    <FormattedMessage id="homeheader.searchdoctor" />
+                  </p>
                 </div>
               </div>
               <div className="child-content">
                 <div>
-                  <b>Cơ Sở Y Tế</b>
-                  <p>Chọn Bệnh Viện Phòng Khám</p>
+                  <b>
+                    {" "}
+                    <FormattedMessage id="homeheader.health-facility" />
+                  </b>
+                  <p>
+                    {" "}
+                    <FormattedMessage id="homeheader.select-room" />
+                  </p>
                 </div>
               </div>
               <div className="child-content">
                 <div>
-                  <b>Bác Sĩ</b>
-                  <p>Chọn Bác Sĩ Giỏi</p>
+                  <b>
+                    <FormattedMessage id="homeheader.doctor" />
+                  </b>
+                  <p>
+                    {" "}
+                    <FormattedMessage id="homeheader.select-doctor" />
+                  </p>
                 </div>
               </div>
               <div className="child-content">
                 <div>
-                  <b>Gói Khám</b>
-                  <p>Khám Sức Khỏe Tổng Quát</p>
+                  <b>
+                    <FormattedMessage id="homeheader.fee" />
+                  </b>
+                  <p>
+                    <FormattedMessage id="homeheader.check-health" />
+                  </p>
                 </div>
               </div>
             </div>
@@ -50,24 +75,24 @@ class HomeHeader extends Component {
                 >
                   {" "}
                   <i className="fas fa-question-circle"></i>
-                  Hỗ Trợ
+                  <FormattedMessage id="homeheader.support" />
                 </a>
-
               </div>
-
             </div>
             <div className="language-code">
-
               <div className="language-vi">
-                <span onClick={() => this.changeLanguage(LANGUAGES.VI)}>VN</span>
+                <span onClick={() => this.changeLanguage(LANGUAGES.VI)}>
+                  VN
+                </span>
               </div>
               <div className="language-en">
-                <span onClick={() => this.changeLanguage(LANGUAGES.EN)}>EN</span>
+                <span onClick={() => this.changeLanguage(LANGUAGES.EN)}>
+                  EN
+                </span>
               </div>
             </div>
-
           </div>
-        </div >
+        </div>
         <div className="home-header-banner">
           <div className="title-1">Nền Tản Sức Khỏe</div>
           <div className="title-2">Chăm Sóc Sức Khỏe Toàn Diện</div>
@@ -77,32 +102,44 @@ class HomeHeader extends Component {
           </div>
           <div className="options">
             <div className="option-child">
-              <div className="icon-child"><i className="far fa-hospital"></i></div>
+              <div className="icon-child">
+                <i className="far fa-hospital"></i>
+              </div>
               <div className="text-child">Khám Chuyên Khoa</div>
             </div>
             <div className="option-child">
-              <div className="icon-child"><i className="fas fa-mobile-alt"></i></div>
+              <div className="icon-child">
+                <i className="fas fa-mobile-alt"></i>
+              </div>
               <div className="text-child">Khám Từ Xa</div>
             </div>
             <div className="option-child">
-              <div className="icon-child"><i className="fas fa-procedures"></i></div>
+              <div className="icon-child">
+                <i className="fas fa-procedures"></i>
+              </div>
               <div className="text-child">Khám Tổng Quát</div>
             </div>
             <div className="option-child">
-              <div className="icon-child"><i className="fas fa-microscope"></i></div>
+              <div className="icon-child">
+                <i className="fas fa-microscope"></i>
+              </div>
               <div className="text-child">Xét Nghiệm Y Học</div>
             </div>
             <div className="option-child">
-              <div className="icon-child"><i className="fas fa-user-md"></i></div>
+              <div className="icon-child">
+                <i className="fas fa-user-md"></i>
+              </div>
               <div className="text-child">Sức Khỏe Tinh Thần</div>
             </div>
             <div className="option-child">
-              <div className="icon-child"><i className="fas fa-tooth"></i></div>
+              <div className="icon-child">
+                <i className="fas fa-tooth"></i>
+              </div>
               <div className="text-child">Khám Nha Khoa</div>
             </div>
           </div>
         </div>
-      </React.Fragment >
+      </React.Fragment>
     );
   }
 }
