@@ -19,7 +19,25 @@
        "General health check",
        "support":
        "Support"
-    
+    },
+    "headercontent":
+    {
+        "Health-Foundation":
+        "Health Foundation",
+        "Health-Care":
+        "Health Care",
+        "Specialized":
+        "Specialized Examination",
+        "examination-remote":
+        "Examination Remote",
+        "GeneralExamination":
+        "Khám Tổng Quát",
+        "Medical-Tests":
+        "Medical Tests",
+        "health-spirit":
+        "Health Spirit",
+        "Dental-Examination":
+        "Dental Examination"
     },
     "common": {
         "add": "Add",

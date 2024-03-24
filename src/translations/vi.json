@@ -19,7 +19,25 @@
        "Khám Sức Khỏe Tổng Quát",
        "support":
        "Hỗ Trợ"
-      
+    },
+    "headercontent":
+    {
+        "Health-Foundation":
+        "Nền Tản Sức Khỏe",
+        "Health-Care":
+        "Chăm Sóc Sức Khỏe Toàn Diện",
+        "Specialized":
+        "Khám Chuyên Khoa",
+        "examination-remote":
+        "Khám Từ Xa",
+        "GeneralExamination":
+        "Khám Tổng Quát",
+        "Medical-Tests":
+        "Xét Nghiệm Y Học",
+        "health-spirit":
+        "Sức Khỏe Tinh Thần",
+        "Dental-Examination":
+        "Khám Nha Khoa"
     },
     "common": {
         "add": "Thêm",

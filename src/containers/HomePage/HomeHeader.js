@@ -94,48 +94,64 @@ class HomeHeader extends Component {
           </div>
         </div>
         <div className="home-header-banner">
-          <div className="title-1">Nền Tản Sức Khỏe</div>
-          <div className="title-2">Chăm Sóc Sức Khỏe Toàn Diện</div>
+          <div className="title-1">
+            <FormattedMessage id="headercontent.Health-Foundation" />
+          </div>
+          <div className="title-2">
+            <FormattedMessage id="headercontent.Health-Care" />
+          </div>
           <div className="search">
             <i className="fas fa-search"></i>
-            <input type="text" placeholder="Tìm Chuyên Khoa "></input>
+            <input type="text" placeholder="Tìm Chuyên Khoa"></input>
           </div>
           <div className="options">
             <div className="option-child">
               <div className="icon-child">
                 <i className="far fa-hospital"></i>
               </div>
-              <div className="text-child">Khám Chuyên Khoa</div>
+              <div className="text-child">
+                <FormattedMessage id="headercontent.Specialized " />
+              </div>
             </div>
             <div className="option-child">
               <div className="icon-child">
                 <i className="fas fa-mobile-alt"></i>
               </div>
-              <div className="text-child">Khám Từ Xa</div>
+              <div className="text-child">
+                <FormattedMessage id="headercontent.examination-remote" />
+              </div>
             </div>
             <div className="option-child">
               <div className="icon-child">
                 <i className="fas fa-procedures"></i>
               </div>
-              <div className="text-child">Khám Tổng Quát</div>
+              <div className="text-child">
+                <FormattedMessage id="headercontent.GeneralExamination" />
+              </div>
             </div>
             <div className="option-child">
               <div className="icon-child">
                 <i className="fas fa-microscope"></i>
               </div>
-              <div className="text-child">Xét Nghiệm Y Học</div>
+              <div className="text-child">
+                <FormattedMessage id="headercontent.Medical-Tests" />
+              </div>
             </div>
             <div className="option-child">
               <div className="icon-child">
                 <i className="fas fa-user-md"></i>
               </div>
-              <div className="text-child">Sức Khỏe Tinh Thần</div>
+              <div className="text-child">
+                <FormattedMessage id="headercontent.health-spirit" />
+              </div>
             </div>
             <div className="option-child">
               <div className="icon-child">
                 <i className="fas fa-tooth"></i>
               </div>
-              <div className="text-child">Khám Nha Khoa</div>
+              <div className="text-child">
+                <FormattedMessage id="headercontent.Dental-Examination" />
+              </div>
             </div>
           </div>
         </div>
