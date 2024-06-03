@@ -1,0 +1,154 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@media only screen and (max-width: 400px) {
+    body {
+        background-color: lightblue;
+
+    }
+}
+
+.medicalFaciliti-facility {
+    height: 320px;
+    background: #f5f5f5;
+
+
+    .medicalFaciliti-container {
+        margin: 0 50px;
+        display: flex;
+        flex-direction: column;
+
+
+        .medicalFaciliti-header {
+            height: 60px;
+            border: none;
+            margin-bottom: 20px;
+            display: flex;
+            padding-top: 20px;
+
+            button {
+                height: 20px;
+                border: none;
+                box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+            }
+
+            button:hover {
+                color: rgb(114, 111, 111);
+            }
+
+            .title-section {
+                font-size: 20px;
+                font-weight: 600;
+                margin-top: 2px;
+
+
+            }
+
+            .btn-section {
+                border-radius: 6px;
+                font-size: 17px;
+                width: 100px;
+                font-family: 'Cambria', 'Cochin', Georgia, Times, 'Times New Roman', serif;
+                margin-left: 845px;
+                height: 40px;
+
+            }
+
+            .btn-section:hover {
+                background-color: #b1adad;
+                color: #000;
+            }
+        }
+
+        .medicalFaciliti-body {
+            border-radius: 5px;
+            border: none;
+
+            .medicalFaciliti-customize {
+                width: 100%;
+
+
+                .bg-image {
+                    width: 278px;
+                    height: 150px;
+                    background: url(../../../assets/facility/083122lo-go-viet-duc.jpg);
+                    background-position: center center;
+                    background-repeat: no-repeat;
+                    background-color: #eee;
+                    background-size: cover;
+                    cursor: pointer;
+                }
+
+
+                .bg-image-2 {
+                    width: 278px;
+                    height: 150px;
+                    background: url(../../../assets/facility/092249-doctor-check.jpg);
+                    background-position: center center;
+                    background-repeat: no-repeat;
+                    background-color: #eee;
+                    background-size: cover;
+                    cursor: pointer;
+                }
+
+                .bg-image-3 {
+                    width: 278px;
+                    height: 150px;
+                    background: url(../../../assets/facility/104922-logo-med-tai-ha-noi--01.jpg);
+                    background-position: center center;
+                    background-repeat: no-repeat;
+                    background-color: #eee;
+                    background-size: cover;
+                    cursor: pointer;
+                }
+
+                .bg-image-4 {
+                    width: 278px;
+                    height: 150px;
+                    background: url(../../../assets/facility/152704logo-bvcr-moi.jpg);
+                    background-position: center center;
+                    background-repeat: no-repeat;
+                    background-color: #eee;
+                    background-size: cover;
+                    cursor: pointer;
+                }
+
+                .bg-image-5 {
+                    width: 278px;
+                    height: 150px;
+                    background: url(../../../assets/facility/153236-logo-hung-viet.jpg);
+                    background-position: center center;
+                    background-repeat: no-repeat;
+                    background-color: #eee;
+                    background-size: cover;
+                    cursor: pointer;
+                }
+
+                .bg-image-6 {
+                    width: 278px;
+                    height: 150px;
+                    background: url(../../../assets/facility/160340-logo-diag.jpg);
+                    background-position: center center;
+                    background-repeat: no-repeat;
+                    background-color: #eee;
+                    background-size: cover;
+                    cursor: pointer;
+                }
+
+            }
+        }
+
+    }
+
+    h3 {
+        border: 1px solid green;
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+
+
+}

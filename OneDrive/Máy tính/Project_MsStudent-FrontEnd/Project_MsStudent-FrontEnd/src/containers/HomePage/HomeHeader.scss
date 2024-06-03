@@ -1,0 +1,266 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+
+@media only screen and (max-width:864px) {
+    .search {
+        margin-right: -10px;
+        border: 1px solid transparent;
+        line-height: 46px;
+        border-radius: 25px;
+        padding-right: 150px;
+        position: relative;
+        height: 47px;
+        color: #000;
+        background-color: #f7d800;
+        width: 480px;
+    }
+}
+
+@media only screen and (max-width:1836px) {
+    .search {
+        // margin-left: 100px;
+        border: 1px solid transparent;
+        line-height: 46px;
+        border-radius: 25px;
+        padding-left: 10px;
+        padding-right: 150px;
+        position: relative;
+        height: 47px;
+        color: #000;
+        background-color: #f7d800;
+        width: 480px;
+    }
+}
+
+
+
+
+.home-header-container {
+    border: none;
+    width: 100%;
+    position: fixed !important;
+    z-index: 1;
+
+    background-color: aliceblue;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+    .home-header-content {
+        width: 100%;
+        height: 100%;
+        display: flex;
+
+        .left-content {
+            width: 30%;
+            border: none;
+            cursor: pointer;
+            display: flex;
+
+
+            i {
+                font-size: 30px;
+                padding-top: 10px;
+                padding-left: 10px;
+            }
+
+            i:hover {
+                color: #918a8a;
+            }
+
+
+            .Header-logo {
+
+                background: url(../../assets/images/Booking.com-Logo.wine.svg) center no-repeat;
+                width: 360px;
+                height: 70px;
+                color: black;
+                background-size: cover;
+            }
+        }
+
+        .center-content {
+            width: 50%;
+            border: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+
+            .child-content b {
+                font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                font-size: 14px;
+            }
+
+        }
+
+        .right-content {
+            width: 12%;
+            border: none;
+            padding: 10px;
+            float: right;
+            height: 100px;
+
+        }
+
+        // 
+        //     align-items: center;
+
+        // }
+
+    }
+}
+
+.search {
+    margin-left: 400px;
+    border: 1px solid transparent;
+    line-height: 46px;
+    border-radius: 25px;
+    padding-left: 10px;
+    padding-right: 150px;
+    position: relative;
+    height: 47px;
+    color: #000;
+    background-color: #f7d800;
+    width: 480px;
+}
+
+.content-right {
+    color: black;
+    text-decoration: none;
+    text-align: center;
+    margin-left: 20%;
+}
+
+
+
+.home-header-banner {
+    background-image: url(../../assets/images/ic_banner.6b9cdab4.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    box-shadow: rgba(203, 201, 201, 0.909) 0px 2px 8px 0px;
+    padding: 15px 0;
+
+
+
+    .title-1 {
+
+        margin-top: 350px;
+        font-size: 40px;
+        text-align: center;
+        color: #adacac;
+        font-family: cursive;
+    }
+
+    .title-2 {
+        text-align: center;
+        color: #918a8a;
+        font-size: 50px;
+        font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
+    }
+
+    i {
+        font-size: 13px;
+
+    }
+
+    input {
+        padding-left: 10px;
+        outline: none;
+        cursor: pointer;
+        background-color: #f7d800;
+        border: none;
+        width: 300px;
+
+    }
+
+    .options {
+
+        justify-content: center;
+        display: flex;
+        gap: 30px;
+        align-items: center;
+        display: flex;
+        cursor: pointer;
+
+        .option-child {
+            text-align: center;
+            padding: 10px;
+            margin: 10px;
+            font-size: 15px;
+
+        }
+
+        i {
+            font-size: 40px;
+            color: #00B9F7;
+        }
+
+        i:hover {
+            color: #a0c4d1;
+        }
+
+        .icon-child {
+            font-size: 30px;
+        }
+
+        .text-child {
+            font-size: 15px;
+        }
+
+        .text-child:hover {
+            color: #494848;
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+        }
+
+
+
+
+    }
+}
+
+.language-code {
+    display: flex;
+    margin-top: 20px;
+    border: none;
+    border-radius: 10px;
+    width: 60px;
+    height: 50px;
+
+    .language-vi {
+        cursor: pointer;
+        padding: 5px;
+        margin-top: 10px;
+    }
+
+    .language-vi:hover {
+        background-color: #00B9F7;
+        border-radius: 5px;
+        width: 30px;
+        height: 25px;
+        margin-top: 12px;
+    }
+
+
+    .language-en {
+        margin-top: 10px;
+        padding: 5px;
+        cursor: pointer;
+    }
+
+    .language-en:hover {
+        background-color: orange;
+        border-radius: 5px;
+        width: 30px;
+        height: 25px;
+        margin-top: 12px;
+    }
+}
+
+.child-right-content {
+    margin-top: 10px;
+}

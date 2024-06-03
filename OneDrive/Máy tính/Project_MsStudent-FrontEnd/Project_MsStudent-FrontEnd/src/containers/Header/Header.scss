@@ -1,0 +1,149 @@
+@import "../../styles/common.scss";
+
+.header-container {
+    z-index: 99;
+    display: flex;
+    justify-content: space-between;
+    background-color: $colormain;
+    color: $common-text-color;
+    height: 40px;
+    position: relative;
+
+    .btn-logout {
+        color: $common-text-color;
+        line-height: 40px;
+        height: 18px;
+        display: flex;
+        padding: 0 10px;
+
+        i {
+            font-size: $base-size + 1px;
+        }
+    }
+
+    .languages {
+        display: flex;
+        border: none;
+        border-radius: 10px;
+        width: 60px;
+        height: 50px;
+
+        .language-vi {
+            cursor: pointer;
+            padding: 5px;
+            margin-top: 10px;
+        }
+
+        .language-vi:hover {
+            background-color: #00B9F7;
+            border-radius: 5px;
+            width: 30px;
+            height: 25px;
+            margin-top: 12px;
+        }
+
+        .language-en {
+            margin-top: 10px;
+            padding: 5px;
+            cursor: pointer;
+        }
+
+        .language-en:hover {
+            background-color: orange;
+            border-radius: 5px;
+            width: 30px;
+            height: 25px;
+            margin-top: 12px;
+        }
+
+
+    }
+
+    .welcome {
+        margin-top: 15px;
+
+        span {
+            margin-left: 200px;
+            padding-left: 280px;
+
+        }
+
+        span:hover {
+            cursor: pointer;
+            color: #34a78e;
+        }
+    }
+
+    .welcome:hover {
+        color: #34a78e;
+    }
+
+    .btn-logout:hover {
+        background-color: $common-text-color;
+        height: 18px;
+    }
+}
+
+// @media only screen and (max-width:2252px) and (min-width:1305px) {
+
+//     .languages {
+//         display: flex;
+//         border: none;
+//         border-radius: 10px;
+//         width: 60px;
+//         height: 50px;
+
+//         .language-vi {
+//             cursor: pointer;
+//             padding: 5px;
+//             margin-top: 10px;
+//         }
+
+//         .language-vi:hover {
+//             background-color: #00B9F7;
+//             border-radius: 5px;
+//             width: 30px;
+//             height: 25px;
+//             margin-top: 12px;
+//         }
+
+//         .language-en {
+//             margin-top: 10px;
+//             padding: 5px;
+//             cursor: pointer;
+//         }
+
+//         .language-en:hover {
+//             background-color: orange;
+//             border-radius: 5px;
+//             width: 30px;
+//             height: 25px;
+//             margin-top: 12px;
+//         }
+
+
+//     }
+
+//     .welcome {
+//         margin-top: 15px;
+
+//         span {
+//             margin-left: 50px;
+
+//         }
+
+//         span:hover {
+//             cursor: pointer;
+//             color: #34a78e;
+//         }
+//     }
+
+//     .welcome:hover {
+//         color: #34a78e;
+//     }
+
+//     .btn-logout:hover {
+//         background-color: $common-text-color;
+//         height: 18px;
+//     }
+// }

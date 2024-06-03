@@ -1,0 +1,166 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@media only screen and (max-width: 400px) {
+    body {
+        background-color: lightblue;
+
+    }
+}
+
+.section-HandBook {
+    height: 320px;
+    background: #f5f5f5;
+
+    span {
+        font-size: 24px;
+    }
+
+    .HandBook-container {
+        margin: 0 50px;
+        display: flex;
+        flex-direction: column;
+
+
+
+        .HandBook-header {
+            height: 60px;
+            border: none;
+            margin-bottom: 20px;
+            display: flex;
+            padding-top: 20px;
+
+            button {
+                height: 20px;
+                border: none;
+                box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+            }
+
+            button:hover {
+                color: rgb(114, 111, 111);
+            }
+
+            .title-section {
+                font-size: 20px;
+                font-weight: 600;
+                margin-top: 2px;
+
+
+            }
+
+            .btn-section {
+                border-radius: 6px;
+                font-size: 17px;
+                width: 100px;
+                font-family: 'Cambria', 'Cochin', Georgia, Times, 'Times New Roman', serif;
+                margin-left: 900px;
+                height: 40px;
+
+            }
+
+            .btn-section:hover {
+                background-color: #b1adad;
+                color: #000;
+            }
+        }
+
+        .HandBook-body {
+            border-radius: 5px;
+            padding: 2px;
+
+            .HandBook-customize {
+                width: 100%;
+                border: none;
+
+                border-radius: 10px;
+
+                .bg-image {
+                    width: 270px;
+                    height: 150px;
+                    background: url(../../../assets/handbook/khamrang.jpg);
+                    background-position: center center;
+                    background-repeat: no-repeat;
+                    background-color: #eee;
+                    background-size: cover;
+                    cursor: pointer;
+                    border-radius: 10px;
+                }
+
+
+                .bg-image-2 {
+                    width: 270px;
+                    height: 150px;
+                    background: url(../../../assets/handbook/225934-nho-rang-khon-ha-noi.png);
+                    background-position: center center;
+                    background-repeat: no-repeat;
+                    background-color: #eee;
+                    background-size: cover;
+                    cursor: pointer;
+                    border-radius: 10px;
+                }
+
+                .bg-image-3 {
+                    width: 270px;
+                    height: 150px;
+                    background: url(../../../assets/handbook/155640-dia-chi-nha-khoa-kham-rang-uy-tin-tai-vung-tau.jpg);
+                    background-position: center center;
+                    background-repeat: no-repeat;
+                    background-color: #eee;
+                    background-size: cover;
+                    cursor: pointer;
+                    border-radius: 10px;
+                }
+
+                .bg-image-4 {
+                    width: 270px;
+                    height: 150px;
+                    background: url(../../../assets/handbook/100305-review-nha-khoa-uy-tin-dong-nai.png);
+                    background-position: center center;
+                    background-repeat: no-repeat;
+                    background-color: #eee;
+                    background-size: cover;
+                    cursor: pointer;
+                    border-radius: 10px;
+                }
+
+                .bg-image-5 {
+                    width: 270px;
+                    height: 150px;
+                    background: url(../../../assets/handbook/173343-nha-khoa-thuan-an-binh-duong-uy-tin.png);
+                    background-position: center center;
+                    background-repeat: no-repeat;
+                    background-color: #eee;
+                    background-size: cover;
+                    cursor: pointer;
+                    border-radius: 10px;
+                }
+
+                .bg-image-6 {
+                    width: 270px;
+                    height: 150px;
+                    background: url(../../../assets/handbook/150445img9068.jpg);
+                    background-position: center center;
+                    background-repeat: no-repeat;
+                    background-color: #eee;
+                    background-size: cover;
+                    cursor: pointer;
+                    border-radius: 10px;
+                }
+
+            }
+        }
+
+    }
+
+    h3 {
+        border: 1px solid green;
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+
+
+}

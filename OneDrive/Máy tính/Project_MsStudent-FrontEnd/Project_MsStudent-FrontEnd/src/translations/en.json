@@ -1,0 +1,113 @@
+{
+    "homeheader": {
+        "speaciality": "Medical speacialty",
+        "searchdoctor": " Find a doctor by speacialty",
+        "health-facility": "Health facilities",
+        "select-room": "Select DiseaseInstitute of Clinics",
+        "doctor": "Doctor",
+        "select-doctor": "Select Doctor Better",
+        "fee": "Examination Package",
+        "check-health": "General health check",
+        "support": "Support",
+        "welcome":"Welcome Admin!"
+    },
+    "headercontent": {
+        "Health-Foundation": "Health Foundation",
+        "Health-Care": "Health Care",
+        "Specialized": "Specialized Examination",
+        "examination-remote": "Examination Remote",
+        "GeneralExamination": "Khám Tổng Quát",
+        "Medical-Tests": "Medical Tests",
+        "health-spirit": "Health Spirit",
+        "Dental-Examination": "Dental Examination"
+    },
+    "specialty": {
+        "SeeMore": "See More",
+        "popularspecialties": "Popular Specialties",
+        "musculoskeletal": "Musculoskeletal",
+        "Nerve": "Nerve",
+        "Digest": "Digest",
+        "Heart": "Heart",
+        "Traditionalmedicine": "Traditional Medicine",
+        "Pediatrics": "Pediatrics"
+    },
+    "facility": {
+        "SeeMore": "See More",
+        "OutstandingMedicalFacility": "Outstanding Medical Facility",
+        "VietDuc": "Viet Duc Friendship Hospital",
+        "DoctorCheck": "Doctor Check",
+        "MEDLATEC": "MEDLATEC Medical System",
+        "ChoRay": "Cho Ray Hospital",
+        "HungViet": "Hung Viet Oncology Hospital",
+        "Diag": "Diag Laboratories Testing Center"
+    },
+    "outstanding": {
+        "SeeMoreoutstanding": "See More",
+        "Outstandingdoctorlastweek": "Doctor Outstanding ",
+        "doctorlathibuoi": "Doctor Specialist La Thi Buoi",
+        "musculoskeletal": "Mental health",
+        "doctorngoductruong": "Doctor Specialist Ngo Duc Truong",
+        "NeurologySpineNeurosurgery": "Nerve, Spine, Neurosurgery",
+        "doctortranthimaithy": "Master, Doctor Tran Thi Mai Thi",
+        "nerve": "Nerve",
+        "doctornguyenthikimloan": "Doctor Nguyen Thi Kim Loan",
+        "musculoskeletals": "Nerve",
+        "doctorlequocviet": "Doctor Le Quoc Vỉet",
+        "Medicals": "Musculoskeletal, Internal Medicine",
+        "doctorvongocthu": "Doctor Specialist Vo Thi Ngoc Thu",
+        "neurologyinternalmedicine": "Nerve, Medical"
+    },
+    "HandBook": {
+        "HandBooks": "HandBooks",
+        "SeeMoreHandBooks": "See More",
+        "porcelainteethpricelist": "Price list for porcelain crowns at 7 reputable dentists in Vung Tau?",
+        "dentalreview": "Review Nha khoa Dong Nai:Top 8 reputable and quality addresses",
+        "dentaltop": "Top 5 Dentistry in Thuan An (Binh Duong) with good oral treatment",
+        "dentalbraces": "How much do self-ligating braces cost at 7 reputable dentists in Hanoi?",
+        "7VungTaudentalclinics": "Where to have wisdom teeth extracted? Review of 6 reputable dentists in Dong Nai",
+        "Hepatitisexamination": "Things to know when going for hepatitis B examination at the National Hospital of Tropical Diseases"
+    },
+    "About":
+    {
+        "booking":"Media Talk About BookingCare"
+    },
+ 
+    "login": {
+        "login": "Login",
+        "username": "Username",
+        "password": "Password",
+        "userpass-wrong": "Invalid username or password!"
+    },
+    "menu": {
+        "admin":{
+            "manager-user": "Manager User",
+            "manager-doctor":"Manager Doctor",
+            "manager-admin":"Manager Admin",
+            "crud" :"CRUD User",
+            "crud-redux":"CRUD Redux",
+            "clinic":"Clinic",
+            "manager-clinic":"Manager-clinic",
+            "specialty":"Specialty",
+            "manager-specialty":"Manager-Specialty",
+            "handbook":"HandBook",
+            "manager-handbook":"Manager-hadbook" 
+        }
+    },
+     "manager-user":
+     {
+        "add" :"Add new user",
+        "email":"Email",
+        "password":"Password",
+        "firstname":"Firstname",
+        "lastname":"Lastname",
+        "Phone-number":"Phone-Number",
+        "address":"Address",
+        "gender":"Gender",
+        "position":"Position",
+        "role":"Role",
+        "image":"Image",
+        "save":"Save User"
+     } 
+      
+ 
+}
