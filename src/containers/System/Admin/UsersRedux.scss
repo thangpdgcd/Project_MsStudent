@@ -1,0 +1,32 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {}
+
+.preview-img-container {
+    .label-upload {
+        padding: 5px;
+        border-radius: 3px;
+        background: #ddd;
+        cursor: pointer;
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    }
+
+    .label-upload:hover {
+        box-shadow: rgba(78, 78, 78, 0.2) 0px 2px 8px 0px;
+    }
+
+}
+
+.preview-image {
+    height: 50px;
+    width: 100%;
+    border: 1px solid red;
+    background: center center no-repeat;
+    background-size: contain;
+
+
+}

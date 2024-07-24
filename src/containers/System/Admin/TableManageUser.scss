@@ -1,0 +1,16 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#TableManageUser {}
+
+tr th {
+    background-color: rgb(38, 146, 38);
+}
+
+td:hover {
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    color: grey;
+}

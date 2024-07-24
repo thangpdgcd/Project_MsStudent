@@ -1,0 +1,110 @@
+{
+    "homeheader": {
+        "speaciality": "Chuyên Khoa",
+        "searchdoctor": "Tìm bác sĩ theo chuyên khoa",
+        "health-facility": "Cơ Sở Y Tế",
+        "select-room": "Chọn Bệnh Viện Phòng Khám",
+        "doctor": "Bác Sĩ",
+        "select-doctor": "Chọn Bác Sĩ Giỏi",
+        "fee": "Gói Khám ",
+        "check-health": "Khám Sức Khỏe Tổng Quát",
+        "support": "Hỗ Trợ",
+        "welcome": "xin chao"
+    },
+    "headercontent": {
+        "Health-Foundation": "Nền Tản Sức Khỏe",
+        "Health-Care": "Chăm Sóc Sức Khỏe Toàn Diện",
+        "Specialized": "Khám Chuyên Khoa",
+        "examination-remote": "Khám Từ Xa",
+        "GeneralExamination": "Khám Tổng Quát",
+        "Medical-Tests": "Xét Nghiệm Y Học",
+        "health-spirit": "Sức Khỏe Tinh Thần",
+        "Dental-Examination": "Khám Nha Khoa"
+    },
+    "specialty": {
+        "SeeMore": "Xem Thêm ",
+        "popularspecialties": "Chuyên Khoa Nổi Bật",
+        "musculoskeletal": "Cơ Xương Khớp",
+        "Nerve": "Thần Kinh",
+        "Digest": "Tiêu Hóa",
+        "Heart": "Tim Mạch",
+        "Traditionalmedicine": "Y Học Cổ truyền",
+        "Pediatrics": "Nhi Khoa"
+    },
+    "facility": {
+        "SeeMore": "Xem Thêm",
+        "OutstandingMedicalFacility": "Cơ Sở Y Tế Nổi Bật",
+        "VietDuc": "Bệnh Viện Hữu Nghị Việt Đức",
+        "DoctorCheck": "Doctor Check",
+        "MEDLATEC": "Hệ Thống Y Tế MEDLATEC",
+        "ChoRay": "Bệnh Viện Chợ Rẫy",
+        "HungViet": "Bệnh Viện Ung bướu Hưng Việt",
+        "Diag": "Trung Tâm Xét nghiệm Diag Laboratories"
+    },
+    "HandBook": {
+        "HandBooks": "Cẩm Nang",
+        "SeeMoreHandBooks": "Xem Thêm",
+        "porcelainteethpricelist": "Bảng giá bọc răng sứ tại 7 nha khoa uy tín ở Vũng Tàu?",
+        "dentalreview": "Review Nha khoa Đồng Nai: Top 8 địa chỉ uy tín, chất lượng",
+        "dentaltop": "Top 5 Nha khoa tại Thuận An (Bình Dương) điều trị răng miệng tốt",
+        "dentalbraces": "Niềng răng mắc cài tự buộc giá bao nhiêu tại 7 nha khoa uy tín Hà Nội",
+        "7VungTaudentalclinics": "Nhổ răng khôn ở đâu? Review 6 nha khoa uy tín tại Đồng Nai",
+        "Hepatitisexamination": "Những điều cần biết khi đi khám viêm gan B tại Bệnh viện Bệnh Nhiệt đới TW"
+    },
+    "About": {
+        "booking": "Truyền Thông Nói Về BookingCare"
+    },
+    "outstanding": {
+        "Outstandingdoctorlastweek": "Bác Sĩ Nổi Bật",
+        "SeeMoreoutstanding": "Xem Thêm",
+        "doctorlathibuoi": "Bác sĩ Chuyên khoa  Lã Thị Bưởi",
+        "musculoskeletal": "Sức Khỏe Tâm Thần",
+        "doctorngoductruong": "Bác sĩ Chuyên khoa Ngô Đức Trường",
+        "NeurologySpineNeurosurgery": "Thần kinh,Cột sống,Ngoại thần kinh",
+        "doctortranthimaithy": "Thạc sĩ, Bác sĩ Trần Thị Mai Thy",
+        "nerve": "Thần Kinh",
+        "doctornguyenthikimloan": "Bác sĩ Nguyễn Thị Kim Loan",
+        "musculoskeletals": "Cơ Xương Khớp",
+        "doctorlequocviet": "Tiến sĩ, Bác sĩ Lê Quốc Việt",
+        "Medicals": "Cơ Xương Khớp, Nội Khoa",
+        "doctorvongocthu": "Bác sĩ Chuyên khoa Võ Thị Ngọc Thu",
+        "neurologyinternalmedicine": "Thần Kinh, Nội Khoa"
+    },
+    "login": {
+        "login": "Đăng nhập",
+        "username": "Tên đăng nhập",
+        "password": "Mật khẩu",
+        "userpass-wrong": "Sai tên đăng nhập hoặc mật khẩu!"
+    },
+    "menu": {
+        "admin": {
+            "manager-user": "Người dùng",
+            "manager-doctor": "Quản lý bác sĩ",
+            "manager-admin": "Quản lý Admin",
+            "crud": "CRUD User",
+            "crud-redux": "CRUD Redux",
+            "clinic": "Phòng Khám",
+            "manager-clinic": "Quản lý phòng khám",
+            "specialty": "Chuyên khoa",
+            "manager-specialty": "Quản lý chuyên khoa",
+            "handbook": "Cẩm nang",
+            "manager-handbook": "Quản lý cẩm nang"
+        }
+    },
+    "manager-user": {
+        "add": "Thêm mới người dùng",
+        "email": "Email",
+        "password": "Mật Khẩu",
+        "firstname": "Họ",
+        "lastname": "Tên",
+        "Phone-number": "Số Điện Thoại",
+        "address": "Địa Chỉ",
+        "gender": "Giới Tính",
+        "position": "Chức Năng",
+        "role": "Vai Trò",
+        "image": "Hình Ảnh",
+        "save": "Lưu User",
+        "IMAGE":" tải ảnh",
+        "edit" :"Lưu Thay Đổi"
+    }
+}
