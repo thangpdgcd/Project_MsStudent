@@ -1,0 +1,32 @@
+import { Model, where } from "sequelize";
+import db from "../models/index";
+
+let getTopDoctorHome = (limitInput) => {
+    return new Promise(async (resolve, reject) => {
+        try {
+            let users = await db.User.findAll({
+                limit: limitInput,
+                where: { roleId: "R2" },
+                order: [["createdAt", "DESC",]],
+                attribute: {
+                    exclude: ['password', 'image']
+                },
+                include: [
+                    { model: db.Allcode, as: 'positionData', attribute: ['valueEn', 'valueVi'] },
+                    { model: db.Allcode, as: 'genderData', attribute: ['valueEn', 'valueVi'] },
+                ],
+                raw: true,
+                nest: true
+            })
+            resolve({
+                errorCode: 0,
+                data: users
+            })
+        } catch (error) {
+            reject(error)
+        }
+    })
+}
+module.exports = {
+    getTopDoctorHome: getTopDoctorHome
+}
