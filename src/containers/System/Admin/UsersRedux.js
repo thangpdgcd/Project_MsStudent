@@ -6,6 +6,7 @@ import * as actions from "../../../store/actions";
 import "./UsersRedux.scss";
 import LightBox from "react-image-lightbox";
 import TableManageUser from "./TableManageUser";
+import CommonUtils from "../../../utils/CommonUtils";
 class UsersRedux extends Component {
   constructor(props) {
     super(props);
@@ -80,19 +81,22 @@ class UsersRedux extends Component {
         positionId:
           arrPosition && arrPosition.length > 0 ? arrPosition[0].keyMap : "",
         avatar: "",
+        previewImgURL: "",
         action: CRUD_ACTIONS.CREATE,
       });
     }
   };
 
-  handleOnchangeImage = (e) => {
+  handleOnchangeImage = async (e) => {
     let data = e.target.files;
     let file = data[0];
     if (file) {
+      let base64 = await CommonUtils.getBase64(file)
+      console.log("get base 64", base64)
       let objectUrl = URL.createObjectURL(file);
       this.setState({
         previewImgURL: objectUrl,
-        avatar: file,
+        avatar: base64,
       });
     }
   };
@@ -188,6 +192,10 @@ class UsersRedux extends Component {
   };
 
   handleEditUserFromParent = (user) => {
+    let imageBase64 = '';
+    if (user.image) {
+      imageBase64 = new Buffer(user.image, 'base64').toString('binary')
+    }
     console.log("Check handleEditUserFromParet", user);
     this.setState({
       email: user.email,
@@ -199,7 +207,8 @@ class UsersRedux extends Component {
       gender: user.gender,
       roleId: user.roleId,
       positionId: user.positionId,
-      //gán từ constant qua
+      avatar: '',
+      previewImgURL: imageBase64,
       action: CRUD_ACTIONS.EDIT,
       userEditId: user.id,
     });
@@ -334,7 +343,7 @@ class UsersRedux extends Component {
                     this.onChangeInput(e, "gender");
                   }}
                 >
-                  {genders &&
+                  {/* {genders &&
                     genders.length > 0 &&
                     genders.map((item, index) => {
                       return (
@@ -344,6 +353,19 @@ class UsersRedux extends Component {
                             : item.valueEn}
                         </option>
                       );
+                    })} */}
+                  {genders &&
+                    genders.length > 0 &&
+                    genders.map((item, index) => {
+                      return (
+                        <option key={index} value={item.key}>
+                          {
+                            language === LANGUAGES.VI
+                              ? item.valueVi
+                              : item.valueEn
+                          }
+                        </option>
+                      )
                     })}
                 </select>
               </div>

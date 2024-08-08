@@ -1,5 +1,5 @@
 import actionTypes from "./actionTypes";
-import { getAllCodeService } from "../../services/userService";
+import { getAllCodeService, getTopDoctorHomeService } from "../../services/userService";
 import { createNewUserService } from "../../services/userService";
 import { getAllUsers } from "../../services/userService";
 import { toast } from "react-toastify";
@@ -19,6 +19,8 @@ export const fetchGenderStart = () => {
         type: actionTypes.FETCH_GENDER_START,
       });
       let res = await getAllCodeService("GENDER");
+      let res1 = await getTopDoctorHomeService(3);
+      console.log("check response gettopdoctor", res1)
       //errcode o ben back end
       if (res && res.errCode === 0) {
         // console.log("getsatetesss", getState);

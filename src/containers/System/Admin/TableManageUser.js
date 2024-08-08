@@ -52,7 +52,6 @@ class TableManageUser extends Component {
             <th>LastName</th>
             <th>Address</th>
             <th>PhoneNumber</th>
-            <th>image</th>
             <th>Action</th>
           </tr>
         </thead>
@@ -67,7 +66,6 @@ class TableManageUser extends Component {
                   <td>{item.lastName}</td>
                   <td>{item.address}</td>
                   <td>{item.phonenumber}</td>
-                  <td>{item.image}</td>
                   <td>
                     <button
                       className="btn-edit"
