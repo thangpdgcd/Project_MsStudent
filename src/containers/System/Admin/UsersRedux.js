@@ -343,22 +343,11 @@ class UsersRedux extends Component {
                     this.onChangeInput(e, "gender");
                   }}
                 >
-                  {/* {genders &&
-                    genders.length > 0 &&
-                    genders.map((item, index) => {
-                      return (
-                        <option key={index} value={item.key}>
-                          {language === LANGUAGES.VI
-                            ? item.valueVi
-                            : item.valueEn}
-                        </option>
-                      );
-                    })} */}
                   {genders &&
                     genders.length > 0 &&
                     genders.map((item, index) => {
                       return (
-                        <option key={index} value={item.key}>
+                        <option key={index} value={item.keyMap}>
                           {
                             language === LANGUAGES.VI
                               ? item.valueVi
@@ -383,7 +372,7 @@ class UsersRedux extends Component {
                     positions.length > 0 &&
                     positions.map((item, index) => {
                       return (
-                        <option key={index} value={item.key}>
+                        <option key={index} value={item.keyMap}>
                           {language === LANGUAGES.VI
                             ? item.valueVi
                             : item.valueEn}
@@ -406,7 +395,7 @@ class UsersRedux extends Component {
                     roles.length > 0 &&
                     roles.map((item, index) => {
                       return (
-                        <option key={index} value={item.key}>
+                        <option key={index} value={item.keyMap}>
                           {language === LANGUAGES.VI
                             ? item.valueVi
                             : item.valueEn}

@@ -54,22 +54,6 @@
     "About": {
         "booking": "Truyền Thông Nói Về BookingCare"
     },
-    "outstanding": {
-        "Outstandingdoctorlastweek": "Bác Sĩ Nổi Bật",
-        "SeeMoreoutstanding": "Xem Thêm",
-        "doctorlathibuoi": "Bác sĩ Chuyên khoa  Lã Thị Bưởi",
-        "musculoskeletal": "Sức Khỏe Tâm Thần",
-        "doctorngoductruong": "Bác sĩ Chuyên khoa Ngô Đức Trường",
-        "NeurologySpineNeurosurgery": "Thần kinh,Cột sống,Ngoại thần kinh",
-        "doctortranthimaithy": "Thạc sĩ, Bác sĩ Trần Thị Mai Thy",
-        "nerve": "Thần Kinh",
-        "doctornguyenthikimloan": "Bác sĩ Nguyễn Thị Kim Loan",
-        "musculoskeletals": "Cơ Xương Khớp",
-        "doctorlequocviet": "Tiến sĩ, Bác sĩ Lê Quốc Việt",
-        "Medicals": "Cơ Xương Khớp, Nội Khoa",
-        "doctorvongocthu": "Bác sĩ Chuyên khoa Võ Thị Ngọc Thu",
-        "neurologyinternalmedicine": "Thần Kinh, Nội Khoa"
-    },
     "login": {
         "login": "Đăng nhập",
         "username": "Tên đăng nhập",
@@ -104,7 +88,7 @@
         "role": "Vai Trò",
         "image": "Hình Ảnh",
         "save": "Lưu User",
-        "IMAGE":" tải ảnh",
-        "edit" :"Lưu Thay Đổi"
+        "IMAGE": " tải ảnh",
+        "edit": "Lưu Thay Đổi"
     }
 }

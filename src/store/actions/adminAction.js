@@ -19,8 +19,7 @@ export const fetchGenderStart = () => {
         type: actionTypes.FETCH_GENDER_START,
       });
       let res = await getAllCodeService("GENDER");
-      let res1 = await getTopDoctorHomeService(3);
-      console.log("check response gettopdoctor", res1)
+
       //errcode o ben back end
       if (res && res.errCode === 0) {
         // console.log("getsatetesss", getState);
@@ -214,3 +213,27 @@ export const EditUsersSuccess = () => ({
 export const EditUsersFail = () => ({
   type: actionTypes.EDIT_USER_FAIL,
 });
+
+export const fetchTopDoctor = () => {
+  return async (dispatch, getState) => {
+    try {
+      let res = await getTopDoctorHomeService('');
+      console.log("check response gettopdoctor", res)
+      if (res && res.errCode === 0) {
+        dispatch(fetchTopDoctorSuccess(res.data))
+      }
+    } catch (e) {
+      console.log("FETCH_TOP_DOCTORS_FAIL", e)
+      dispatch({
+        type: actionTypes.FETCH_TOP_DOCTORS_FAIL,
+      })
+    }
+  }
+}
+export const fetchTopDoctorSuccess = (dataDoctors) => ({
+  type: actionTypes.FETCH_TOP_DOCTORS_SUCCESS,
+  data: dataDoctors,
+})
+export const fetchTopDoctorFail = () => ({
+  type: actionTypes.FETCH_TOP_DOCTORS_FAIL,
+})

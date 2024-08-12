@@ -6,8 +6,36 @@ import Slider from "react-slick";
 
 import "./OutStandingDoctor.scss";
 import { FormattedMessage } from "react-intl";
+import * as actions from "../../../store/actions";
+import { LANGUAGES } from "../../../utils/constant";
 class OutStandingDoctor extends Component {
+  constructor(props) {
+    super(props)
+    {
+      this.state = {
+        arrDoctors: []
+      }
+    }
+  }
+  async componentDidMount() {
+    this.props.loadTopDoctors();
+  }
+  componentDidUpdate(prevProps, prevState, snapshot) {
+    if (prevProps.topDoctorsRedux !== this.props.topDoctorsRedux) {
+      this.setState({
+        arrDoctors: this.props.topDoctorsRedux
+      })
+    }
+  }
   render() {
+
+    console.log("CHECK TOP DOCTOR REDUX", this.props.topDoctorsRedux)
+
+    let {
+      language
+    } = this.props.language
+
+    let arrDoctors = this.state.arrDoctors
     return (
       <div className="section-outstanding section-outstanding-doctor">
         <div className="outstanding-container">
@@ -21,77 +49,33 @@ class OutStandingDoctor extends Component {
           </div>
           <div className="outstanding-body">
             {/*props get from homepage */}
-            <Slider {...this.props}>
-              <div className="outstanding-customize">
-                <div className="boder">
-                  <div className="bg-image" />
-                  <div className="position text-center">
-                    <FormattedMessage id="outstanding.doctorlathibuoi" />
-                    <p>
-                      <FormattedMessage id="outstanding.musculoskeletal" />
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className="outstanding-customize">
-                <div className="boder">
-                  <div className="bg-image-2" />
-                  <div className="position text-center">
-                    <FormattedMessage id="outstanding.doctorngoductruong" />
-                    <p>
-                      <FormattedMessage id="outstanding.NeurologySpineNeurosurgery" />
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className="outstanding-customize">
-                <div className="boder">
-                  <div className="bg-image-3" />
-                  <div className="position text-center">
-                    <FormattedMessage id="outstanding.doctortranthimaithy" />
-                    <p>
-                      <FormattedMessage id="outstanding.nerve" />
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className="outstanding-customize">
-                <div className="boder">
-                  <div className="bg-image-4" />
-                  <div className="position text-center">
-                    <FormattedMessage id="outstanding.doctornguyenthikimloan" />
-                    <p>
-                      <FormattedMessage id="outstanding.musculoskeletals" />
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className="outstanding-customize">
-                <div className="boder">
-                  <div className="bg-image-5" />
-                  <div className="position text-center">
-                    <FormattedMessage id="outstanding.doctorlequocviet" />
-                    <p>
-                      <FormattedMessage id="outstanding.Medicals" />
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className="outstanding-customize">
-                <div className="boder">
-                  <div className="bg-image-6" />
-                  <div className="position text-center">
-                    <FormattedMessage id="outstanding.doctorvongocthu" />
-                    <p>
-                      <FormattedMessage id="outstanding.neurologyinternalmedicine" />
-                    </p>
-                  </div>
-                </div>
-              </div>
+            <Slider {...this.props.setting}>
+              {arrDoctors && arrDoctors.length > 0
+                && arrDoctors && arrDoctors.map((item, index) => {
+                  let imageBase64 = '';
+                  if (item.image) {
+                    imageBase64 = new Buffer(item.image, 'base64').toString('binary')
+                  }
+                  let nameVi = `${item.positionData.valueVi},${item.firstName}${item.lastName}`;
+                  let nameEn = `${item.positionData.valueEn},${item.firstName}${item.lastName}`;
+                  return (
+                    <div className="outstanding-customize">
+                      <div className="boder">
+                        <div className="bg-image"
+                          style={{ backgroundImage: `url(${imageBase64})` }}
+                        />
+                        <div className="position text-center">
+                          <div>{language === LANGUAGES.VI ? nameVi : nameEn}</div>
+                          <div>Cơ Xương Khớp</div>
+                        </div>
+                      </div>
+                    </div>
+                  )
+                })}
             </Slider>
           </div>
-        </div>
-      </div>
+        </div >
+      </div >
     );
   }
 }
@@ -99,11 +83,16 @@ class OutStandingDoctor extends Component {
 const mapStateToProps = (state) => {
   return {
     isLoggedIn: state.user.isLoggedIn,
+    topDoctorsRedux: state.admin.topDoctors,
+    language: state.app.language,
   };
 };
 
 const mapDispatchToProps = (dispatch) => {
-  return {};
+  return {
+    loadTopDoctors: () =>
+      dispatch(actions.fetchTopDoctor())
+  };
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(OutStandingDoctor);
