@@ -36,6 +36,8 @@ let initWebRoutes = (app) => {
 
   //api topdoctorhome
   router.get("/api/top-doctor-home", doctorController.getTopDoctorHome)
+
+
   return app.use("/", router);
 };
 
