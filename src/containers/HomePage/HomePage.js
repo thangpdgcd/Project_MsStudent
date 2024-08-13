@@ -17,10 +17,11 @@ import HandBook from "./section/HandBook";
 import About from "./section/About";
 import Homefooter from "../../containers/HomePage/Homefooter";
 class HomePage extends Component {
+
   render() {
     let settings = {
       dots: false,
-      infinite: true,
+      infinite: false,
       speed: 500,
       slidesToShow: 4,
       slidesToScroll: 1,

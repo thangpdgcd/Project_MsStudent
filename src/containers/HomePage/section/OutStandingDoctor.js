@@ -49,7 +49,7 @@ class OutStandingDoctor extends Component {
           </div>
           <div className="outstanding-body">
             {/*props get from homepage */}
-            <Slider {...this.props.setting}>
+            <Slider {...this.props}>
               {arrDoctors && arrDoctors.length > 0
                 && arrDoctors && arrDoctors.map((item, index) => {
                   let imageBase64 = '';

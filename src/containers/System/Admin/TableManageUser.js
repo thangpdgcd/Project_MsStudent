@@ -2,8 +2,14 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import "./TableManageUser.scss";
 import * as actions from "../../../store/actions";
-import { handleEditUserFromParentKey } from "../../System/Admin/UsersRedux";
+import MarkdownIt from 'markdown-it'
+import MdEditor from 'react-markdown-editor-lite';
+import 'react-markdown-editor-lite/lib/index.css'
 
+const mdParser = new MarkdownIt();
+function handleEditorChange({ html, text }) {
+  console.log('handleEditorChange', html, text);
+}
 class TableManageUser extends Component {
   //create new object
 
