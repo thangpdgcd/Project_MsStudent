@@ -3,24 +3,7 @@ export const adminMenu = [
     //Quản lý người dùng
     name: "menu.admin.manager-user",
     menus: [
-      // {
-      //   name: "menu.system.system-administrator.header",
-      //   link: "/system/user-manager",
-      //   // subMenus: [
-      //   //   {
-      //   //     name: "menu.system.system-administrator.user-manage",
-      //   //     link: "/system/user-manage",
-      //   //   },
-      //   //   {
-      //   //     name: "menu.system.system-administrator.product-manage",
-      //   //     link: "/system/product-manage",
-      //   //   },
-      //   //   {
-      //   //     name: "menu.system.system-administrator.register-package-group-or-account",
-      //   //     link: "/system/register-package-group-or-account",
-      //   //   },
-      //   // ],
-      // },
+
       {
         name: "menu.admin.crud",
         link: "/system/user-crud",
@@ -31,12 +14,13 @@ export const adminMenu = [
       },
       {
         name: "menu.admin.manager-doctor",
-        link: "/system/user-doctor ",
+        link: "/system/manage-doctor",
       },
       {
         name: "menu.admin.manager-admin",
         link: "/system/user-admin",
       },
+
 
       // { name: 'menu.system.system-parameter.header', link: '/system/system-parameter' },
     ],
@@ -131,4 +115,5 @@ export const adminMenu = [
       // { name: 'menu.system.system-parameter.header', link: '/system/system-parameter' },
     ],
   },
+
 ];
