@@ -48,6 +48,7 @@ class OutStandingDoctor extends Component {
             </button>
           </div>
           <div className="outstanding-body">
+
             {/*props get from homepage */}
             <Slider {...this.props}>
               {arrDoctors && arrDoctors.length > 0

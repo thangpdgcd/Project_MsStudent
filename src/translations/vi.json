@@ -41,6 +41,10 @@
         "HungViet": "Bệnh Viện Ung bướu Hưng Việt",
         "Diag": "Trung Tâm Xét nghiệm Diag Laboratories"
     },
+    "outstanding": {
+        "Outstandingdoctorlastweek": "Bác Sĩ Nỗi Bật",
+        "SeeMoreoutstanding": "Xem Thêm"
+    },
     "HandBook": {
         "HandBooks": "Cẩm Nang",
         "SeeMoreHandBooks": "Xem Thêm",

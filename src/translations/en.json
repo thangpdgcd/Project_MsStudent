@@ -104,7 +104,7 @@
         "role": "Role",
         "image": "Image",
         "save": "Save User",
-        "IMAGE":"Image",
-        "edit":"Save Changes"   
+        "IMAGE": "Image",
+        "edit": "Save Changes"
     }
 }
