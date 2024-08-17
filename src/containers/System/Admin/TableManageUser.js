@@ -7,11 +7,7 @@ import * as actions from "../../../store/actions";
 // import MdEditor from 'react-markdown-editor-lite';
 import MarkdownIt from "markdown-it/index.js";
 import MdEditor from "react-markdown-editor-lite";
-
-
 import 'react-markdown-editor-lite/lib/index.css';
-
-
 
 const mdParser = new MarkdownIt(/* Markdown-it options */);
 
