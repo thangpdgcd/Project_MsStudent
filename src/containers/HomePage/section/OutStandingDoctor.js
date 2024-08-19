@@ -1,13 +1,14 @@
 import React, { Component } from "react";
-
-import { connect } from "react-redux";
-
 import Slider from "react-slick";
-
 import "./OutStandingDoctor.scss";
 import { FormattedMessage } from "react-intl";
 import * as actions from "../../../store/actions";
 import { LANGUAGES } from "../../../utils/constant";
+import { connect } from "react-redux";
+
+import { withRouter } from "react-router";
+import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
+
 class OutStandingDoctor extends Component {
   constructor(props) {
     super(props)
@@ -17,9 +18,11 @@ class OutStandingDoctor extends Component {
       }
     }
   }
+
   async componentDidMount() {
     this.props.loadTopDoctors();
   }
+
   componentDidUpdate(prevProps, prevState, snapshot) {
     if (prevProps.topDoctorsRedux !== this.props.topDoctorsRedux) {
       this.setState({
@@ -27,15 +30,19 @@ class OutStandingDoctor extends Component {
       })
     }
   }
+
+  handleViewDetailDoctor = (doctor) => {
+    console.log("check doctor", doctor)
+
+    //chuyển đến trang view detail của 1 doctor khi click vào
+    this.props.history.push(`/detail-doctor:id/${doctor.id}`)
+  }
+
   render() {
-
     console.log("CHECK TOP DOCTOR REDUX", this.props.topDoctorsRedux)
-
-    let {
-      language
-    } = this.props.language
-
+    let { language } = this.props.language
     let arrDoctors = this.state.arrDoctors
+
     return (
       <div className="section-outstanding section-outstanding-doctor">
         <div className="outstanding-container">
@@ -60,7 +67,7 @@ class OutStandingDoctor extends Component {
                   let nameVi = `${item.positionData.valueVi},${item.firstName}${item.lastName}`;
                   let nameEn = `${item.positionData.valueEn},${item.firstName}${item.lastName}`;
                   return (
-                    <div className="outstanding-customize">
+                    <div className="outstanding-customize" key={index} onClick={() => this.handleViewDetailDoctor(item)}>
                       <div className="boder">
                         <div className="bg-image"
                           style={{ backgroundImage: `url(${imageBase64})` }}
@@ -96,4 +103,4 @@ const mapDispatchToProps = (dispatch) => {
   };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(OutStandingDoctor);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(OutStandingDoctor));

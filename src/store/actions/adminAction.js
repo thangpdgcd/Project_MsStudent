@@ -6,7 +6,7 @@ import { toast } from "react-toastify";
 import { deleteUserService } from "../../services/userService";
 import { editUserServices } from "../../services/userService";
 import { getAllDoctorService } from "../../services/userService";
-
+import { getDetailInforDoctor } from "../../services/userService";
 //get ->fetch
 // export const fetchGenderStart = () => ({
 //   type: actionTypes.FETCH_GENDER_START,
@@ -295,4 +295,35 @@ export const SaveDoctorDetailSuccess = (dataDT) => ({
 )
 export const SaveDoctorDetailFail = () => ({
   type: actionTypes.FETCH_ALL_DOCTORS_FAIL,
+})
+
+
+//GET DETAIL DOCTOR
+
+export const fetchDetailDoctor = (InputId) => {
+  return async (dispatch, getState) => {
+    try {
+      let res = await getDetailInforDoctor(InputId);
+      console.log("GET DOCTOR DETAIL", res);
+      if (res && res.errCode === 0) {
+        //reverse đảo ngược thứ tự lại
+        toast.success("SAVE DOCTORS SUCCESS!!");
+        dispatch(fetchDetailDoctorSuccess(res.data));
+      } else {
+        toast.success("SAVE DOCTORS FAIL!!");
+        dispatch(fetchDetailDoctorFail());
+      }
+    } catch (error) {
+      //fail call dispatch
+      dispatch(fetchDetailDoctorFail());
+      console.log("SAVE DOCTORS SUCCESS!!", error);
+    }
+  };
+}
+export const fetchDetailDoctorSuccess = (InputId) => ({
+  type: actionTypes.FECTH__DETAIL_DOCTORS_SUCCESS,
+  data: InputId
+})
+export const fetchDetailDoctorFail = () => ({
+  type: actionTypes.FECTH__DETAIL_DOCTORS_FAIL,
 })
