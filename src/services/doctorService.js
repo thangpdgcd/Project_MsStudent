@@ -82,6 +82,7 @@ let SaveDetailInforDoctor = (inputData) => {
     })
 }
 
+//get doctorid
 let getDetaildoctorbyId = (inputId) => {
     return new Promise(async (resolve, reject) => {
         try {

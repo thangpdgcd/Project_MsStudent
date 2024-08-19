@@ -45,9 +45,9 @@ let postinforDoctors = async (req, res) => {
     }
 }
 
+//get doctor id
 let getDetaildoctorbyId = async (req, res) => {
     try {
-
         let Information = await doctorServie.getDetaildoctorbyId(req.query.id)
         return res.status(200).json(Information);
     } catch (error) {
