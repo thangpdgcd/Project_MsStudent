@@ -7,23 +7,51 @@ class DetailDoctor extends Component {
     constructor(props) {
         super(props);
         this.state = {
-
+            detailTeacher: {},
+            currentTeacherId: -1,
         }
     }
     async componentDidMount() {
-        if (this.props.match && this.props.match.params && this.props.match.params.id) {
-            let inputid = this.props.match.params.id;
-            let res = await getDetailInforDoctor(2);
-            console.log("Check detai doctor id: ", res)
-        }
 
+        // if (this.props.match && this.props.match.params && this.props.match.params.id) {
+        //     let inputid = this.props.match.params.id;
+        //     this.setState({
+        //         currentTeacherId: inputid,
+        //     });
+        //     let res = await getDetailInforDoctor(inputid);
+        //     if (res && res.errCode === 0) {
+        //         this.setState({
+        //             detailTeacher: res.data,
+        //         });
+        //     }
+        //     console.log("Check detail doctor id: ", res)
+        // }
+        if (
+            this.props.match &&
+            this.props.match.params &&
+            this.props.match.params.id
+        ) {
+            let id = this.props.match.params.id;
+            console.log('GET ID DOCTOR', id)
+            this.setState({
+                currentTeacherId: id,
+            });
+
+            let res = await getDetailInforDoctor(id);
+            if (res && res.errCode === 0) {
+                this.setState({
+                    detailTeacher: res.data,
+                });
+            }
+        }
     }
     componentDidUpdate(prevProps, prevState, snapshot) {
 
     }
     render() {
+        let { detailTeacher } = this.state;
+        console.log('detaildoctor', detailTeacher)
         // console.log("check detail doctor", this.props.DetailDoctorRedux);
-        console.log("Id: ", this.props.match.params.id)
         return (
             <Fragment>
                 <HomeHeader isShowBanner />
@@ -53,7 +81,6 @@ class DetailDoctor extends Component {
 const mapStateToProps = (state) => {
     return {
         isLoggedIn: state.user.isLoggedIn,
-        // DetailDoctorRedux: state.admin.DetailDoctors
     };
 };
 

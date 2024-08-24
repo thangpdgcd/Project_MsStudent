@@ -33,11 +33,9 @@ class OutStandingDoctor extends Component {
 
   handleViewDetailDoctor = (doctor) => {
     console.log("check doctor", doctor)
-
     //chuyển đến trang view detail của 1 doctor khi click vào
-    this.props.history.push(`/detail-doctor:id/${doctor.id}`)
+    this.props.history.push(`/detail-doctor/${doctor.id}`)
   }
-
   render() {
     console.log("CHECK TOP DOCTOR REDUX", this.props.topDoctorsRedux)
     let { language } = this.props.language

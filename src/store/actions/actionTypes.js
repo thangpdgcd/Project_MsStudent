@@ -51,9 +51,6 @@ const actionTypes = Object.freeze({
   SAVE_DETAIL_DOCTORS_FAIL: "SAVE_DETAIL_DOCTORS_FAIL",
 
 
-  //get doctorid
-  FECTH__DETAIL_DOCTORS_SUCCESS: "FECTH__DETAIL_DOCTORS_SUCCESS",
-  FECTH__DETAIL_DOCTORS_FAIL: "FECTH__DETAIL_DOCTORS_FAIL",
 });
 
 export default actionTypes;

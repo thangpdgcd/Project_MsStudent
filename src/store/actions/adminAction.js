@@ -298,32 +298,3 @@ export const SaveDoctorDetailFail = () => ({
 })
 
 
-//GET DETAIL DOCTOR
-
-export const fetchDetailDoctor = (InputId) => {
-  return async (dispatch, getState) => {
-    try {
-      let res = await getDetailInforDoctor(InputId);
-      console.log("GET DOCTOR DETAIL", res);
-      if (res && res.errCode === 0) {
-        //reverse đảo ngược thứ tự lại
-        toast.success("SAVE DOCTORS SUCCESS!!");
-        dispatch(fetchDetailDoctorSuccess(res.data));
-      } else {
-        toast.success("SAVE DOCTORS FAIL!!");
-        dispatch(fetchDetailDoctorFail());
-      }
-    } catch (error) {
-      //fail call dispatch
-      dispatch(fetchDetailDoctorFail());
-      console.log("SAVE DOCTORS SUCCESS!!", error);
-    }
-  };
-}
-export const fetchDetailDoctorSuccess = (InputId) => ({
-  type: actionTypes.FECTH__DETAIL_DOCTORS_SUCCESS,
-  data: InputId
-})
-export const fetchDetailDoctorFail = () => ({
-  type: actionTypes.FECTH__DETAIL_DOCTORS_FAIL,
-})

@@ -11,7 +11,7 @@ const initialState = {
   topDoctors: [],
   allDoctors: [],
   SaveDoctors: [],
-  DetailDoctors: []
+
 };
 
 const adminReducer = (state = initialState, action) => {
@@ -99,17 +99,6 @@ const adminReducer = (state = initialState, action) => {
       };
     case actionTypes.SAVE_DETAIL_DOCTORS_FAIL:
       state.SaveDoctors = [];
-      return {
-        ...state,
-      };
-    case actionTypes.FECTH__DETAIL_DOCTORS_SUCCESS:
-      state.DetailDoctors = action.data;
-      console.log("codeeeeesss", DetailDoctor)
-      return {
-        ...state,
-      };
-    case actionTypes.FECTH__DETAIL_DOCTORS_FAIL:
-      state.DetailDoctors = [];
       return {
         ...state,
       };
