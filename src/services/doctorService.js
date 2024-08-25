@@ -59,18 +59,33 @@ let getAllDoctors = () => {
 let SaveDetailInforDoctor = (inputData) => {
     return new Promise(async (resolve, reject) => {
         try {
-            if (!inputData.doctorId || !inputData.contentHTML || !inputData.contentMarkdown) {
+            if (!inputData.doctorId || !inputData.contentHTML
+                || !inputData.contentMarkdown || !inputData.action) {
                 resolve({
                     errCode: 1,
                     errMessage: 'Missing parameter'
                 })
             } else {
-                await db.Markdown.create({
-                    contentHTML: inputData.contentHTML,
-                    contentMarkdown: inputData.contentMarkdown,
-                    doctorId: inputData.doctorId,
-                    description: inputData.description,
-                })
+                if (inputData.action === "CREATE") {
+                    await db.Markdown.create({
+                        contentHTML: inputData.contentHTML,
+                        contentMarkdown: inputData.contentMarkdown,
+                        description: inputData.description,
+                        doctorId: inputData.doctorId,
+                    })
+                } else if (inputData.action === "EDIT") {
+                    let doctormarkdown = await db.Markdown.findOne({
+                        where: { doctorId: inputData.doctorId },
+                        raw: false
+                    })
+                    if (doctormarkdown) {
+                        doctormarkdown.contentHTML = inputData.contentHTML;
+                        doctormarkdown.contentMarkdown = inputData.contentMarkdown;
+                        doctormarkdown.description = inputData.description;
+                        doctormarkdown.updateAt = new Date();
+                        await doctormarkdown.save();
+                    }
+                }
                 resolve({
                     errCode: 0,
                     errMessage: "Save Information Successed!"
