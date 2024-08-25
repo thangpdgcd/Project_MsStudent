@@ -98,7 +98,7 @@ let getDetaildoctorbyId = (inputId) => {
                     },
                     attributes:
                     {
-                        exclude: ["password", "image"],
+                        exclude: ["password"],
                     },
                     include: [
                         {
@@ -107,9 +107,15 @@ let getDetaildoctorbyId = (inputId) => {
                         },
                         { model: db.Allcode, as: 'positionData', attributes: ['valueEn', 'valueVi'] },
                     ],
-                    raw: true,
+                    raw: false,
                     nest: true
                 });
+                if (data && data.image) {
+                    data.image = new Buffer(data.image, 'base64').toString('binary')
+                }
+                if (!data) {
+                    data.image = {};
+                };
                 resolve({
                     errCode: 0,
                     data: data,
