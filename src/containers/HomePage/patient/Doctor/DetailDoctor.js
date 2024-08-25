@@ -3,29 +3,17 @@ import { connect } from "react-redux";
 import "./DetailDoctor.scss";
 import HomeHeader from "../../HomeHeader";
 import { getDetailInforDoctor } from "../../../../services/userService";
+import { repeat } from "lodash";
+import { LANGUAGES } from "../../../../utils";
 class DetailDoctor extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            detailTeacher: {},
-            currentTeacherId: -1,
+            detailDoctor: {},
+
         }
     }
     async componentDidMount() {
-
-        // if (this.props.match && this.props.match.params && this.props.match.params.id) {
-        //     let inputid = this.props.match.params.id;
-        //     this.setState({
-        //         currentTeacherId: inputid,
-        //     });
-        //     let res = await getDetailInforDoctor(inputid);
-        //     if (res && res.errCode === 0) {
-        //         this.setState({
-        //             detailTeacher: res.data,
-        //         });
-        //     }
-        //     console.log("Check detail doctor id: ", res)
-        // }
         if (
             this.props.match &&
             this.props.match.params &&
@@ -33,14 +21,14 @@ class DetailDoctor extends Component {
         ) {
             let id = this.props.match.params.id;
             console.log('GET ID DOCTOR', id)
-            this.setState({
-                currentTeacherId: id,
-            });
+            // this.setState({
+            //     currentTeacherId: id,
+            // });
 
             let res = await getDetailInforDoctor(id);
             if (res && res.errCode === 0) {
                 this.setState({
-                    detailTeacher: res.data,
+                    detailDoctor: res.data,
                 });
             }
         }
@@ -49,32 +37,53 @@ class DetailDoctor extends Component {
 
     }
     render() {
-        let { detailTeacher } = this.state;
-        console.log('detaildoctor', detailTeacher)
+        let { detailDoctor } = this.state
+        let { language } = this.props;
+        let { nameEn, nameVi } = '';
+        if (detailDoctor && detailDoctor.positionData) {
+            nameVi = `${detailDoctor.positionData.valueVi},${detailDoctor.firstName}${detailDoctor.lastName}`;
+            nameEn = `${detailDoctor.positionData.valueEn},${detailDoctor.firstName}${detailDoctor.lastName}`;
+        }
+
+        console.log('detaildoctor', detailDoctor)
         // console.log("check detail doctor", this.props.DetailDoctorRedux);
         return (
             <Fragment>
                 <HomeHeader isShowBanner />
                 <div className="doctor-detail-container">
                     <div className="intro-doctor">
-                        <div className="content-left"></div>
+                        <div className="content-left" style={{
+                            backgroundImage: `url(${detailDoctor && detailDoctor.image ? detailDoctor.image : ''})`,
+                        }}>
+                        </div>
                         <div className="content-right">
-                            <div className="up">Phó giáo sư</div>
-                            <div className="down">code</div>
+                            <div className="up">
+                                {language === LANGUAGES.VI ? nameVi : nameEn}
+                            </div>
+                            <div className="down">
+                                {detailDoctor && detailDoctor.Markdown
+                                    && detailDoctor.Markdown.description
+                                    && <span>{detailDoctor.Markdown.description}</span>
+                                }</div>
                         </div>
                     </div>
                     <div className="schedule-doctor">
 
                     </div>
                     <div className="detail-infor-doctor">
-
+                        {
+                            detailDoctor && detailDoctor.Markdown && detailDoctor.Markdown.contentHTML
+                            &&
+                            <div dangerouslySetInnerHTML={{ __html: detailDoctor.Markdown.contentHTML }}>
+                            </div>
+                        }
                     </div>
                     <div className="comment-doctor">
 
                     </div>
                 </div>
 
-            </Fragment>
+            </Fragment >
         );
     }
 }
