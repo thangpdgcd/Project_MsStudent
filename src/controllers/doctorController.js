@@ -35,7 +35,7 @@ let getAllDoctors = async (req, res) => {
 //save information doctors
 let postinforDoctors = async (req, res) => {
     try {
-        let response = await doctorServie.SaveDetailInforDoctor(req.body)
+        let response = await doctorServie.saveDetailInforDoctor(req.body)
         return res.status(200).json(response)
     } catch (error) {
         return ({

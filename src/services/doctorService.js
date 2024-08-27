@@ -56,24 +56,23 @@ let getAllDoctors = () => {
 }
 
 //save doctor
-let SaveDetailInforDoctor = (inputData) => {
+let saveDetailInforDoctor = (inputData) => {
     return new Promise(async (resolve, reject) => {
         try {
-            if (!inputData.doctorId || !inputData.contentHTML
-                || !inputData.contentMarkdown || !inputData.action) {
+            if (!inputData.doctorId || !inputData.contentHTML || !inputData.contentMarkdown || !inputData.actions) {
                 resolve({
                     errCode: 1,
                     errMessage: 'Missing parameter'
                 })
             } else {
-                if (inputData.action === "CREATE") {
+                if (inputData.actions === "CREATE") {
                     await db.Markdown.create({
                         contentHTML: inputData.contentHTML,
                         contentMarkdown: inputData.contentMarkdown,
                         description: inputData.description,
                         doctorId: inputData.doctorId,
                     })
-                } else if (inputData.action === "EDIT") {
+                } else if (inputData.actions === "EDIT") {
                     let doctormarkdown = await db.Markdown.findOne({
                         where: { doctorId: inputData.doctorId },
                         raw: false
@@ -144,6 +143,6 @@ let getDetaildoctorbyId = (inputId) => {
 module.exports = {
     getTopDoctorHomes: getTopDoctorHomes,
     getAllDoctors: getAllDoctors,
-    SaveDetailInforDoctor: SaveDetailInforDoctor,
+    saveDetailInforDoctor: saveDetailInforDoctor,
     getDetaildoctorbyId: getDetaildoctorbyId
 }
