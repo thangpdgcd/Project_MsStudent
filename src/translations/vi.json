@@ -9,7 +9,8 @@
         "fee": "Gói Khám ",
         "check-health": "Khám Sức Khỏe Tổng Quát",
         "support": "Hỗ Trợ",
-        "welcome": "xin chao"
+        "welcome": "xin Chào!",
+        "logout": "Thoát"
     },
     "headercontent": {
         "Health-Foundation": "Nền Tản Sức Khỏe",
@@ -79,7 +80,8 @@
             "manager-handbook": "Quản lý cẩm nang"
         },
         "doctor": {
-            "manager-schedule": "Quản Lí Kế Hoạch Khám Bệnh"
+            "manage-schedule": "Quản Lí Kế Hoạch Khám Bệnh",
+            "schedule": "Lịch Trình Bác Sĩ"
         }
     },
     "manager-user": {

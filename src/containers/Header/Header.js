@@ -5,16 +5,42 @@ import * as actions from "../../store/actions";
 import Navigator from "../../components/Navigator";
 import { adminMenu, doctorMenu } from "./menuApp";
 import "./Header.scss";
-import { LANGUAGES } from "../../utils";
-
+import { LANGUAGES, USER_ROLE } from "../../utils";
+import { _ } from "lodash";
+import { isEmpty } from "lodash";
 class Header extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      menuApp: []
+    }
+  }
   changeLanguage = (language) => {
     this.props.changeLanguageAppRedux(language);
   };
+  Backtohome = () => {
+    if (this.props.history) {
+      this.props.history.push(`/login`);
+    }
+  };
   componentDidMount() {
-
+    let menu = [];
+    let { userInfo } = this.props;
+    if (userInfo && !isEmpty(userInfo)) {
+      let role = userInfo.roleId;
+      if (role === USER_ROLE.ADMIN) {
+        menu = adminMenu;
+      }
+      else if (role === USER_ROLE.DOCTOR) {
+        menu = doctorMenu;
+      }
+    }
+    this.setState({
+      menuApp: menu
+    })
   }
   render() {
+
     let userInfo = this.props.userInfo;
     let language = this.props.language;
     console.log("check Userinfo", userInfo);
@@ -24,7 +50,7 @@ class Header extends Component {
       <div className="header-container">
         {/* thanh navigator */}
         <div className="header-tabs-container">
-          <Navigator menus={adminMenu} />
+          <Navigator menus={this.state.menuApp} />
         </div>
         <div className="welcome">
           <span title="Admin aways welcome for people">
@@ -48,6 +74,15 @@ class Header extends Component {
           >
             <span onClick={() => this.changeLanguage(LANGUAGES.EN)}>EN</span>
           </div>
+        </div>
+        <div
+          className="btn btn-logout"
+          onClick={processLogout}
+          title="Log out"
+        >
+          <i className="fas fa-sign-out-alt">
+            <FormattedMessage id="homeheader.logout" />
+          </i>
         </div>
       </div>
     );

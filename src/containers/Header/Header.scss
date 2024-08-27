@@ -8,6 +8,7 @@
     color: $common-text-color;
     height: 40px;
     position: relative;
+    width: 1235px;
 
     .btn-logout {
         color: $common-text-color;
@@ -15,11 +16,14 @@
         height: 18px;
         display: flex;
         padding: 0 10px;
+        padding-top: 17px;
 
         i {
             font-size: $base-size + 1px;
         }
     }
+
+
 
     .languages {
         display: flex;
@@ -78,10 +82,7 @@
         color: #34a78e;
     }
 
-    .btn-logout:hover {
-        background-color: $common-text-color;
-        height: 18px;
-    }
+
 }
 
 // @media only screen and (max-width:2252px) and (min-width:1305px) {

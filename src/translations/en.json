@@ -9,7 +9,8 @@
         "fee": "Examination Package",
         "check-health": "General health check",
         "support": "Support",
-        "welcome": "Welcome Admin!"
+        "welcome": "Welcome Admin!",
+        "logout": "Back"
     },
     "headercontent": {
         "Health-Foundation": "Health Foundation",
@@ -91,7 +92,8 @@
             "manager-handbook": "Manager-hadbook"
         },
         "doctor": {
-            "manager-schedule": "Medical Plan Management"
+            "manage-schedule": "Medical Plan Management",
+            "schedule": "Chedule Doctor"
         }
     },
     "manager-user": {
