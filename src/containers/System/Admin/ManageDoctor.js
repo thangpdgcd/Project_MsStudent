@@ -146,7 +146,7 @@ class ManageDoctor extends Component {
                         onClick={() => this.handleSaveContentMarkdown()}
                         className={hasOldData === true ? "create-content-doctor" : "save-content-doctor"}>
                         {hasOldData === false ?
-                            <span>Lưu thông tin</span> : <span>Tạo thông tin</span>
+                            <span>Tạo thông tin</span> : <span>Lưu thông tin</span>
                         }
                     </button>
                 </div>

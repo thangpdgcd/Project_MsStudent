@@ -89,6 +89,9 @@
             "manager-specialty": "Manager-Specialty",
             "handbook": "HandBook",
             "manager-handbook": "Manager-hadbook"
+        },
+        "doctor": {
+            "manager-schedule": "Medical Plan Management"
         }
     },
     "manager-user": {

@@ -4,10 +4,16 @@ import "./HomeHeader.scss";
 import { LANGUAGES } from "../../utils";
 import { FormattedMessage } from "react-intl";
 import { changeLanguageApp } from "../../store/actions";
+import { withRouter } from "react-router";
 class HomeHeader extends Component {
   changeLanguage = (language) => {
     this.props.changeLanguageAppRedux(language);
   };
+  returntoHome = () => {
+    if (this.props.history) {
+      this.props.history.push(`/home`);
+    }
+  }
   render() {
     // console.log("check prop", this.props)
     let language = this.props.language;
@@ -24,6 +30,7 @@ class HomeHeader extends Component {
               <div
                 className="Header-logo"
                 title="Uy Tín Chất Lượng Hàng Đầu"
+                onClick={() => this.returntoHome()}
               ></div>
             </div>
             <div className="center-content">
@@ -202,4 +209,4 @@ const mapDispatchToProps = (dispatch) => {
   };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(HomeHeader);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(HomeHeader));

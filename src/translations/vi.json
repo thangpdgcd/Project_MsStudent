@@ -77,6 +77,9 @@
             "manager-specialty": "Quản lý chuyên khoa",
             "handbook": "Cẩm nang",
             "manager-handbook": "Quản lý cẩm nang"
+        },
+        "doctor": {
+            "manager-schedule": "Quản Lí Kế Hoạch Khám Bệnh"
         }
     },
     "manager-user": {

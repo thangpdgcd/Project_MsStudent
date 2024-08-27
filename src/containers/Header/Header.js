@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import { FormattedMessage } from "react-intl";
 import * as actions from "../../store/actions";
 import Navigator from "../../components/Navigator";
-import { adminMenu } from "./menuApp";
+import { adminMenu, doctorMenu } from "./menuApp";
 import "./Header.scss";
 import { LANGUAGES } from "../../utils";
 
@@ -11,6 +11,9 @@ class Header extends Component {
   changeLanguage = (language) => {
     this.props.changeLanguageAppRedux(language);
   };
+  componentDidMount() {
+
+  }
   render() {
     let userInfo = this.props.userInfo;
     let language = this.props.language;

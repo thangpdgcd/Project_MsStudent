@@ -15,15 +15,25 @@ export const adminMenu = [
         name: "menu.admin.manager-doctor",
         link: "/system/manage-doctor",
       },
+      // {
+      //   name: "menu.admin.manager-admin",
+      //   link: "/system/user-admin",
+      // },
       {
-        name: "menu.admin.manager-admin",
-        link: "/system/user-admin",
-      },
-      // { name: 'menu.system.system-parameter.header', link: '/system/system-parameter' },
+        name: "menu.doctor.manager-schedule",
+        menus: [
+          {
+            name: "menu.doctor.schedule",
+            link: "/system/user-manage",
+          },
+
+        ]
+      }
+
     ],
   },
+  //quản lý phòng khám
   {
-    //quản lý phòng khám
     name: "menu.admin.clinic",
     menus: [
       {
@@ -32,8 +42,8 @@ export const adminMenu = [
       },
     ],
   },
+  //quản lý chuyên khoa
   {
-    //quản lý chuyên khoa
     name: "menu.admin.specialty",
     menus: [
       {
@@ -62,8 +72,9 @@ export const adminMenu = [
       // { name: 'menu.system.system-parameter.header', link: '/system/system-parameter' },
     ],
   },
+  //quản lý cẩm nang
   {
-    //quản lý cẩm nang
+
     name: "menu.admin.handbook",
     menus: [
       {
@@ -94,3 +105,18 @@ export const adminMenu = [
   },
 
 ];
+
+export const doctorMenu = [
+  // quản lí kế hoạch khám bệnh của bác sĩ
+  {
+    name: "menu.doctor.manager-schedule",
+    menus: [
+      {
+        name: "menu.doctor.schedule",
+        link: "/system/user-manage",
+      },
+
+    ]
+  }
+
+]
