@@ -1,4 +1,4 @@
-import DetailDoctor from "../../containers/HomePage/patient/Doctor/DetailDoctor";
+
 import actionTypes from "../actions/actionTypes";
 
 const initialState = {

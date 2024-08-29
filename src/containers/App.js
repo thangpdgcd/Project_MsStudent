@@ -13,7 +13,8 @@ import Home from "../routes/Home";
 import Login from "./Auth/Login";
 import System from "../routes/System";
 import ConfirmModal from "../components/ConfirmModal";
-import DetailDoctor from "./HomePage/patient/Doctor/DetailDoctor";
+import DetailDoctor from "./Patient/Doctor/DetailDoctor";
+import Doctor from "../routes/Doctor";
 class App extends Component {
   handlePersistorState = () => {
     const { persistor } = this.props;
@@ -45,6 +46,7 @@ class App extends Component {
                   <Route path={path.HOME} exact component={Home} />
                   <Route path={path.LOGIN} component={userIsNotAuthenticated(Login)} />
                   <Route path={path.SYSTEM} component={userIsAuthenticated(System)} />
+                  <Route path={'/doctor/'} component={userIsAuthenticated(Doctor)} />
                   <Route path={path.HOMEPAGE} component={HomePage} />
                   <Route path={path.DETAILDOCTOR} component={DetailDoctor} />
                 </Switch>
@@ -60,20 +62,7 @@ class App extends Component {
               pauseOnFocusLoss
               draggable
               pauseOnHover
-            />
-            ;
-            {/* <ToastContainer
-              className="toast-container"
-              toastClassName="toast-item"
-              bodyClassName="toast-item-body"
-              autoClose={false}
-              hideProgressBar={true}
-              pauseOnHover={false}
-              pauseOnFocusLoss={true}
-              closeOnClick={false}
-              draggable={false}
-              closeButton={<CustomToastCloseButton />}
-            /> */}
+            />;
           </div>
         </Router>
       </Fragment>

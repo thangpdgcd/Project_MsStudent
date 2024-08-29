@@ -1,10 +1,9 @@
 import React, { Component, Fragment } from "react";
 import { connect } from "react-redux";
 import "./DetailDoctor.scss";
-import HomeHeader from "../../HomeHeader";
-import { getDetailInforDoctor } from "../../../../services/userService";
-import { repeat } from "lodash";
-import { LANGUAGES } from "../../../../utils";
+import HomeHeader from "../../HomePage/HomeHeader";
+import { getDetailInforDoctor } from "../../../services/userService";
+import { LANGUAGES } from "../../../utils";
 class DetailDoctor extends Component {
     constructor(props) {
         super(props);
