@@ -111,5 +111,8 @@
         "save": "Save User",
         "IMAGE": "Image",
         "edit": "Save Changes"
+    },
+    "manage-schedule": {
+        "title": "Manager Schedule"
     }
 }
