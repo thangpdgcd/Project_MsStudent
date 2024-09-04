@@ -15,21 +15,15 @@ export const adminMenu = [
         name: "menu.admin.manager-doctor",
         link: "/system/manage-doctor",
       },
+      {
+        name: "menu.doctor.schedule",
+        link: "/doctor/manage-schedule",
+      }
+
       // {
       //   name: "menu.admin.manager-admin",
       //   link: "/system/user-admin",
       // },
-      {
-        name: "menu.doctor.manage-schedule",
-        menus: [
-          {
-            name: "menu.doctor.schedule",
-            link: "/doctor/manage-schedule",
-          },
-
-        ]
-      }
-
     ],
   },
   //quản lý phòng khám
@@ -112,14 +106,8 @@ export const doctorMenu = [
     name: "menu.admin.manager-user",
     menus: [
       {
-        name: "menu.doctor.manage-schedule",
-        menus: [
-          {
-            name: "menu.doctor.schedule",
-            link: "/system/user-manage",
-          },
-
-        ]
+        name: "menu.doctor.schedule",
+        link: "/doctor/manage-schedule",
       },
     ]
   }

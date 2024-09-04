@@ -6,7 +6,6 @@ import Navigator from "../../components/Navigator";
 import { adminMenu, doctorMenu } from "./menuApp";
 import "./Header.scss";
 import { LANGUAGES, USER_ROLE } from "../../utils";
-import { _ } from "lodash";
 import { isEmpty } from "lodash";
 class Header extends Component {
   constructor(props) {
@@ -40,7 +39,6 @@ class Header extends Component {
     })
   }
   render() {
-
     let userInfo = this.props.userInfo;
     let language = this.props.language;
     console.log("check Userinfo", userInfo);

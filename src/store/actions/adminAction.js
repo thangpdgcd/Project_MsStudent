@@ -298,3 +298,31 @@ export const SaveDoctorDetailFail = () => ({
 })
 
 
+//Get All code schedule
+export const fetchAllScheduletTime = () => {
+  return async (dispatch, getState) => {
+    try {
+      let res = await getAllCodeService("TIME");
+      if (res && res.errCode === 0) {
+        //reverse đảo ngược thứ tự lại
+        dispatch(fetchAllScheduletTimeSuccess(res.data));
+      } else {
+        dispatch(fetchAllScheduletTimeFail());
+      }
+    } catch (error) {
+      //fail call dispatch
+      dispatch(fetchAllScheduletTimeFail());
+      console.log("fetchAllDoctorsFail", error);
+    }
+  };
+};
+export const fetchAllScheduletTimeSuccess = (dataTime) => ({
+  type: actionTypes.FETCH_ALLCODE_SCHEDULE_TIME_SUCCESS,
+  data: dataTime
+}
+)
+export const fetchAllScheduletTimeFail = () => ({
+  type: actionTypes.FETCH_ALLCODE_SCHEDULE_TIME_FAIL,
+})
+
+

@@ -99,5 +99,8 @@
         "save": "Lưu User",
         "IMAGE": " tải ảnh",
         "edit": "Lưu Thay Đổi"
+    },
+    "manage-schedule": {
+        "title": "Quản lí kế hoạch khám bệnh"
     }
 }
