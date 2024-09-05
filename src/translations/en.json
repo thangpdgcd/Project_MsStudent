@@ -113,6 +113,9 @@
         "edit": "Save Changes"
     },
     "manage-schedule": {
-        "title": "Manage Schedule"
+        "title": "Manage Schedule",
+        "Name": "Choose Doctor",
+        "Date": "Choose Date",
+        "save": "Save"
     }
 }

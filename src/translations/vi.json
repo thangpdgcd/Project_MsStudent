@@ -101,6 +101,9 @@
         "edit": "Lưu Thay Đổi"
     },
     "manage-schedule": {
-        "title": "Quản lí kế hoạch khám bệnh"
+        "title": "Quản Lý Kế Hoạch Khám Bệnh Của Bác Sĩ",
+        "Name": "Chọn Bác Sĩ",
+        "Date": "Chọn Ngày",
+        "save": "Lưu Thông Tin"
     }
 }

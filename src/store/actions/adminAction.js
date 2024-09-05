@@ -244,7 +244,7 @@ export const fetchTopDoctorFail = () => ({
 export const fetchAllDoctorsStart = () => {
   return async (dispatch, getState) => {
     try {
-      let res = await getAllDoctorService();
+      let res = await getAllDoctorService("ALL");
       if (res && res.errCode === 0) {
         //reverse đảo ngược thứ tự lại
         dispatch(fetchAllDoctorsSuccess(res.data));

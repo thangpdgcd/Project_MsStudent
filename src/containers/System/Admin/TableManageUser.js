@@ -6,7 +6,7 @@ import * as actions from "../../../store/actions";
 // import MarkdownIt from 'markdown-it';
 // import MdEditor from 'react-markdown-editor-lite';
 import MarkdownIt from "markdown-it/index.js";
-import MdEditor from "react-markdown-editor-lite";
+
 import 'react-markdown-editor-lite/lib/index.css';
 
 const mdParser = new MarkdownIt(/* Markdown-it options */);
@@ -95,7 +95,6 @@ class TableManageUser extends Component {
               })}
           </tbody>
         </table>
-        <MdEditor style={{ height: '500px' }} renderHTML={text => mdParser.render(text)} onChange={handleEditorChange} />
       </React.Fragment>
     );
   }

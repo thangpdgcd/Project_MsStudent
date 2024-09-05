@@ -83,7 +83,6 @@ const adminReducer = (state = initialState, action) => {
       };
     case actionTypes.FETCH_ALL_DOCTORS_SUCCESS:
       state.allDoctors = action.data;
-      console.log("addmiinnn ", state.allDoctors)
       return {
         ...state,
       };
@@ -103,7 +102,7 @@ const adminReducer = (state = initialState, action) => {
         ...state,
       };
     case actionTypes.FETCH_ALLCODE_SCHEDULE_TIME_SUCCESS:
-      state.allScheduleTime = action.dataTime;
+      state.allScheduleTime = action.data;
       return {
         ...state,
       };
