@@ -10,6 +10,7 @@ import moment from "moment";
 import { toast } from "react-toastify";
 import { isEmpty } from "lodash";
 import { dateFormat } from "../../../utils";
+import { SaveBulkScheduleDoctor } from "../../../services/userService";
 class Manageschedules extends Component {
     constructor(props) {
         super(props);
@@ -83,7 +84,7 @@ class Manageschedules extends Component {
             })
         }
     }
-    handleSaveSchedule = () => {
+    handleSaveSchedule = async () => {
         let { rangeTime, selectedDoctor, currentDate } = this.state;
         let result = []
         //check validate
@@ -97,8 +98,8 @@ class Manageschedules extends Component {
             toast.error("Invalid Selected Doctor!");
             return;
         }
-        let fortmatDate = moment(currentDate).format(dateFormat.SEND_TO_SERVER);
-
+        // let fortmatDate = moment(currentDate).format(dateFormat.SEND_TO_SERVER);
+        let fortmatDate = new Date(currentDate).getTime();
         if (rangeTime && rangeTime.length > 0) {
 
             let selectedTime = rangeTime.filter(item => item.isSelected === true)
@@ -108,7 +109,7 @@ class Manageschedules extends Component {
                     let object = {};
                     object.doctorId = selectedDoctor.value;
                     object.date = fortmatDate;
-                    object.time = schedule.keyMap;
+                    object.timeType = schedule.keyMap;
                     result.push(object);
                 })
 
@@ -118,6 +119,11 @@ class Manageschedules extends Component {
             }
             console.log("Check after Click Button: ", selectedTime)
         }
+
+        let res = await SaveBulkScheduleDoctor({
+            ArraySchedule: result
+        })
+        console.log("Check result res: ", res)
         console.log("check result: ", result)
     }
     render() {
