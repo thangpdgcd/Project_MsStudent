@@ -6,9 +6,11 @@ import { LANGUAGES } from "../../../utils";
 import Select from 'react-select';
 import "./Manageschedules.scss"
 import DatePicker from "../../../components/Input/DatePicker";
+import moment from "moment";
 import { toast } from "react-toastify";
+import { isEmpty } from "lodash";
+import { dateFormat } from "../../../utils";
 import { saveBulkScheduleDoctor } from "../../../services/userService";
-import _ from "lodash";
 class Manageschedules extends Component {
     constructor(props) {
         super(props);
@@ -92,13 +94,15 @@ class Manageschedules extends Component {
         } else {
             toast.success("Add New Date Succsess!");
         }
-        if (selectedDoctor && _.isEmpty(selectedDoctor)) {
+        if (selectedDoctor && isEmpty(selectedDoctor)) {
             toast.error("Invalid Selected Doctor!");
             return;
         }
-        // let fortmatDate = moment(currentDate).format(dateFormat.SEND_TO_SERVER);
-        let formatedDate = new Date(currentDate).getTime()
+        let formatedDate = new Date(currentDate).getTime();
+
+
         if (rangeTime && rangeTime.length > 0) {
+
             let selectedTime = rangeTime.filter(item => item.isSelected === true)
             if (selectedTime && selectedTime.length > 0) {
                 selectedTime.map((schedule, index) => {
@@ -121,8 +125,7 @@ class Manageschedules extends Component {
             doctorId: selectedDoctor.value,
             formatedDate: formatedDate
         })
-        console.log("check saveBulkScheduleDoctor: ", res)
-        console.log("check result: ", result)
+        console.log("check result: ", res)
     }
     render() {
         console.log('check', this.props)

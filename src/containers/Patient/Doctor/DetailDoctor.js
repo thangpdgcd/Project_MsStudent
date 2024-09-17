@@ -9,7 +9,6 @@ class DetailDoctor extends Component {
         super(props);
         this.state = {
             detailDoctor: {},
-
         }
     }
     async componentDidMount() {
