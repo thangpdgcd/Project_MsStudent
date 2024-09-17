@@ -13,7 +13,7 @@ class DoctorSchedule extends Component {
     }
     componentDidMount = () => {
         let { language } = this.props;
-        console.log("moment vi", moment(new Date()).format("dddd - DD/MM"))
+        console.log("moment vi", moment(new Date()).locale('vi').format("dddd - DD/MM"))
         console.log("moment en", moment(new Date()).locale('en').format("ddd - DD/MM"));
         this.setArrayDays(language)
     }
@@ -46,7 +46,9 @@ class DoctorSchedule extends Component {
             let doctorId = this.props.doctorIdFromParents;
             let date = e.target.value;
             let res = await getScheduleDoctorByDate(doctorId, date);
-            console.log("Check res react", res);
+            console.log("Check res react", doctorId);
+            console.log("Check res reactss", date);
+            console.log("Check res RES", res);
         }
     }
     render() {

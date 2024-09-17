@@ -9,7 +9,7 @@ import DatePicker from "../../../components/Input/DatePicker";
 import { toast } from "react-toastify";
 import { isEmpty } from "lodash";
 import { saveBulkScheduleDoctor } from "../../../services/userService";
-import { getScheduleDoctorByDate } from "../../../services/userService";
+
 class Manageschedules extends Component {
     constructor(props) {
         super(props);
