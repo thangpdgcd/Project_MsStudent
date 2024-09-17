@@ -6,10 +6,9 @@ import { LANGUAGES } from "../../../utils";
 import Select from 'react-select';
 import "./Manageschedules.scss"
 import DatePicker from "../../../components/Input/DatePicker";
-import moment from "moment";
 import { toast } from "react-toastify";
-import { isEmpty } from "lodash";
-import { dateFormat } from "../../../utils";
+import { saveBulkScheduleDoctor } from "../../../services/userService";
+import _ from "lodash";
 class Manageschedules extends Component {
     constructor(props) {
         super(props);
@@ -83,7 +82,7 @@ class Manageschedules extends Component {
             })
         }
     }
-    handleSaveSchedule = () => {
+    handleSaveSchedule = async () => {
         let { rangeTime, selectedDoctor, currentDate } = this.state;
         let result = []
         //check validate
@@ -93,22 +92,21 @@ class Manageschedules extends Component {
         } else {
             toast.success("Add New Date Succsess!");
         }
-        if (selectedDoctor && isEmpty(selectedDoctor)) {
+        if (selectedDoctor && _.isEmpty(selectedDoctor)) {
             toast.error("Invalid Selected Doctor!");
             return;
         }
-        let fortmatDate = moment(currentDate).format(dateFormat.SEND_TO_SERVER);
-
+        // let fortmatDate = moment(currentDate).format(dateFormat.SEND_TO_SERVER);
+        let formatedDate = new Date(currentDate).getTime()
         if (rangeTime && rangeTime.length > 0) {
-
             let selectedTime = rangeTime.filter(item => item.isSelected === true)
             if (selectedTime && selectedTime.length > 0) {
                 selectedTime.map((schedule, index) => {
                     console.log("check schedule", schedule, index, selectedDoctor)
                     let object = {};
                     object.doctorId = selectedDoctor.value;
-                    object.date = fortmatDate;
-                    object.time = schedule.keyMap;
+                    object.date = formatedDate;
+                    object.timeType = schedule.keyMap;
                     result.push(object);
                 })
 
@@ -118,6 +116,12 @@ class Manageschedules extends Component {
             }
             console.log("Check after Click Button: ", selectedTime)
         }
+        let res = await saveBulkScheduleDoctor({
+            arrSchedule: result,
+            doctorId: selectedDoctor.value,
+            formatedDate: formatedDate
+        })
+        console.log("check saveBulkScheduleDoctor: ", res)
         console.log("check result: ", result)
     }
     render() {
