@@ -6,11 +6,10 @@ import { LANGUAGES } from "../../../utils";
 import Select from 'react-select';
 import "./Manageschedules.scss"
 import DatePicker from "../../../components/Input/DatePicker";
-import moment from "moment";
 import { toast } from "react-toastify";
 import { isEmpty } from "lodash";
-import { dateFormat } from "../../../utils";
 import { saveBulkScheduleDoctor } from "../../../services/userService";
+import { getScheduleDoctorByDate } from "../../../services/userService";
 class Manageschedules extends Component {
     constructor(props) {
         super(props);
