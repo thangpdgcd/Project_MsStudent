@@ -1,6 +1,8 @@
 import React, { Component, Fragment } from "react";
 import { connect } from "react-redux";
 import "./DoctorSchedule.scss";
+//import moment tiếng việt để trang có thể đọc được nn tiếng việt
+import 'moment/locale/vi';
 import moment from "moment";
 import { LANGUAGES } from "../../../utils";
 import { getScheduleDoctorByDate, handleLoginApi } from "../../../services/userService";
@@ -22,7 +24,7 @@ class DoctorSchedule extends Component {
         for (let i = 0; i < 7; i++) {
             let object = {};
             if (language === LANGUAGES.VI) {
-                object.label = moment(new Date()).add(i, 'days').format('dddd - DD/MM');
+                object.label = moment(new Date()).add(i, 'days').locale('vi').format('dddd - DD / MM');
             } else {
                 object.label = moment(new Date()).add(i, 'days').locale('en').format("ddd - DD/MM");
             }
