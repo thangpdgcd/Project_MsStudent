@@ -173,7 +173,8 @@ let bulkCreateSchedule = (data) => {
                     )
                 }
                 let toCreate = _.differenceWith(schedule, existing, (a, b) => {
-                    return a.timeType === b.timeType && a.date == b.date
+                    return a.timeType === b.timeType && +a.date == +b.date
+                    //b+""=1 số nguyên 
                 });
                 if (toCreate && toCreate.length > 0) {
                     await db.Schedule.bulkCreate(toCreate)
@@ -197,13 +198,17 @@ let getScheduleByDate = (doctorId, date) => {
                     errCode: 1,
                     errMessage: "Missing required parameters!"
                 })
-            }
-            else {
+            } else {
                 let dataSchedule = await db.Schedule.findAll({
                     where: {
                         doctorId: doctorId,
                         date: date
                     },
+                    include: [
+                        { model: db.Allcode, as: 'timeTypeData', attributes: ['valueEn', 'valueVi'] },
+                    ],
+                    raw: false,
+                    nest: true
                 })
                 if (!dataSchedule) {
                     dataSchedule = [];
