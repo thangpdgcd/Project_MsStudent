@@ -117,5 +117,8 @@
         "Name": "Choose Doctor",
         "Date": "Choose Date",
         "save": "Save"
+    },
+    "time-content": {
+        "messages": "No appointments available at this time, please choose another time!"
     }
 }

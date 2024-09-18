@@ -105,5 +105,8 @@
         "Name": "Chọn Bác Sĩ",
         "Date": "Chọn Ngày",
         "save": "Lưu Thông Tin"
+    },
+    "time-content": {
+        "messages": "Không có lịch hẹn trong thời gian này, vui lòng chọn thời gian khác!"
     }
 }

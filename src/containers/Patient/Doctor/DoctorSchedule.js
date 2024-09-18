@@ -6,11 +6,13 @@ import 'moment/locale/vi';
 import moment from "moment";
 import { LANGUAGES } from "../../../utils";
 import { getScheduleDoctorByDate, handleLoginApi } from "../../../services/userService";
+import { FormattedMessage } from "react-intl";
 class DoctorSchedule extends Component {
     constructor(props) {
         super(props);
         this.state = {
             allDays: [],
+            allavailableTime: [],
         }
     }
     componentDidMount = () => {
@@ -19,12 +21,18 @@ class DoctorSchedule extends Component {
         console.log("moment en", moment(new Date()).locale('en').format("ddd - DD/MM"));
         this.setArrayDays(language)
     }
+    // Viết hoa chữ cái đầu trong thứ
+    capitalizeFirstLetter(string) {
+        return string.charAt(0).toUpperCase() + string.slice(1);
+    }
     setArrayDays = (language) => {
         let allDate = [];
         for (let i = 0; i < 7; i++) {
             let object = {};
             if (language === LANGUAGES.VI) {
-                object.label = moment(new Date()).add(i, 'days').locale('vi').format('dddd - DD / MM');
+                //chuyển đổi chữ cái đầu từ thường thành hoa
+                let labelVi = object.label = moment(new Date()).add(i, 'days').locale('vi').format('dddd - DD / MM');
+                object.label = this.capitalizeFirstLetter(labelVi)
             } else {
                 object.label = moment(new Date()).add(i, 'days').locale('en').format("ddd - DD/MM");
             }
@@ -48,13 +56,22 @@ class DoctorSchedule extends Component {
             let doctorId = this.props.doctorIdFromParents;
             let date = e.target.value;
             let res = await getScheduleDoctorByDate(doctorId, date);
-            console.log("Check res react", doctorId);
-            console.log("Check res reactss", date);
+
+            let alltime = [];
+            if (res && res.errCode === 0) {
+                alltime = res.data;
+                this.setState
+                    ({
+                        allavailableTime: res.data ? res.data : []
+                    })
+            }
+
             console.log("Check res RES", res);
         }
     }
     render() {
-        let { allDays } = this.state;
+        let { allDays, allavailableTime } = this.state;
+        let { language } = this.props;
         return (
             <div className="doctor-schedule-container">
                 <div className="all-schedule">
@@ -74,6 +91,27 @@ class DoctorSchedule extends Component {
                     </select>
                 </div>
                 <div className="all-available-time">
+                    <div className="text-calendar">
+                        <span>
+                            <i className="fas fa-calendar-alt"><span>Lịch Khám Bệnh</span></i>
+                        </span>
+                    </div>
+                    <div className="time-content">
+                        {allavailableTime && allavailableTime.length > 0 ?
+                            allavailableTime.map((item, index) => {
+                                let timeDisplay = language === LANGUAGES.VI ?
+                                    item.timeTypeData.valueVi : item.timeType.valueEn
+                                return (
+                                    <button
+                                        key={index}
+                                    >
+                                        {item.timeDisplay}
+                                    </button>
+                                );
+                            })
+                            : <div><FormattedMessage id="time-content.messages" /></div>
+                        }
+                    </div>
 
                 </div>
             </div>
