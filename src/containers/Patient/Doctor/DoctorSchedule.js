@@ -7,6 +7,7 @@ import moment from "moment";
 import { LANGUAGES } from "../../../utils";
 import { getScheduleDoctorByDate, handleLoginApi } from "../../../services/userService";
 import { FormattedMessage } from "react-intl";
+import { allKeys } from "underscore";
 class DoctorSchedule extends Component {
     constructor(props) {
         super(props);
@@ -15,18 +16,63 @@ class DoctorSchedule extends Component {
             allavailableTime: [],
         }
     }
-    componentDidMount = () => {
+    componentDidMount = async () => {
         let { language } = this.props;
-        console.log("moment vi", moment(new Date()).locale('vi').format("dddd - DD/MM"))
-        console.log("moment en", moment(new Date()).locale('en').format("ddd - DD/MM"));
-        this.setArrayDays(language)
+        let allDays = this.getArrayDays(language);
+        console.log("get all day", allDays)
+        this.setState({
+            allDays: allDays,
+        })
+
+    }
+    componentDidUpdate = async (prevProps, prevState, snapshot) => {
+        if (this.props.language !== prevProps.language) {
+            let allDays = this.getArrayDays(this.props.language);
+            this.setState({
+                allDays: allDays,
+            })
+        }
+
+        if (this.props.doctorIdFromParents !== prevProps.doctorIdFromParents) {
+            try {
+                let allDays = this.getArrayDays(this.props.language);
+                // Kiểm tra nếu allDays tồn tại và có ít nhất một phần tử
+                if (allDays && allDays.length > 0) {
+                    // Đảm bảo allDays[0] có thuộc tính value hợp lệ
+                    if (allDays[0].value) {
+                        let res = await getScheduleDoctorByDate(this.props.doctorIdFromParents, allDays[0].value);
+                        this.setState({
+                            allavailableTime: res.data ? res.data : []
+                        });
+                        console.log("Success", res);
+                    } else {
+                        console.log("allDays[0] does not have a valid 'value'");
+                        this.setState({
+                            allavailableTime: []
+                        });
+                    }
+                } else {
+                    console.log("allDays is empty or undefined");
+                    this.setState({
+                        allavailableTime: []
+                    });
+                }
+            } catch (error) {
+                this.setState({
+                    allavailableTime: []
+                });
+                console.log("Error fetching doctor schedule", error);
+            }
+
+        }
+
     }
     // Viết hoa chữ cái đầu trong thứ
     capitalizeFirstLetter(string) {
         return string.charAt(0).toUpperCase() + string.slice(1);
     }
-    setArrayDays = (language) => {
-        let allDate = [];
+    getArrayDays = (language) => {
+        let allDays = [];
         for (let i = 0; i < 7; i++) {
             let object = {};
             if (language === LANGUAGES.VI) {
@@ -38,28 +84,21 @@ class DoctorSchedule extends Component {
             }
             object.value = moment(new Date()).add(i, 'days').startOf('day').valueOf();
 
-            allDate.push(object);
+            allDays.push(object);
         }
 
         this.setState({
-            allDays: allDate,
+            allDays: allDays,
         })
-        console.log("arrDate", allDate)
     }
-    componentDidUpdate = (prevProps, prevState, snapshot) => {
-        if (this.props.language !== prevProps.language) {
-            this.setArrayDays(this.props.language)
-        }
-    }
+
     handleOnchangeSelect = async (e) => {
         if (this.props.doctorIdFromParents && this.props.doctorIdFromParents !== -1) {
             let doctorId = this.props.doctorIdFromParents;
             let date = e.target.value;
             let res = await getScheduleDoctorByDate(doctorId, date);
 
-            let alltime = [];
             if (res && res.errCode === 0) {
-                alltime = res.data;
                 this.setState
                     ({
                         allavailableTime: res.data ? res.data : []
@@ -99,13 +138,15 @@ class DoctorSchedule extends Component {
                     <div className="time-content">
                         {allavailableTime && allavailableTime.length > 0 ?
                             allavailableTime.map((item, index) => {
-                                let timeDisplay = language === LANGUAGES.VI ?
-                                    item.timeTypeData.valueVi : item.timeType.valueEn
+                                let timeDisplay = '';
+                                timeDisplay = language === LANGUAGES.VI
+                                    ? item.timeTypeData.valueVi
+                                    : item.timeTypeData.valueEn
                                 return (
                                     <button
                                         key={index}
                                     >
-                                        {item.timeDisplay}
+                                        {timeDisplay}
                                     </button>
                                 );
                             })

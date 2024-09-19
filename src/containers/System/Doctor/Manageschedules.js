@@ -7,9 +7,9 @@ import Select from 'react-select';
 import "./Manageschedules.scss"
 import DatePicker from "../../../components/Input/DatePicker";
 import { toast } from "react-toastify";
-import { isEmpty } from "lodash";
+import { escape, isEmpty } from "lodash";
 import { saveBulkScheduleDoctor } from "../../../services/userService";
-
+import moment from "moment";
 class Manageschedules extends Component {
     constructor(props) {
         super(props);
@@ -124,9 +124,18 @@ class Manageschedules extends Component {
             doctorId: selectedDoctor.value,
             formatedDate: formatedDate
         })
+        if (res && res.errCode === 0) {
+            toast.success("Save success!");
+        }
+        else {
+            toast.error("ErrorsaveBulkScheduleDoctor ");
+        }
         console.log("check result: ", res)
     }
     render() {
+        //user yesterday;
+        let yesterday = new Date(new Date().setDate(new Date().getDate() - 1));
+        console.log(`Yesterday (oneliner)\n${yesterday}`);
         console.log('check', this.props)
         let { language } = this.props;
         let { rangeTime } = this.state
@@ -156,7 +165,7 @@ class Manageschedules extends Component {
                                     onChange={this.handleOnChangeDatePicker}
                                     className="form-control"
                                     value={this.state.currentDate[0]}
-                                    minDate={new Date()}
+                                    minDate={yesterday}
                                 />
                             </div>
                             <div className="col-12 pick-our-container">
