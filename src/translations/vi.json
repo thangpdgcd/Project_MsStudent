@@ -106,7 +106,10 @@
         "Date": "Chọn Ngày",
         "save": "Lưu Thông Tin"
     },
-    "time-content": {
-        "messages": "Không có lịch hẹn trong thời gian này, vui lòng chọn thời gian khác!"
+    "patient": {
+        "detaildoctor": {
+            "schedule": "lịch Khám Bệnh",
+            "time-content": "Không có lịch hẹn trong thời gian này, vui lòng chọn thời gian khác!"
+        }
     }
 }

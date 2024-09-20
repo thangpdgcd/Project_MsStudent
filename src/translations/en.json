@@ -118,7 +118,10 @@
         "Date": "Choose Date",
         "save": "Save"
     },
-    "time-content": {
-        "messages": "No appointments available at this time, please choose another time!"
+    "patient": {
+        "detaildoctor": {
+            "schedule": "medical appointment",
+            "time-content": "No appointments available at this time, please choose another time!"
+        }
     }
 }

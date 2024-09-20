@@ -7,7 +7,6 @@ import moment from "moment";
 import { LANGUAGES } from "../../../utils";
 import { getScheduleDoctorByDate, handleLoginApi } from "../../../services/userService";
 import { FormattedMessage } from "react-intl";
-import { allKeys } from "underscore";
 class DoctorSchedule extends Component {
     constructor(props) {
         super(props);
@@ -16,6 +15,7 @@ class DoctorSchedule extends Component {
             allavailableTime: [],
         }
     }
+
     async componentDidMount() {
         let { language } = this.props;
         let allDays = this.getArrayDays(language);
@@ -25,6 +25,7 @@ class DoctorSchedule extends Component {
         })
 
     }
+
     async componentDidUpdate(prevProps, prevState, snapshot) {
         if (this.props.language !== prevProps.language) {
             let allDays = this.getArrayDays(this.props.language);
@@ -41,10 +42,12 @@ class DoctorSchedule extends Component {
             })
         }
     }
+
     // Viết hoa chữ cái đầu trong thứ
     capitalizeFirstLetter(string) {
         return string.charAt(0).toUpperCase() + string.slice(1);
     }
+
     getArrayDays = (language) => {
         let allDays = [];
         for (let i = 0; i < 7; i++) {
@@ -80,6 +83,7 @@ class DoctorSchedule extends Component {
             console.log("Check res RES", res);
         }
     }
+
     render() {
         let { allDays, allavailableTime } = this.state;
         let { language } = this.props;
@@ -104,7 +108,7 @@ class DoctorSchedule extends Component {
                 <div className="all-available-time">
                     <div className="text-calendar">
                         <span>
-                            <i className="fas fa-calendar-alt"><span>Lịch Khám Bệnh</span></i>
+                            <i className="fas fa-calendar-alt"><span><FormattedMessage id="patient.detaildoctor.schedule" /></span></i>
                         </span>
                     </div>
                     <div className="time-content">
@@ -122,7 +126,7 @@ class DoctorSchedule extends Component {
                                     </button>
                                 );
                             })
-                            : <div><FormattedMessage id="time-content.messages" /></div>
+                            : <div><FormattedMessage id="patient.detaildoctor.time-content" /></div>
                         }
                     </div>
 
