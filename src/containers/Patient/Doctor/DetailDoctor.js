@@ -22,14 +22,13 @@ class DetailDoctor extends Component {
 
             let id = this.props.match.params.id;
             this.setState({
-                currentTeacherId: id,
-            });
+                currentDoctorId: id
+            })
 
             let res = await getDetailInforDoctor(id);
             if (res && res.errCode === 0) {
                 this.setState({
                     detailDoctor: res.data,
-                    currentDoctorId: id
                 });
             }
         }

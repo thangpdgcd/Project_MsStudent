@@ -16,7 +16,7 @@ class DoctorSchedule extends Component {
             allavailableTime: [],
         }
     }
-    componentDidMount = async () => {
+    async componentDidMount() {
         let { language } = this.props;
         let allDays = this.getArrayDays(language);
         console.log("get all day", allDays)
@@ -25,7 +25,7 @@ class DoctorSchedule extends Component {
         })
 
     }
-    componentDidUpdate = async (prevProps, prevState, snapshot) => {
+    async componentDidUpdate(prevProps, prevState, snapshot) {
         if (this.props.language !== prevProps.language) {
             let allDays = this.getArrayDays(this.props.language);
             this.setState({
@@ -34,38 +34,12 @@ class DoctorSchedule extends Component {
         }
 
         if (this.props.doctorIdFromParents !== prevProps.doctorIdFromParents) {
-            try {
-                let allDays = this.getArrayDays(this.props.language);
-                // Kiểm tra nếu allDays tồn tại và có ít nhất một phần tử
-                if (allDays && allDays.length > 0) {
-                    // Đảm bảo allDays[0] có thuộc tính value hợp lệ
-                    if (allDays[0].value) {
-                        let res = await getScheduleDoctorByDate(this.props.doctorIdFromParents, allDays[0].value);
-                        this.setState({
-                            allavailableTime: res.data ? res.data : []
-                        });
-                        console.log("Success", res);
-                    } else {
-                        console.log("allDays[0] does not have a valid 'value'");
-                        this.setState({
-                            allavailableTime: []
-                        });
-                    }
-                } else {
-                    console.log("allDays is empty or undefined");
-                    this.setState({
-                        allavailableTime: []
-                    });
-                }
-            } catch (error) {
-                this.setState({
-                    allavailableTime: []
-                });
-                console.log("Error fetching doctor schedule", error);
-            }
-
+            let allDays = this.getArrayDays(this.props.language);
+            let res = await getScheduleDoctorByDate(this.props.doctorIdFromParents, allDays[0].value);
+            this.setState({
+                allavailableTime: res.data ? res.data : []
+            })
         }
-
     }
     // Viết hoa chữ cái đầu trong thứ
     capitalizeFirstLetter(string) {
@@ -87,9 +61,7 @@ class DoctorSchedule extends Component {
             allDays.push(object);
         }
 
-        this.setState({
-            allDays: allDays,
-        })
+        return allDays;
     }
 
     handleOnchangeSelect = async (e) => {
