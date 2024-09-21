@@ -10,7 +10,7 @@ class DetailDoctor extends Component {
         super(props);
         this.state = {
             detailDoctor: {},
-            currentDoctorId: -1,
+            currentDoctorId: -1, 
         }
     }
     async componentDidMount() {
@@ -99,6 +99,7 @@ class DetailDoctor extends Component {
 const mapStateToProps = (state) => {
     return {
         isLoggedIn: state.user.isLoggedIn,
+        language: state.app.language,
     };
 };
 
