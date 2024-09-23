@@ -109,7 +109,9 @@
     "patient": {
         "detaildoctor": {
             "schedule": "lịch Khám Bệnh",
-            "time-content": "Không có lịch hẹn trong thời gian này, vui lòng chọn thời gian khác!"
+            "time-content": "Không có lịch hẹn trong thời gian này, vui lòng chọn thời gian khác!",
+            "choose": "Chọn ",
+            "free": " Và Đặt (Miễn Phí)"
         }
     }
 }

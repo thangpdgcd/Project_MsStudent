@@ -53,11 +53,24 @@ class DoctorSchedule extends Component {
         for (let i = 0; i < 7; i++) {
             let object = {};
             if (language === LANGUAGES.VI) {
-                //chuyển đổi chữ cái đầu từ thường thành hoa
-                let labelVi = object.label = moment(new Date()).add(i, 'days').locale('vi').format('dddd - DD / MM');
-                object.label = this.capitalizeFirstLetter(labelVi)
+                if (i === 0) {
+                    let ddMM = moment(new Date()).format("DD/MM");
+                    let today = `Hôm Nay - ${ddMM}`
+                    object.label = today;
+                } else {
+                    //chuyển đổi chữ cái đầu từ thường thành hoa
+                    let labelVi = object.label = moment(new Date()).add(i, 'days').locale('vi').format('dddd - DD / MM');
+                    object.label = this.capitalizeFirstLetter(labelVi)
+                }
             } else {
-                object.label = moment(new Date()).add(i, 'days').locale('en').format("ddd - DD/MM");
+                if (i === 0) {
+                    let ddMM = moment(new Date()).format("DD/MM");
+                    let today = `Today - ${ddMM}`
+                    object.label = today;
+                }
+                else {
+                    object.label = moment(new Date()).add(i, 'days').locale('en').format("ddd - DD/MM");
+                }
             }
             object.value = moment(new Date()).add(i, 'days').startOf('day').valueOf();
 
@@ -113,25 +126,41 @@ class DoctorSchedule extends Component {
                     </div>
                     <div className="time-content">
                         {allavailableTime && allavailableTime.length > 0 ?
-                            allavailableTime.map((item, index) => {
-                                let timeDisplay = '';
-                                timeDisplay = language === LANGUAGES.VI
-                                    ? item.timeTypeData.valueVi
-                                    : item.timeTypeData.valueEn
-                                return (
-                                    <button
-                                        key={index}
-                                    >
-                                        {timeDisplay}
-                                    </button>
-                                );
-                            })
-                            : <div><FormattedMessage id="patient.detaildoctor.time-content" /></div>
+                            <>
+                                <div className="time-content-btns">
+                                    {allavailableTime.map((item, index) => {
+                                        let timeDisplay = '';
+                                        timeDisplay = language === LANGUAGES.VI
+                                            ? item.timeTypeData.valueVi
+                                            : item.timeTypeData.valueEn
+                                        return (
+                                            <button
+                                                key={index}
+                                                className={language === LANGUAGES.VI ? 'btn-vi' : 'btn-en'}
+                                            >
+                                                {timeDisplay}
+                                            </button>
+                                        );
+                                    })
+                                    }
+                                </div>
+                                <div className="book-free">
+                                    <span >
+                                        <FormattedMessage id="patient.detaildoctor.choose" />
+                                        <i className=" far fa-hand-point-up"></i>
+                                        <FormattedMessage id="patient.detaildoctor.free" />
+                                    </span>
+                                </div>
+                            </>
+                            :
+                            <div>
+                                <FormattedMessage id="patient.detaildoctor.time-content" />
+                            </div>
                         }
                     </div>
 
                 </div>
-            </div>
+            </div >
         );
     }
 }

@@ -121,7 +121,9 @@
     "patient": {
         "detaildoctor": {
             "schedule": "medical appointment",
-            "time-content": "No appointments available at this time, please choose another time!"
+            "time-content": "No appointments available at this time, please choose another time!",
+            "choose": "Choose ",
+            "free": " And Book (Free)"
         }
     }
 }

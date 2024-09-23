@@ -38,24 +38,41 @@
         }
 
         .time-content {
-            display: flex;
-            gap: 5px;
-            flex-wrap: wrap;
+            .time-content-btns {
+                display: flex;
+                gap: 5px;
+                flex-wrap: wrap;
+                font-style: italic;
+                font-size: 14px;
 
-            button {
-                padding: 8px 10px;
-                border: none;
-                outline: none;
-                background-color: #fff0b4;
-                border-radius: 5px;
-                min-width: 120px;
-                font-weight: 600;
-                color: #333;
+
+                button {
+                    padding: 8px 10px;
+                    border: none;
+                    outline: none;
+                    background-color: #fff0b4;
+                    border-radius: 5px;
+                    min-width: 120px;
+                    font-weight: 600;
+                    color: #333;
+                }
+
+                button:hover {
+                    background-color: #45c3d2;
+                    color: white;
+                }
+
+                .btn-vi {
+                    min-width: 120px;
+                }
+
+                .btn-en {
+                    min-width: 150px;
+                }
             }
 
-            button:hover {
-                background-color: #45c3d2;
-                color: white;
+            .book-free {
+                margin-top: 10px;
             }
         }
     }
