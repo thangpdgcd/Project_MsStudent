@@ -33,7 +33,6 @@ class DoctorSchedule extends Component {
                 allDays: allDays,
             })
         }
-
         if (this.props.doctorIdFromParents !== prevProps.doctorIdFromParents) {
             let allDays = this.getArrayDays(this.props.language);
             let res = await getScheduleDoctorByDate(this.props.doctorIdFromParents, allDays[0].value);
