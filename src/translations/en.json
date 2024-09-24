@@ -118,6 +118,17 @@
         "Date": "Choose Date",
         "save": "Save"
     },
+     "manage-doctor":{
+        "title":"Create Infomation Doctors"
+    },
+     "more-infor":{
+        "content-left": {
+             "label-left":"Choose Doctors"
+        },    
+           "content-right": {
+            "label-right":"Infomation Doctors"
+        }
+    },
     "patient": {
         "detaildoctor": {
             "schedule": "medical appointment",
@@ -125,5 +136,17 @@
             "choose": "Choose ",
             "free": " And Book (Free)"
         }
+    },
+      "more-infor-extra":{
+        "price":"Price",
+        "payment":"Payment ",
+        "privince":"Province",
+        "clinic":"Clinic Name",
+        "addressClinic":"Clinic Address",
+        "note":"Note"
+    },
+    "button":{
+        "create":"Create",
+        "save":"Save"
     }
 }

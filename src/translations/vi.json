@@ -106,6 +106,14 @@
         "Date": "Chọn Ngày",
         "save": "Lưu Thông Tin"
     },
+    "more-infor":{
+        "content-left": {
+            "label-left":"Chọn Bác Sĩ"
+        },
+         "content-right": {
+            "label-right":"Thông Tin Bác Sĩ"
+        } 
+    },
     "patient": {
         "detaildoctor": {
             "schedule": "lịch Khám Bệnh",
@@ -113,5 +121,20 @@
             "choose": "Chọn ",
             "free": " Và Đặt (Miễn Phí)"
         }
+    },
+    "manage-doctor":{
+        "title":"Tạo Thêm Thông Tin Bác Sĩ"
+    },
+    "more-infor-extra":{
+        "price":"Giá",
+        "payment":"Phương Thức Thanh Toán",
+        "privince":"Tỉnh Thành",
+        "clinic":"Tên phòng Khám",
+        "addressClinic":"Địa Chỉ Phòng Khám",
+        "note":"Ghi Chú"
+    },
+    "button":{
+        "create":"Tạo Thông Tin",
+        "save":"Lưu Thông Tin"
     }
 }

@@ -1,4 +1,3 @@
-
 import actionTypes from "../actions/actionTypes";
 
 const initialState = {
@@ -11,7 +10,8 @@ const initialState = {
   topDoctors: [],
   allDoctors: [],
   SaveDoctors: [],
-  allScheduleTime: []
+  allScheduleTime: [],
+  allRequiredDoctorInfor: [],
 };
 
 const adminReducer = (state = initialState, action) => {
@@ -108,6 +108,18 @@ const adminReducer = (state = initialState, action) => {
       };
     case actionTypes.FETCH_ALLCODE_SCHEDULE_TIME_FAIL:
       state.allScheduleTime = [];
+      return {
+        ...state,
+      };
+    case actionTypes.FETCH_REQUIRED_DOCTOR_INFOR_SUCCESS:
+      state.allRequiredDoctorInfor = action.data;
+      console.log("fire fetch positions success", state);
+      return {
+        ...state,
+      };
+    case actionTypes.FETCH_ALLCODE_SCHEDULE_TIME_FAIL:
+      state.allRequiredDoctorInfor = [];
+      console.log("fire fetch positions fail", state);
       return {
         ...state,
       };
