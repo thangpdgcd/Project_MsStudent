@@ -31,19 +31,21 @@ let initWebRoutes = (app) => {
   router.delete("/api/delete-user", userController.handleDeleteUser);
   router.get("/api/allcode", userController.getAllCode);
 
-  //new route test
-  router.get("/api/allscode", userController.getallss);
-
-
   //api topdoctorhome
-  router.get("/api/top-doctor-home", doctorController.getTopDoctorHome)
+  router.get("/api/top-doctor-home", doctorController.getTopDoctorHome);
 
   //api edit information doctor
-  router.get("/api/get-all-doctors", doctorController.getAllDoctors)
-  router.post("/api/save-infor-doctors", doctorController.postinforDoctors)
-  router.get("/api/get-detail-doctor-by-id", doctorController.getDetaildoctorbyId)
-  router.post("/api/bulk-create-schedule", doctorController.bulkCreateSchedule)
-  router.get("/api/get-schedule-doctor-by-date", doctorController.getScheduleByDate)
+  router.get("/api/get-all-doctors", doctorController.getAllDoctors);
+  router.post("/api/save-infor-doctors", doctorController.postinforDoctors);
+  router.get(
+    "/api/get-detail-doctor-by-id",
+    doctorController.getDetaildoctorbyId
+  );
+  router.post("/api/bulk-create-schedule", doctorController.bulkCreateSchedule);
+  router.get(
+    "/api/get-schedule-doctor-by-date",
+    doctorController.getScheduleByDate
+  );
   return app.use("/", router);
 };
 
