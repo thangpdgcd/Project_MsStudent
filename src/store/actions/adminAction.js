@@ -101,9 +101,7 @@ export const fetchRoleFail = () => ({
   type: actionTypes.FETCH_ROLE_FAIL,
 });
 
-//start doing and
-
-//save
+//create
 export const createNewUser = (data) => {
   return async (dispatch, getState) => {
     try {
@@ -279,7 +277,7 @@ export const SaveDoctorDetail = (data) => {
         toast.success("SAVE DOCTORS SUCCESS!!");
         dispatch(fetchAllDoctorsSuccess(res.data));
       } else {
-        toast.success("SAVE DOCTORS FAIL!!");
+        toast.error("SAVE DOCTORS FAIL!!");
         dispatch(fetchAllDoctorsFail());
       }
     } catch (error) {
