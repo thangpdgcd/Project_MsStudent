@@ -1,7 +1,5 @@
-import { where } from "sequelize";
 import db from "../models/index";
 import _ from "lodash";
-import { raw } from "body-parser";
 require("dotenv").config();
 const MAX_NUMBER_SCHEDULE = process.env.MAX_NUMBER_SCHEDULE;
 
@@ -68,17 +66,18 @@ let saveDetailInforDoctor = (inputData) => {
   return new Promise(async (resolve, reject) => {
     try {
       //check valid
+
       if (
         !inputData.doctorId ||
-        !inputData.contentHTML ||
-        !inputData.contentMarkdown ||
-        !inputData.actions ||
         !inputData.selectedPrice ||
         !inputData.selectedPayment ||
         !inputData.selectedProvince ||
         !inputData.nameClinic ||
         !inputData.addressClinic ||
-        !inputData.note
+        !inputData.note ||
+        !inputData.contentHTML ||
+        !inputData.contentMarkdown ||
+        !inputData.actions
       ) {
         resolve({
           errCode: 1,
@@ -116,7 +115,7 @@ let saveDetailInforDoctor = (inputData) => {
           raw: false,
         });
         if (doctorInfor) {
-          //update
+          doctorInfor.doctorId = inputData.doctorId;
           doctorInfor.priceId = inputData.selectedPrice;
           doctorInfor.provinceId = inputData.selectedProvince;
           doctorInfor.paymentId = inputData.selectedPayment;
@@ -125,7 +124,6 @@ let saveDetailInforDoctor = (inputData) => {
           doctorInfor.note = inputData.note;
           await doctorInfor.save();
         } else {
-          //create
           await db.Doctor_infor.create({
             doctorId: inputData.doctorId,
             priceId: inputData.selectedPrice,
@@ -179,7 +177,7 @@ let getDetaildoctorbyId = (inputId) => {
           nest: true,
         });
         if (data && data.image) {
-          data.image = new Buffer(data.image, "base64").toString("binary");
+          data.image = new Buffer.from(data.image, "base64").toString("binary");
         }
         if (!data) {
           data.image = {};

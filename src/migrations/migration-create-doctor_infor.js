@@ -1,68 +1,61 @@
-'use strict';
+"use strict";
 
 const { defaultValueSchemable } = require("sequelize/lib/utils");
 const { sequelize } = require("../models");
 
 module.exports = {
-    up: async (queryInterface, Sequelize) => {
-        await queryInterface.createTable('doctor_infor', {
-            // priceId: DataTypes.STRING,
-            // provinceId: DataTypes.STRING,
-            // paymentId: DataTypes.STRING,
-            // addressClinic: DataTypes.STRING,
-            // nameClinic: DataTypes.STRING,
-            // note: DataTypes.STRING,
-            // count: DataTypes.INTEGER
-            // Các trường id k cho nó null
-            id: {
-                allowNull: false,
-                autoIncrement: true,
-                primaryKey: true,
-                type: Sequelize.INTEGER
-            },
-            doctorId: {
-                type: Sequelize.INTEGER,
-                allowNull: false
-            },
-            priceId: {
-                type: Sequelize.STRING,
-                allowNull: false
-            },
-            provinceId: {
-                type: Sequelize.STRING,
-                allowNull: false
-            },
-            paymentId: {
-                type: Sequelize.STRING,
-                allowNull: false
-            },
-            addressClinic: {
-                type: Sequelize.STRING,
-                allowNull: false
-            },
-            nameClinic: {
-                type: Sequelize.STRING,
-                allowNull: false
-            },
-            note: {
-                type: Sequelize.STRING
-            },
-            count: {
-                type: Sequelize.INTEGER,
-                allowNull: false,
-                defaultValue: 0
-            },
-            createdAt: {
-                allowNull: false,
-                type: Sequelize.DATE
-            },
-            updatedAt: {
-                allowNull: false,
-                type: Sequelize.DATE
-            }
-        });
-    },
-    down: async (queryInterface, Sequelize) => {
-        await queryInterface.dropTable('doctor_infor');
-    }
+  up: async (queryInterface, Sequelize) => {
+    await queryInterface.createTable("doctor_infor", {
+      // Các trường id k cho nó null
+      id: {
+        allowNull: false,
+        autoIncrement: true,
+        primaryKey: true,
+        type: Sequelize.INTEGER,
+      },
+      doctorId: {
+        type: Sequelize.INTEGER,
+        allowNull: false,
+      },
+      priceId: {
+        type: Sequelize.STRING,
+        allowNull: false,
+      },
+      provinceId: {
+        type: Sequelize.STRING,
+        allowNull: false,
+      },
+      paymentId: {
+        type: Sequelize.STRING,
+        allowNull: false,
+      },
+      addressClinic: {
+        type: Sequelize.STRING,
+        allowNull: false,
+      },
+      nameClinic: {
+        type: Sequelize.STRING,
+        allowNull: false,
+      },
+      note: {
+        type: Sequelize.STRING,
+      },
+      count: {
+        type: Sequelize.INTEGER,
+        allowNull: false,
+        defaultValue: 0,
+      },
+      createdAt: {
+        allowNull: false,
+        type: Sequelize.DATE,
+      },
+      updatedAt: {
+        allowNull: false,
+        type: Sequelize.DATE,
+      },
+    });
+  },
+  down: async (queryInterface, Sequelize) => {
+    await queryInterface.dropTable("doctor_infor");
+  },
 };
