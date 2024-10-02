@@ -24,7 +24,6 @@ class ManageDoctor extends Component {
       selectedOption: "",
       description: "",
       listDoctors: [],
-      AllDoctor: {},
       hasOldData: false,
 
       //save to doctor_infor table
@@ -61,7 +60,7 @@ class ManageDoctor extends Component {
       if (type === "PRICE") {
         inputData.map((item, index) => {
           let object = {};
-          let labelVi = `${item.valueVi} VND`;
+          let labelVi = `${item.valueVi}`;
           let labelEn = `${item.valueEn} USD`;
           object.label = language === LANGUAGES.VI ? labelVi : labelEn;
           object.value = item.keyMap;
@@ -95,6 +94,7 @@ class ManageDoctor extends Component {
         listDoctors: dataSelect,
       });
     }
+
     // các thuộc tính giá, thanh toán,tỉnh thành
     if (
       prevProps.allRequiredDoctorInfor !== this.props.allRequiredDoctorInfor
@@ -128,7 +128,7 @@ class ManageDoctor extends Component {
         "PROVINCE"
       );
       this.setState({
-        listDoctors: dataSelect,
+        listDoctor: dataSelect,
         listPrice: dataSelectPrice,
         listPayment: dataSelectPayment,
         listProvince: dataSelectProvince,
@@ -161,7 +161,7 @@ class ManageDoctor extends Component {
       addressClinic: this.state.addressClinic,
       note: this.state.note,
     });
-    console.log("Check prop handle ", this.state);
+    console.log("Check prop handle fetsave ", this.state);
   };
 
   handleChangeSelect = async (selectedOption) => {
@@ -252,7 +252,6 @@ class ManageDoctor extends Component {
                 value={this.state.selectedPrice}
                 onChange={this.handleChangeSelectDoctorInfor}
                 options={this.state.listPrice}
-                placeholder={<FormattedMessage id="more-infor-extra.price" />}
                 name="selectedPrice"
               />
             </div>
@@ -264,7 +263,6 @@ class ManageDoctor extends Component {
                 value={this.state.selectedPayment}
                 onChange={this.handleChangeSelectDoctorInfor}
                 options={this.state.listPayment}
-                placeholder={<FormattedMessage id="more-infor-extra.payment" />}
                 name="selectedPayment"
               />
             </div>
@@ -276,9 +274,6 @@ class ManageDoctor extends Component {
                 value={this.state.selectedProvince}
                 onChange={this.handleChangeSelectDoctorInfor}
                 options={this.state.listProvince}
-                placeholder={
-                  <FormattedMessage id="more-infor-extra.privince" />
-                }
                 name="selectedProvince"
               />
             </div>
@@ -291,7 +286,7 @@ class ManageDoctor extends Component {
                   this.handleOnChangeOnText(event, "nameClinic")
                 }
                 value={this.state.nameClinic}
-                placeholder={<FormattedMessage id="more-infor-extra.clinic" />}
+                // placeholder={<FormattedMessage id="more-infor-extra.clinic" />}
               />
             </div>
             <div className="col-4 form-group">
@@ -302,10 +297,10 @@ class ManageDoctor extends Component {
                 onChange={(event) =>
                   this.handleOnChangeOnText(event, "addressClinic")
                 }
+                // placeholder={
+                //   <FormattedMessage id="more-infor-extra.addressClinic" />
+                // }
                 value={this.state.addressClinic}
-                placeholder={
-                  <FormattedMessage id="more-infor-extra.addressClinic" />
-                }
               />
             </div>
             <div className="col-4 form-group">
@@ -315,9 +310,8 @@ class ManageDoctor extends Component {
               <input
                 onChange={(event) => this.handleOnChangeOnText(event, "note")}
                 value={this.state.note}
-                placeholder={
-                  <FormattedMessage id="more-infor-extra.addressClinic" />
-                }
+                // placeholder={
+                //   <FormattedMessage id="more-infor-extra.addressClinic" />      }
               />
             </div>
           </div>
@@ -354,16 +348,14 @@ class ManageDoctor extends Component {
 }
 const mapStateToProps = (state) => {
   return {
-    listUsers: state.admin.users,
     language: state.app.language,
     allDoctorRedux: state.admin.allDoctors,
-    SaveDoctorsRedux: state.admin.SaveDoctors,
     allRequiredDoctorInfor: state.admin.allRequiredDoctorInfor,
   };
 };
 const mapDispatchToProps = (dispatch) => {
   return {
-    fetchAllDoctorRedux: (id) => dispatch(actions.fetchAllDoctorsStart(id)),
+    fetchAllDoctorRedux: () => dispatch(actions.fetchAllDoctorsStart()),
     fetchSaveDoctorRedux: (data) => dispatch(actions.SaveDoctorDetail(data)),
     getRequiredDoctorInforRedux: () =>
       dispatch(actions.getRequiredDoctorInfor()),

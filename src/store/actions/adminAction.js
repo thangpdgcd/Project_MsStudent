@@ -325,9 +325,9 @@ export const fetchAllScheduletTimeFail = () => ({
 export const getRequiredDoctorInfor = () => {
   return async (dispatch, getState) => {
     try {
-      // dispatch({
-      //   type: actionTypes.FETCH_REQUIRED_DOCTOR_INFOR_START,
-      // });
+      dispatch({
+        type: actionTypes.FETCH_REQUIRED_DOCTOR_INFOR_START,
+      });
       let resPrice = await getAllCodeService("PRICE");
       let resPayment = await getAllCodeService("PAYMENT");
       let resProvince = await getAllCodeService("PROVINCE");
