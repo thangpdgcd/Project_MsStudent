@@ -82,6 +82,20 @@ let getScheduleByDate = async (req, res) => {
     });
   }
 };
+let getScheduleByDate2 = async (req, res) => {
+  try {
+    let inforbydate = await doctorService.getScheduleByDate(
+      req.query.doctorId,
+      req.query.date
+    );
+    return res.status(200).json(inforbydate);
+  } catch (error) {
+    return res.status(200).json({
+      errorCode: -1,
+      message: "Error from sever....",
+    });
+  }
+};
 module.exports = {
   getTopDoctorHome: getTopDoctorHome,
   getAllDoctors: getAllDoctors,
