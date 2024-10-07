@@ -1,8 +1,8 @@
-
-import { where } from "sequelize";
+import raw from "body-parser/lib/types/raw";
 import db from "../models/index";
 import _ from "lodash"
-import { raw } from "body-parser";
+
+
 require('dotenv').config();
 const MAX_NUMBER_SCHEDULE = process.env.MAX_NUMBER_SCHEDULE;
 
@@ -61,12 +61,24 @@ let getAllDoctors = () => {
 let saveDetailInforDoctor = (inputData) => {
     return new Promise(async (resolve, reject) => {
         try {
-            if (!inputData.doctorId || !inputData.contentHTML || !inputData.contentMarkdown || !inputData.actions) {
+
+            if (!inputData.doctorId ||
+                !inputData.contentHTML ||
+                !inputData.contentMarkdown ||
+                !inputData.actions ||
+                !inputData.selectedPrice ||
+                !inputData.selectedPayment ||
+                !inputData.selectedProvince ||
+                !inputData.nameClinic ||
+                !inputData.addressClinic ||
+                !inputData.note
+            ) {
                 resolve({
                     errCode: 1,
                     errMessage: 'Missing parameter'
                 })
             } else {
+                //table markdown
                 if (inputData.actions === "CREATE") {
                     await db.Markdown.create({
                         contentHTML: inputData.contentHTML,
@@ -78,7 +90,8 @@ let saveDetailInforDoctor = (inputData) => {
                     let doctormarkdown = await db.Markdown.findOne({
                         where: { doctorId: inputData.doctorId },
                         raw: false
-                    })
+                    },)
+
                     if (doctormarkdown) {
                         doctormarkdown.contentHTML = inputData.contentHTML;
                         doctormarkdown.contentMarkdown = inputData.contentMarkdown;
@@ -87,6 +100,35 @@ let saveDetailInforDoctor = (inputData) => {
                         await doctormarkdown.save();
                     }
                 }
+                // table doctor_infor
+                let Doctorinfor = await db.Doctor_infor.findOne({
+                    where: { doctorId: inputData.doctorId },
+                    raw: false
+                })
+                if (Doctorinfor) {
+                    //update
+                    Doctorinfor.doctorId = inputData.doctorId,
+                        Doctorinfor.priceId = inputData.selectedPrice,
+                        Doctorinfor.provinceId = inputData.selectedProvince,
+                        Doctorinfor.paymentId = inputData.selectedPayment,
+                        Doctorinfor.addressClinic = inputData.addressClinic,
+                        Doctorinfor.nameClinic = inputData.nameClinic,
+                        Doctorinfor.note = inputData.note,
+                        await doctormarkdown.save();
+
+                } else {
+                    //create
+                    await db.Doctor_infor.create({
+                        doctorId: inputData.doctorId,
+                        priceId: inputData.selectedPrice,
+                        provinceId: inputData.selectedProvince,
+                        paymentId: inputData.selectedPayment,
+                        addressClinic: inputData.addressClinic,
+                        nameClinic: inputData.nameClinic,
+                        note: inputData.note,
+                    })
+                }
+
                 resolve({
                     errCode: 0,
                     errMessage: "Save Information Successed!"
@@ -96,6 +138,7 @@ let saveDetailInforDoctor = (inputData) => {
             reject(e)
         }
     })
+
 }
 
 //get doctorid
@@ -127,7 +170,7 @@ let getDetaildoctorbyId = (inputId) => {
                     nest: true
                 });
                 if (data && data.image) {
-                    data.image = new Buffer(data.image, 'base64').toString('binary')
+                    data.image = new Buffer.from(data.image, 'base64').toString('binary')
                 }
                 if (!data) {
                     data.image = {};

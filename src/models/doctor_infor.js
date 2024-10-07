@@ -14,7 +14,6 @@ module.exports = (sequelize, DataTypes) => {
         }
     };
     Doctor_infor.init({
-
         doctorId: DataTypes.INTEGER,
         priceId: DataTypes.STRING,
         provinceId: DataTypes.STRING,
@@ -25,7 +24,8 @@ module.exports = (sequelize, DataTypes) => {
         count: DataTypes.INTEGER
     }, {
         sequelize,
-        modelName: 'doctor_infor.js',
+        modelName: 'Doctor_infor',
+        freezeTableName: true
     });
     return Doctor_infor;
 };
