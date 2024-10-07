@@ -1,0 +1,10 @@
+diff a/src/services/doctorService.js b/src/services/doctorService.js	(rejected hunks)
+@@ -115,7 +115,7 @@
+                         Doctorinfor.addressClinic = inputData.addressClinic,
+                         Doctorinfor.nameClinic = inputData.nameClinic,
+                         Doctorinfor.note = inputData.note,
+-                        await doctormarkdown.save();
++                        await Doctorinfor.save();
+                 } else {
+                     //create
+                     await db.Doctor_infor.create({
