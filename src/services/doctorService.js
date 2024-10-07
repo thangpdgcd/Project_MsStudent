@@ -115,7 +115,7 @@ let saveDetailInforDoctor = (inputData) => {
                         Doctorinfor.addressClinic = inputData.addressClinic,
                         Doctorinfor.nameClinic = inputData.nameClinic,
                         Doctorinfor.note = inputData.note,
-                        await doctormarkdown.save();
+                        await Doctorinfor.save();
                 } else {
                     //create
                     await db.Doctor_infor.create({

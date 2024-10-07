@@ -4,7 +4,6 @@ const { defaultValueSchemable } = require("sequelize/lib/utils");
 const { sequelize } = require("../models");
 
 module.exports = {
-
   up: async (queryInterface, Sequelize) => {
     await queryInterface.createTable("doctor_infor", {
       // Các trường id k cho nó null
