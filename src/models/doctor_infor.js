@@ -23,7 +23,8 @@ module.exports = (sequelize, DataTypes) => {
         count: DataTypes.INTEGER
     }, {
         sequelize,
-        modelName: 'doctor_infor.js',
+        modelName: 'Doctor_infor',
+        freezeTableName: true
     });
     return Doctor_infor;
 };
