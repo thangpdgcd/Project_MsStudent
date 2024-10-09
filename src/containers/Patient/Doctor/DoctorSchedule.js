@@ -7,6 +7,7 @@ import moment from "moment";
 import { LANGUAGES } from "../../../utils";
 import { getScheduleDoctorByDate, handleLoginApi } from "../../../services/userService";
 import { FormattedMessage } from "react-intl";
+import DoctorExtraInfor from "./DoctorExtraInfor";
 class DoctorSchedule extends Component {
     constructor(props) {
         super(props);

@@ -5,12 +5,13 @@ import HomeHeader from "../../HomePage/HomeHeader";
 import { getDetailInforDoctor } from "../../../services/userService";
 import { LANGUAGES } from "../../../utils";
 import DoctorSchedule from "./DoctorSchedule";
+import DoctorExtraInfor from "./DoctorExtraInfor";
 class DetailDoctor extends Component {
     constructor(props) {
         super(props);
         this.state = {
             detailDoctor: {},
-            currentDoctorId: -1, 
+            currentDoctorId: -1,
         }
     }
     async componentDidMount() {
@@ -75,7 +76,9 @@ class DetailDoctor extends Component {
                             />
                         </div>
                         <div className="content-right">
-
+                            <DoctorExtraInfor
+                                doctorIdFromParents={this.state.currentDoctorId}
+                            />
                         </div>
                     </div>
 

@@ -9,6 +9,7 @@ import Select from "react-select";
 import { CRUD_ACTIONS, LANGUAGES } from "../../../utils";
 import { getDetailInforDoctor } from "../../../services/userService";
 import { FormattedMessage } from "react-intl";
+import { map } from "lodash";
 
 const mdParser = new MarkdownIt(/* Markdown-it options */);
 class ManageDoctor extends Component {
@@ -166,14 +167,53 @@ class ManageDoctor extends Component {
 
   handleChangeSelect = async (selectedOption) => {
     this.setState({ selectedOption });
+    let { listPayment, listProvince, listPrice } = this.state;
     let res = await getDetailInforDoctor(selectedOption.value);
     if (res && res.errCode === 0 && res.data.Markdown) {
       let markdown = res.data.Markdown;
+      let addressClinic = "",
+        nameClinic = "",
+        note = "",
+        paymentId = "",
+        priceId = "",
+        provinceId = "",
+        selectedPrice = "",
+        selectedPayment = "",
+        selectedProvince = "";
+
+      if (res.data.Doctor_infor) {
+        addressClinic = res.data.Doctor_infor.addressClinic;
+        note = res.data.Doctor_infor.note;
+        nameClinic = res.data.Doctor_infor.nameClinic;
+        paymentId = res.data.Doctor_infor.paymentId;
+        priceId = res.data.Doctor_infor.priceId;
+        provinceId = res.data.Doctor_infor.provinceId;
+
+        selectedPrice = listPrice.find((item => {
+          return item && item.value === priceId
+        }
+        ))
+        selectedPayment = listPayment.find((item => {
+          return item && item.value === paymentId
+        }
+        ))
+        selectedProvince = listProvince.find((item => {
+          return item && item.value === provinceId
+        }
+        ))
+      }
+
       this.setState({
         contentHTML: markdown.contentHTML,
         contentMarkdown: markdown.contentMarkdown,
         description: markdown.description,
         hasOldData: true,
+        addressClinic: addressClinic,
+        nameClinic: nameClinic,
+        note: note,
+        selectedPrice: selectedPrice,
+        selectedPayment: selectedPayment,
+        selectedProvince: selectedProvince
       });
     } else {
       this.setState({
@@ -181,6 +221,12 @@ class ManageDoctor extends Component {
         contentMarkdown: "",
         description: "",
         hasOldData: false,
+        addressClinic: "",
+        nameClinic: "",
+        note: "",
+        selectedPrice: "",
+        selectedPayment: "",
+        selectedProvince: ""
       });
     }
   };
@@ -203,6 +249,7 @@ class ManageDoctor extends Component {
     });
   };
   render() {
+    console.log("check statesss", this.state)
     console.log("check state", this.state);
     // let { listPrice, listPayment, listProvince } = this.props;
     let { hasOldData } = this.state;
@@ -286,7 +333,7 @@ class ManageDoctor extends Component {
                   this.handleOnChangeOnText(event, "nameClinic")
                 }
                 value={this.state.nameClinic}
-                // placeholder={<FormattedMessage id="more-infor-extra.clinic" />}
+              // placeholder={<FormattedMessage id="more-infor-extra.clinic" />}
               />
             </div>
             <div className="col-4 form-group">
@@ -310,8 +357,8 @@ class ManageDoctor extends Component {
               <input
                 onChange={(event) => this.handleOnChangeOnText(event, "note")}
                 value={this.state.note}
-                // placeholder={
-                //   <FormattedMessage id="more-infor-extra.addressClinic" />      }
+              // placeholder={
+              //   <FormattedMessage id="more-infor-extra.addressClinic" />      }
               />
             </div>
           </div>
