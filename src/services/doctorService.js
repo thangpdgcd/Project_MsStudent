@@ -1,4 +1,3 @@
-import raw from "body-parser/lib/types/raw";
 import db from "../models/index";
 import _ from "lodash"
 
@@ -164,7 +163,19 @@ let getDetaildoctorbyId = (inputId) => {
                             model: db.Markdown,
                             attributes: ['description', 'contentMarkdown', 'contentHTML']
                         },
+
                         { model: db.Allcode, as: 'positionData', attributes: ['valueEn', 'valueVi'] },
+                        {
+                            model: db.Doctor_infor,
+                            attributes: {
+                                exclude: ['id', 'doctorId']
+                            },
+                            include: [
+                                { model: db.Allcode, as: 'priceTypeData', attributes: ['valueEn', 'valueVi'] },
+                                { model: db.Allcode, as: 'provinceTypeData', attributes: ['valueEn', 'valueVi'] },
+                                { model: db.Allcode, as: 'paymentTypeData', attributes: ['valueEn', 'valueVi'] },
+                            ]
+                        },
                     ],
                     raw: false,
                     nest: true
@@ -172,6 +183,7 @@ let getDetaildoctorbyId = (inputId) => {
                 if (data && data.image) {
                     data.image = new Buffer.from(data.image, 'base64').toString('binary')
                 }
+                //nếu không có data trả về object rỗng
                 if (!data) {
                     data.image = {};
                 };
