@@ -118,15 +118,15 @@
         "Date": "Choose Date",
         "save": "Save"
     },
-     "manage-doctor":{
-        "title":"Create Infomation Doctors"
+    "manage-doctor": {
+        "title": "Create Infomation Doctors"
     },
-     "more-infor":{
+    "more-infor": {
         "content-left": {
-             "label-left":"Choose Doctors"
-        },    
-           "content-right": {
-            "label-right":"Infomation Doctors"
+            "label-left": "Choose Doctors"
+        },
+        "content-right": {
+            "label-right": "Infomation Doctors"
         }
     },
     "patient": {
@@ -137,16 +137,27 @@
             "free": " And Book (Free)"
         }
     },
-      "more-infor-extra":{
-        "price":"Price",
-        "payment":"Payment ",
-        "privince":"Province",
-        "clinic":"Clinic Name",
-        "addressClinic":"Clinic Address",
-        "note":"Note"
+    "more-infor-extra": {
+        "price": "Price",
+        "payment": "Payment ",
+        "privince": "Province",
+        "clinic": "Clinic Name",
+        "addressClinic": "Clinic Address",
+        "note": "Note"
     },
-    "button":{
-        "create":"Create",
-        "save":"Save"
+    "button": {
+        "create": "Create",
+        "save": "Save"
+    },
+    "patient": {
+        "doctor-extra-infor": {
+            "content-down": {
+                "short-infor": "Examination Price",
+                "note": "Note",
+                "payment": "The patient can pay the cost in the form of:",
+                "hide-price": "Hide Price",
+                "detail": "View Details"
+            }
+        }
     }
 }

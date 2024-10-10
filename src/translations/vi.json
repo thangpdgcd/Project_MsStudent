@@ -106,13 +106,13 @@
         "Date": "Chọn Ngày",
         "save": "Lưu Thông Tin"
     },
-    "more-infor":{
+    "more-infor": {
         "content-left": {
-            "label-left":"Chọn Bác Sĩ"
+            "label-left": "Chọn Bác Sĩ"
         },
-         "content-right": {
-            "label-right":"Thông Tin Bác Sĩ"
-        } 
+        "content-right": {
+            "label-right": "Thông Tin Bác Sĩ"
+        }
     },
     "patient": {
         "detaildoctor": {
@@ -122,19 +122,30 @@
             "free": " Và Đặt (Miễn Phí)"
         }
     },
-    "manage-doctor":{
-        "title":"Tạo Thêm Thông Tin Bác Sĩ"
+    "manage-doctor": {
+        "title": "Tạo Thêm Thông Tin Bác Sĩ"
     },
-    "more-infor-extra":{
-        "price":"Giá",
-        "payment":"Phương Thức Thanh Toán",
-        "privince":"Tỉnh Thành",
-        "clinic":"Tên phòng Khám",
-        "addressClinic":"Địa Chỉ Phòng Khám",
-        "note":"Ghi Chú"
+    "more-infor-extra": {
+        "price": "Giá",
+        "payment": "Phương Thức Thanh Toán",
+        "privince": "Tỉnh Thành",
+        "clinic": "Tên phòng Khám",
+        "addressClinic": "Địa Chỉ Phòng Khám",
+        "note": "Ghi Chú"
     },
-    "button":{
-        "create":"Tạo Thông Tin",
-        "save":"Lưu Thông Tin"
+    "button": {
+        "create": "Tạo Thông Tin",
+        "save": "Lưu Thông Tin"
+    },
+    "patient": {
+        "doctor-extra-infor": {
+            "content-down": {
+                "short-infor": "Giá Khám",
+                "note": "Ghi Chú",
+                "payment": "Bệnh nhân có thể thanh toán chi phí theo hình thức:",
+                "hide-price": "Ẩn Bảng Giá",
+                "detail": "Xem Chi Tiết"
+            }
+        }
     }
 }

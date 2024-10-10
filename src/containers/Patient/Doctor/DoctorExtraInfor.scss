@@ -23,7 +23,7 @@
 
     .content-down {
         .short-infor {
-            span {
+            .detail {
                 cursor: pointer;
                 color: white
             }
@@ -31,6 +31,10 @@
             span:hover {
                 cursor: pointer;
                 color: rgb(38, 160, 231)
+            }
+
+            .currency {
+                margin: 0 7px;
             }
         }
 
