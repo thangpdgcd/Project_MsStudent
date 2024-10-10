@@ -1,5 +1,7 @@
+import { where } from "sequelize";
 import db from "../models/index";
 import _ from "lodash"
+import raw from "body-parser/lib/types/raw";
 
 
 require('dotenv').config();
@@ -34,7 +36,6 @@ let getTopDoctorHomes = (limitInput) => {
         }
     })
 }
-
 // let getalldoctor
 let getAllDoctors = () => {
     return new Promise(async (resolve, reject) => {
@@ -55,7 +56,6 @@ let getAllDoctors = () => {
         }
     })
 }
-
 //save doctor
 let saveDetailInforDoctor = (inputData) => {
     return new Promise(async (resolve, reject) => {
@@ -139,7 +139,6 @@ let saveDetailInforDoctor = (inputData) => {
     })
 
 }
-
 //get doctorid
 let getDetaildoctorbyId = (inputId) => {
     return new Promise(async (resolve, reject) => {
@@ -278,6 +277,43 @@ let getScheduleByDate = (doctorId, date) => {
         }
     })
 }
+let getExtraInforDoctorById = (idInput) => {
+    return new Promise(async (resolve, reject) => {
+        try {
+            if (!idInput) {
+                resolve({
+                    errCode: 1,
+                    errMessage: "Missing required parameters!"
+                })
+            } else {
+                let data = await db.Doctor_infor.findOne({
+                    where: {
+                        doctorId: idInput
+                    },
+                    attributes: {
+                        exclude: ['id', 'doctorId']
+                    },
+                    include: [
+                        { model: db.Allcode, as: 'priceTypeData', attributes: ['valueEn', 'valueVi'] },
+                        { model: db.Allcode, as: 'provinceTypeData', attributes: ['valueEn', 'valueVi'] },
+                        { model: db.Allcode, as: 'paymentTypeData', attributes: ['valueEn', 'valueVi'] },
+                    ],
+                    raw: false,
+                    nest: true
+                })
+                if (!data) {
+                    data = {};
+                }
+                resolve({
+                    errCode: 0,
+                    data: data
+                })
+            }
+        } catch (error) {
+            reject(error)
+        }
+    })
+}
 module.exports = {
     getTopDoctorHomes: getTopDoctorHomes,
     getAllDoctors: getAllDoctors,
@@ -285,5 +321,5 @@ module.exports = {
     getDetaildoctorbyId: getDetaildoctorbyId,
     bulkCreateSchedule: bulkCreateSchedule,
     getScheduleByDate: getScheduleByDate,
-
+    getExtraInforDoctorById: getExtraInforDoctorById
 }

@@ -1,8 +1,7 @@
-import express, { Router } from "express";
+import express from "express";
 import homeController from "../controllers/homeController";
 import userController from "../controllers/userController";
 import doctorController from "../controllers/doctorController";
-import { BulkRecordError } from "sequelize";
 let router = express.Router();
 
 let initWebRoutes = (app) => {
@@ -46,6 +45,11 @@ let initWebRoutes = (app) => {
     "/api/get-schedule-doctor-by-date",
     doctorController.getScheduleByDate
   );
+  router.get(
+    "/api/get-extra-infor-doctor-by-id",
+    doctorController.getExtraInforDoctorById
+  );
+
   return app.use("/", router);
 };
 
