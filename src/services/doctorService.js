@@ -1,11 +1,11 @@
-import { where } from "sequelize";
+
 import db from "../models/index";
 import _ from "lodash"
-import raw from "body-parser/lib/types/raw";
 
 
-require('dotenv').config();
-const MAX_NUMBER_SCHEDULE = process.env.MAX_NUMBER_SCHEDULE;
+
+require('dotenv').config()
+const maxNumber = process.env.MAX_NUMBER_SCHEDULE
 
 //get top doctor
 let getTopDoctorHomes = (limitInput) => {
@@ -208,7 +208,7 @@ let bulkCreateSchedule = (data) => {
                 let schedule = data.arrSchedule;
                 if (schedule && schedule.length > 0) {
                     schedule = schedule.map(item => {
-                        item.maxNumber = MAX_NUMBER_SCHEDULE;
+                        item.maxNumber = maxNumber;
                         return item;
                     })
                 }
