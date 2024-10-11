@@ -87,10 +87,10 @@ class DoctorExtraInfor extends Component {
                     }
                     {isShowDetailInfor === true &&
                         <>
-                            <div className="title-price"><FormattedMessage id="patient.doctor-extra-infor.content-down.short-infor" /></div >
+                            <div className="title-price"></div >
                             <div className="detail-infor">
-                                <div className="price">
-                                    <span className="left"><FormattedMessage id="patient.doctor-extra-infor.content-down.short-infor" /></span >
+                                <div className="price"><FormattedMessage id="patient.doctor-extra-infor.content-down.short-infor" />
+                                    <span className="left"><FormattedMessage id="patient.doctor-extra-infor.content-down.short-infor" />: </span >
                                     <span className="right">
                                         {extraInfor && extraInfor.priceTypeData && language === LANGUAGES.VI
                                             &&

@@ -7,13 +7,18 @@ import moment from "moment";
 import { LANGUAGES } from "../../../utils";
 import { getScheduleDoctorByDate, handleLoginApi } from "../../../services/userService";
 import { FormattedMessage } from "react-intl";
-import DoctorExtraInfor from "./DoctorExtraInfor";
+import BookingModal from "./Modal/BookingModal";
+
+
 class DoctorSchedule extends Component {
     constructor(props) {
         super(props);
         this.state = {
             allDays: [],
             allavailableTime: [],
+            //isOpenModalBooking:set up before false
+            isOpenModalBooking: false,
+            dataScheduleTimeModal: {}
         }
     }
 
@@ -96,71 +101,98 @@ class DoctorSchedule extends Component {
             console.log("Check res RES", res);
         }
     }
-
+    // open modal
+    handleClickScheduleTime = (time) => {
+        this.setState({
+            isOpenModalBooking: true,
+            dataScheduleTimeModal: time
+        })
+        console.log("Check res time", time);
+    }
+    //close modal
+    closeBookingClose = () => {
+        this.setState({
+            isOpenModalBooking: false
+        })
+    }
     render() {
-        let { allDays, allavailableTime } = this.state;
+        let { allDays, allavailableTime, isOpenModalBooking, dataScheduleTimeModal } = this.state;
         let { language } = this.props;
         return (
-            <div className="doctor-schedule-container">
-                <div className="all-schedule">
-                    <select onChange={(e) => this.handleOnchangeSelect(e)}>
-                        {allDays && allDays.length > 0
-                            && allDays.map((item, index) => {
-                                return (
-                                    <option
-                                        value={item.value}
-                                        key={index}
-                                    >
-                                        {item.label}
-                                    </option>
-                                );
-                            })}
+            //use fragment
+            <>
+                <div className="doctor-schedule-container">
+                    <div className="all-schedule">
+                        <select onChange={(e) => this.handleOnchangeSelect(e)}>
+                            {allDays && allDays.length > 0
+                                && allDays.map((item, index) => {
+                                    return (
+                                        <option
+                                            value={item.value}
+                                            key={index}
+                                        >
+                                            {item.label}
+                                        </option>
+                                    );
+                                })}
 
-                    </select>
-                </div>
-                <div className="all-available-time">
-                    <div className="text-calendar">
-                        <span>
-                            <i className="fas fa-calendar-alt"><span><FormattedMessage id="patient.detaildoctor.schedule" /></span></i>
-                        </span>
+                        </select>
                     </div>
-                    <div className="time-content">
-                        {allavailableTime && allavailableTime.length > 0 ?
-                            <>
-                                <div className="time-content-btns">
-                                    {allavailableTime.map((item, index) => {
-                                        let timeDisplay = '';
-                                        timeDisplay = language === LANGUAGES.VI
-                                            ? item.timeTypeData.valueVi
-                                            : item.timeTypeData.valueEn
-                                        return (
-                                            <button
-                                                key={index}
-                                                className={language === LANGUAGES.VI ? 'btn-vi' : 'btn-en'}
-                                            >
-                                                {timeDisplay}
-                                            </button>
-                                        );
-                                    })
-                                    }
-                                </div>
-                                <div className="book-free">
-                                    <span >
-                                        <FormattedMessage id="patient.detaildoctor.choose" />
-                                        <i className=" far fa-hand-point-up"></i>
-                                        <FormattedMessage id="patient.detaildoctor.free" />
+                    <div className="all-available-time">
+                        <div className="text-calendar">
+                            <span>
+                                <i className="fas fa-calendar-alt">
+                                    <span>
+                                        <FormattedMessage id="patients.detaildoctor.schedule" />
                                     </span>
+                                </i>
+                            </span>
+                        </div>
+                        <div className="time-content">
+                            {allavailableTime && allavailableTime.length > 0 ?
+                                <>
+                                    <div className="time-content-btns">
+                                        {allavailableTime.map((item, index) => {
+                                            let timeDisplay;
+                                            timeDisplay = language === LANGUAGES.VI
+                                                ? item.timeTypeData.valueVi
+                                                : item.timeTypeData.valueEn
+                                            return (
+                                                <button
+                                                    key={index}
+                                                    className={language === LANGUAGES.VI ? 'btn-vi' : 'btn-en'}
+                                                    onClick={() => this.handleClickScheduleTime(item)}
+                                                >
+                                                    {timeDisplay}
+                                                </button>
+                                            );
+                                        })
+                                        }
+                                    </div>
+                                    <div className="book-free">
+                                        <span >
+                                            <FormattedMessage id="patients.detaildoctor.choose" />
+                                            <i className=" far fa-hand-point-up"></i>
+                                            <FormattedMessage id="patients.detaildoctor.free" />
+                                        </span>
+                                    </div>
+                                </>
+                                :
+                                <div>
+                                    <FormattedMessage id="patients.detaildoctor.time-content" />
                                 </div>
-                            </>
-                            :
-                            <div>
-                                <FormattedMessage id="patient.detaildoctor.time-content" />
-                            </div>
-                        }
-                    </div>
+                            }
+                        </div>
 
-                </div>
-            </div >
+                    </div>
+                </div >
+                <BookingModal
+                    isOpenModalBooking={isOpenModalBooking}
+                    closeBookingClose={this.closeBookingClose}
+                    dataTime={dataScheduleTimeModal}
+                />
+
+            </>
         );
     }
 }

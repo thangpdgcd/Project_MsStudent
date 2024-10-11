@@ -129,7 +129,7 @@
             "label-right": "Infomation Doctors"
         }
     },
-    "patient": {
+    "patients": {
         "detaildoctor": {
             "schedule": "medical appointment",
             "time-content": "No appointments available at this time, please choose another time!",

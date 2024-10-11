@@ -1,0 +1,94 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.booking-modal-container {}
+
+.booking-modal-content {
+    border: none;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+
+    .booking-modal-header {
+        text-align: center;
+        padding: 10px;
+        border-bottom: none;
+        box-shadow: rgba(145, 144, 144, 0.15) 1.95px 1.95px 2.6px;
+        height: 30px;
+        font-size: 15px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+        .left {
+            font-size: 15px;
+            color: #333;
+            font-weight: bold;
+        }
+
+        .right {
+            float: right;
+            cursor: pointer;
+        }
+    }
+
+    .booking-modal-body {
+        height: 100%;
+        box-shadow: rgba(145, 144, 144, 0.15) 1.95px 1.95px 2.6px;
+        padding: 15px;
+        margin: 10px 0;
+
+
+        .row {
+            .form-group {
+                label {
+                    margin-bottom: 10px;
+                }
+            }
+        }
+    }
+
+    .booking-modal-footer {
+        padding: 10px;
+        box-shadow: rgba(145, 144, 144, 0.15) 1.95px 1.95px 2.6px;
+        display: flex;
+        justify-content: flex-end;
+
+        button {
+            border: none;
+            outline: none;
+            padding: 5px 8px;
+        }
+
+        .btn-booking-confirm {
+            border: none;
+            border-radius: 10px;
+            margin: 0 5px;
+            width: 100px;
+            transition: background-color 0.3s ease, transform 0.4s ease;
+        }
+
+        .btn-booking-cancel {
+            border: none;
+            border-radius: 10px;
+            margin: 0 5px;
+            width: 100px;
+            transition: background-color 0.3s ease, transform 0.4s ease;
+        }
+
+        .btn-booking-confirm:hover {
+            border: none;
+            background-color: rgb(248, 232, 11);
+            transform: scale(1.1);
+
+        }
+
+        .btn-booking-cancel:hover {
+            border: none;
+            transform: scale(1.1);
+            background-color: rgb(248, 232, 11);
+        }
+    }
+}

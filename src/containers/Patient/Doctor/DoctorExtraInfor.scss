@@ -11,21 +11,25 @@
 
         .name-clinic {
             padding: 5px 0;
-            font-weight: 600;
+            font-weight: bold;
             color: #333;
+            font-size: 15px;
         }
 
         .detail-address {
-            font-weight: 600;
+            font-weight: bold;
             color: #333;
+            font-size: 15px;
         }
     }
 
     .content-down {
+        border: none;
+
         .short-infor {
             .detail {
                 cursor: pointer;
-                color: white
+                color: black
             }
 
             span:hover {
@@ -34,7 +38,7 @@
             }
 
             .currency {
-                margin: 0 7px;
+                margin: 0 5px;
             }
         }
 
@@ -43,23 +47,32 @@
         }
 
         .detail-infor {
-            border: 1px solid #ddd;
+            border: none;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
             background-color: #f8f8f8;
             padding: 5px;
 
             .price {
                 padding-bottom: 5px;
 
+
+                .left {
+                    float: left;
+                }
+
                 .right {
-                    float: right;
+                    float: left;
                 }
             }
 
-            .note {}
+            .note {
+                margin-top: 20px;
+            }
         }
 
         .payment {
-            border: 1px solid #ddd;
+            border: none;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
             padding: 5px;
             background-color: #eee;
         }
@@ -69,7 +82,7 @@
 
             span {
                 cursor: pointer;
-                color: white
+                color: black
             }
 
             span:hover {

@@ -114,7 +114,7 @@
             "label-right": "Thông Tin Bác Sĩ"
         }
     },
-    "patient": {
+    "patients": {
         "detaildoctor": {
             "schedule": "lịch Khám Bệnh",
             "time-content": "Không có lịch hẹn trong thời gian này, vui lòng chọn thời gian khác!",
