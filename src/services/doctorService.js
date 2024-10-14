@@ -209,6 +209,7 @@ let bulkCreateSchedule = (data) => {
                 if (schedule && schedule.length > 0) {
                     schedule = schedule.map(item => {
                         item.maxNumber = maxNumber;
+                        console.log("hhhhhhhhhhhhhh", maxNumber)
                         return item;
                     })
                 }
@@ -230,6 +231,8 @@ let bulkCreateSchedule = (data) => {
                     return a.timeType === b.timeType && +a.date == +b.date
                     //b+""=1 số nguyên 
                 });
+
+                //errorr
                 if (toCreate && toCreate.length > 0) {
                     await db.Schedule.bulkCreate(toCreate)
                 }
