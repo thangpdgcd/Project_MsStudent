@@ -5,7 +5,7 @@ import _ from "lodash"
 
 
 require('dotenv').config()
-const maxNumber = process.env.MAX_NUMBER_SCHEDULE
+const MAX_NUMBER_SCHEDULE = process.env.MAX_NUMBER_SCHEDULE
 
 //get top doctor
 let getTopDoctorHomes = (limitInput) => {
@@ -208,8 +208,7 @@ let bulkCreateSchedule = (data) => {
                 let schedule = data.arrSchedule;
                 if (schedule && schedule.length > 0) {
                     schedule = schedule.map(item => {
-                        item.maxNumber = maxNumber;
-                        console.log("hhhhhhhhhhhhhh", maxNumber)
+                        item.maxNumber = MAX_NUMBER_SCHEDULE;
                         return item;
                     })
                 }
