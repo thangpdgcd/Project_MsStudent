@@ -1,0 +1,101 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+
+
+#heading-thang {
+
+    display: flex;
+    justify-content: center;
+    font-family: 'Trebuchet MS',
+        'Lucida Sans Unicode',
+        'Lucida Grande',
+        'Lucida Sans',
+        Arial,
+        sans-serif;
+
+
+    .about {
+        text-align: center;
+        margin-right: 10px;
+        border: none;
+        border-radius: 5px;
+        padding: 0;
+        font-size: 1rem;
+        line-height: 2.5rem;
+        color: inherit;
+        opacity: 0.8;
+        width: 70px;
+        text-align: center;
+        cursor: pointer;
+        color: black;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    }
+
+    .skill {
+        text-align: center;
+        width: 70px;
+        margin-right: 10px;
+        border: none;
+        border-radius: 5px;
+        padding: 0;
+        font-size: 1rem;
+        line-height: 2.5rem;
+        color: inherit;
+        opacity: 0.8;
+        cursor: pointer;
+        color: black;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    }
+
+    .contact-header {
+        width: 70px;
+        text-align: center;
+        margin-right: 10px;
+        border: none;
+        border-radius: 5px;
+        padding: 0;
+        font-size: 1rem;
+        line-height: 2.5rem;
+        color: inherit;
+        opacity: 0.8;
+        cursor: pointer;
+        color: black;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    }
+
+    .about:hover {
+        color: rgb(63, 65, 64);
+        transform: scale(1.1);
+    }
+
+    .hobby:hover {
+        transform: scale(1.1);
+        color: rgb(63, 65, 64);
+    }
+
+    .contact-header:hover {
+        transform: scale(1.1);
+        color: rgb(63, 65, 64);
+    }
+}
+
+#content {
+    .background-content-header {
+
+        .name {}
+
+        .major {}
+
+        .contact {}
+    }
+}
+
+#footer {}
