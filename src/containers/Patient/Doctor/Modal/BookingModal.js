@@ -2,7 +2,7 @@ import React, { Component, Fragment } from "react";
 import { connect } from "react-redux";
 import "./BookingModal.scss";
 import { Modal } from "reactstrap";
-import { MdHeight } from "react-icons/md";
+import ProfileDoctor from "../ProfileDoctor";
 class BookingModal extends Component {
     constructor(props) {
         super(props);
@@ -45,7 +45,9 @@ class BookingModal extends Component {
                     <div className="booking-modal-body">
                         {/* using javascrip JSON */}
                         {/* {JSON.stringify(dataTime)} */}
-                        <div className="doctor-infor"></div>
+                        <div className="doctor-infor">
+                            < ProfileDoctor />
+                        </div>
                         <div className="prices">
                             exam price 50
                         </div>
@@ -55,7 +57,7 @@ class BookingModal extends Component {
                                 </label>
                                 <input className="form-control"></input>
                             </div>
-                            <div className="col-6 form-group">
+                            <div cla000Name="col-6 form-group">
                                 <label>Số Điện Thoại
                                 </label>
                                 <input className="form-control"></input>

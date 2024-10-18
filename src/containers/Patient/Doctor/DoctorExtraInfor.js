@@ -14,7 +14,7 @@ class DoctorExtraInfor extends Component {
     };
   }
 
-  async componentDidMount() {}
+  async componentDidMount() { }
 
   async componentDidUpdate(prevProps, prevState, snapshot) {
     if (this.props.language !== prevProps.language) {
@@ -130,13 +130,13 @@ class DoctorExtraInfor extends Component {
                 <FormattedMessage id="patient.doctor-extra-infor.content-down.payment" />
 
                 {extraInfor &&
-                extraInfor.paymentTypeData &&
-                language === LANGUAGES.VI
+                  extraInfor.paymentTypeData &&
+                  language === LANGUAGES.VI
                   ? extraInfor.paymentTypeData.valueVi
                   : ""}
                 {extraInfor &&
-                extraInfor.paymentTypeData &&
-                language === LANGUAGES.EN
+                  extraInfor.paymentTypeData &&
+                  language === LANGUAGES.EN
                   ? extraInfor.paymentTypeData.valueEn
                   : ""}
               </div>

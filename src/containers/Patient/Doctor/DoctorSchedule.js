@@ -46,6 +46,8 @@ class DoctorSchedule extends Component {
                 allavailableTime: res.data ? res.data : []
             })
         }
+
+
     }
 
     // Viết hoa chữ cái đầu trong thứ
