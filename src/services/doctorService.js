@@ -313,6 +313,63 @@ let getExtraInforDoctorById = (idInput) => {
         }
     })
 }
+let getProfileDoctorById = (inputId) => {
+    return new Promise(async (resolve, reject) => {
+        try {
+            if (!inputId) {
+                resolve({
+                    errCode: 1,
+                    errMessage: "Missing require parameter"
+                })
+            } else {
+                let data = await db.User.findOne({
+                    where: {
+                        id: inputId
+                    },
+                    attributes:
+                    {
+                        exclude: ["password"],
+                    },
+                    include: [
+                        {
+                            model: db.Markdown,
+                            attributes: ['description', 'contentMarkdown', 'contentHTML']
+                        },
+
+                        { model: db.Allcode, as: 'positionData', attributes: ['valueEn', 'valueVi'] },
+                        {
+                            model: db.Doctor_infor,
+                            attributes: {
+                                exclude: ['id', 'doctorId']
+                            },
+                            include: [
+                                { model: db.Allcode, as: 'priceTypeData', attributes: ['valueEn', 'valueVi'] },
+                                { model: db.Allcode, as: 'provinceTypeData', attributes: ['valueEn', 'valueVi'] },
+                                { model: db.Allcode, as: 'paymentTypeData', attributes: ['valueEn', 'valueVi'] },
+                            ]
+                        },
+                    ],
+                    raw: false,
+                    nest: true
+                });
+                if (data && data.image) {
+                    data.image = new Buffer.from(data.image, 'base64').toString('binary')
+                }
+                //nếu không có data trả về object rỗng
+                if (!data) {
+                    data.image = {};
+                };
+                resolve({
+                    errCode: 0,
+                    data: data,
+                })
+            }
+        } catch (error) {
+            reject(error)
+        }
+    })
+
+}
 module.exports = {
     getTopDoctorHomes: getTopDoctorHomes,
     getAllDoctors: getAllDoctors,
@@ -320,5 +377,6 @@ module.exports = {
     getDetaildoctorbyId: getDetaildoctorbyId,
     bulkCreateSchedule: bulkCreateSchedule,
     getScheduleByDate: getScheduleByDate,
-    getExtraInforDoctorById: getExtraInforDoctorById
+    getExtraInforDoctorById: getExtraInforDoctorById,
+    getProfileDoctorById: getProfileDoctorById
 }
