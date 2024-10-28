@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import "./BookingModal.scss";
 import { Modal } from "reactstrap";
 import ProfileDoctor from "../ProfileDoctor";
+import _ from "lodash"
 class BookingModal extends Component {
     constructor(props) {
         super(props);
@@ -16,16 +17,19 @@ class BookingModal extends Component {
 
     async componentDidUpdate(prevProps, prevState, snapshot) {
 
-
     }
 
     render() {
-        let { isOpenModalBooking, closeBookingClose, dataTime } = this.props
+        let { isOpenModalBooking, closeBookingClose, dataTime } = this.props;
+        let doctorId = '';
+        if (dataTime && !_.isEmpty(dataTime)) {
+            doctorId = dataTime.doctorId;
+        }
+        console.log("check data modal: ", this.props)
         //toggle={}
         return (
             //isOpenModalBooking
             <Modal
-
                 isOpen={isOpenModalBooking}
                 className={"booking-modal-container"}
                 size="lg"
@@ -46,7 +50,9 @@ class BookingModal extends Component {
                         {/* using javascrip JSON */}
                         {/* {JSON.stringify(dataTime)} */}
                         <div className="doctor-infor">
-                            < ProfileDoctor />
+                            < ProfileDoctor
+                                doctorId={doctorId}
+                            />
                         </div>
                         <div className="prices">
                             exam price 50
@@ -57,7 +63,7 @@ class BookingModal extends Component {
                                 </label>
                                 <input className="form-control"></input>
                             </div>
-                            <div cla000Name="col-6 form-group">
+                            <div className="col-6 form-group">
                                 <label>Số Điện Thoại
                                 </label>
                                 <input className="form-control"></input>

@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from "react";
+import React, { Component } from "react";
 import { connect } from "react-redux";
 import { FormattedMessage } from "react-intl";
 import * as actions from "../../../store/actions";
@@ -7,9 +7,8 @@ import Select from 'react-select';
 import "./Manageschedules.scss"
 import DatePicker from "../../../components/Input/DatePicker";
 import { toast } from "react-toastify";
-import { escape, isEmpty } from "lodash";
+import { isEmpty } from "lodash";
 import { saveBulkScheduleDoctor } from "../../../services/userService";
-import moment from "moment";
 class Manageschedules extends Component {
     constructor(props) {
         super(props);

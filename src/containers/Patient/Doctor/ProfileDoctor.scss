@@ -1,0 +1,40 @@
+.intro-doctor {
+    display: flex;
+
+    .content-left {
+        width: 20%;
+        background: center center no-repeat;
+        border-radius: 50%;
+        width: 180px;
+        height: 160px;
+        margin: 10px 20px;
+    }
+
+    .content-right {
+        width: 90%;
+        flex-direction: column;
+        margin-left: 5%;
+
+        .up {
+
+            font-size: 30px;
+            font-weight: 600;
+            font-family: emoji;
+            display: f lex;
+            padding-left: 5px;
+        }
+
+        .down {
+            font-weight: 400;
+            display: flex;
+            font-size: 20px;
+            padding-top: 2px;
+
+            span {
+                font-size: 12px;
+                font-weight: 600;
+                font-family: emoji;
+            }
+        }
+    }
+}

@@ -51,8 +51,7 @@ class DetailDoctor extends Component {
         return (
             <Fragment>
                 <HomeHeader isShowBanner />
-                <div cla
-                    Name="doctor-detail-container">
+                <div className="doctor-detail-container">
                     <div className="intro-doctor">
                         <div className="content-left" style={{
                             backgroundImage: `url(${detailDoctor && detailDoctor.image ? detailDoctor.image : ''})`,
