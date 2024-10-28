@@ -112,7 +112,7 @@ class DoctorSchedule extends Component {
         console.log("Check res time", time);
     }
     //close modal
-    closeBookingClose = () => {
+    closeBookingModel = () => {
         this.setState({
             isOpenModalBooking: false
         })
@@ -190,7 +190,7 @@ class DoctorSchedule extends Component {
                 </div >
                 <BookingModal
                     isOpenModalBooking={isOpenModalBooking}
-                    closeBookingClose={this.closeBookingClose}
+                    closeBookingModel={this.closeBookingModel}
                     dataTime={dataScheduleTimeModal}
                 />
 

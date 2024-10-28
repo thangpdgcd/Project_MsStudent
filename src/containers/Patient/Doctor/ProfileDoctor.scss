@@ -1,39 +1,42 @@
-.intro-doctor {
-    display: flex;
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
 
-    .content-left {
-        width: 20%;
-        background: center center no-repeat;
-        border-radius: 50%;
-        width: 180px;
-        height: 160px;
-        margin: 10px 20px;
-    }
+.profile-doctor-container {
 
-    .content-right {
-        width: 90%;
-        flex-direction: column;
-        margin-left: 5%;
+    .intro-doctor {
+        display: flex;
 
-        .up {
-
-            font-size: 30px;
-            font-weight: 600;
-            font-family: emoji;
-            display: f lex;
-            padding-left: 5px;
+        .content-left {
+            width: 20%;
+            background: center center no-repeat;
+            border-radius: 50%;
+            width: 80px;
+            height: 80px;
         }
 
-        .down {
-            font-weight: 400;
+        .content-right {
+            width: calc(100% - 80px);
+            flex-direction: column;
             display: flex;
-            font-size: 20px;
-            padding-top: 2px;
+            padding-left: 10px;
 
-            span {
-                font-size: 12px;
+            .up {
                 font-weight: 600;
-                font-family: emoji;
+            }
+
+            .down {
+                //can deu trai phai
+                text-align: justify;
+                padding-top: 10px;
+
+                span {
+                    font-size: 12px;
+                    font-weight: 600;
+                    font-family: emoji;
+                }
             }
         }
     }

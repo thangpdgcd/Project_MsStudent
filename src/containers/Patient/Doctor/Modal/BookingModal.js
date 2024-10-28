@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from "react";
+import React, { Component } from "react";
 import { connect } from "react-redux";
 import "./BookingModal.scss";
 import { Modal } from "reactstrap";
@@ -20,13 +20,14 @@ class BookingModal extends Component {
     }
 
     render() {
-        let { isOpenModalBooking, closeBookingClose, dataTime } = this.props;
+        let { isOpenModalBooking, closeBookingModel, dataTime } = this.props;
         let doctorId = '';
         if (dataTime && !_.isEmpty(dataTime)) {
             doctorId = dataTime.doctorId;
         }
+        //code rut gon
+        // let doctorId = dataTime && !_.isEmpty(dataTime)? dataTime.doctorId :""
         console.log("check data modal: ", this.props)
-        //toggle={}
         return (
             //isOpenModalBooking
             <Modal
@@ -34,14 +35,13 @@ class BookingModal extends Component {
                 className={"booking-modal-container"}
                 size="lg"
                 centered
-
             >
                 <div className="booking-modal-content">
                     <div className="booking-modal-header">
                         <span className="left"></span>
                         <span
                             className="right"
-                            onClick={closeBookingClose}
+                            onClick={closeBookingModel}
                         >
                             <i className="fas fa-times"></i></span>
                         Thông Báo Lịch Hẹn Khám Bệnh
@@ -50,7 +50,7 @@ class BookingModal extends Component {
                         {/* using javascrip JSON */}
                         {/* {JSON.stringify(dataTime)} */}
                         <div className="doctor-infor">
-                            < ProfileDoctor
+                            <ProfileDoctor
                                 doctorId={doctorId}
                             />
                         </div>
@@ -96,8 +96,12 @@ class BookingModal extends Component {
                         </div>
                     </div>
                     <div className="booking-modal-footer">
-                        <button className="btn-booking-confirm"> Xác Nhận</button>
-                        <button className="btn-booking-cancel"> Hủy </button>
+                        <button className="btn-booking-confirm"
+                            onClick={closeBookingModel}
+                        > Xác Nhận</button>
+                        <button className="btn-booking-cancel"
+                            onClick={closeBookingModel}
+                        > Hủy </button>
                     </div>
                 </div>
             </Modal >

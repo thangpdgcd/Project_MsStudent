@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import "./ProfileDoctor.scss";
 import { getProfileDoctorById } from "../../../services/userService";
 import { LANGUAGES } from "../../../utils";
+import NumberFormat from "react-number-format";
 class ProfileDoctor extends Component {
     constructor(props) {
         super(props);
@@ -18,7 +19,7 @@ class ProfileDoctor extends Component {
         })
     }
     getInforDoctor = async (id) => {
-        let result = ''
+        let result = {};
         if (id) {
             let res = await getProfileDoctorById(id);
             if (res && res.errCode === 0) {
@@ -30,10 +31,10 @@ class ProfileDoctor extends Component {
         return result;
     }
     async componentDidUpdate(prevProps, prevState, snapshot) {
-        if (this.props.language !== prevProps.props.language) {
+        if (this.props.language !== prevProps.language) {
 
         }
-        if (this.props.doctorId !== prevProps.props.doctorId) {
+        if (this.props.doctorId !== prevProps.doctorId) {
 
         }
     }
@@ -48,20 +49,46 @@ class ProfileDoctor extends Component {
             nameEn = `${dataprofile.positionData.valueEn},${dataprofile.firstName}${dataprofile.lastName}`;
         }
         return (
-            <div className="intro-doctor">
-                <div className="content-left" style={{
-                    backgroundImage: `url(${dataprofile && dataprofile.image ? dataprofile.image : ''})`,
-                }}>
-                </div>
-                <div className="content-right">
-                    <div className="up">
-                        {language === LANGUAGES.VI ? nameVi : nameEn}
+            <div className="profile-doctor-container">
+                <div className="intro-doctor">
+                    <div className="content-left" style={{
+                        backgroundImage: `url(${dataprofile && dataprofile.image ? dataprofile.image : ''})`,
+                    }}>
                     </div>
-                    <div className="down">
-                        {dataprofile && dataprofile.Markdown
-                            && dataprofile.Markdown.description
-                            && <span>{dataprofile.Markdown.description}</span>
-                        }</div>
+                    <div className="content-right">
+                        <div className="up">
+                            {language === LANGUAGES.VI ? nameVi : nameEn}
+                        </div>
+                        <div className="down">
+                            {dataprofile && dataprofile.Markdown
+                                && dataprofile.Markdown.description
+                                && <span>{dataprofile.Markdown.description}</span>
+                            }</div>
+                    </div>
+                </div>
+                <div className="price">
+                    Giá Khám
+                    {dataprofile && dataprofile.Doctor_infor &&
+                        language === LANGUAGES.VI ?
+                        < NumberFormat
+                            className="currency"
+                            value={dataprofile.Doctor_infor.priceTypeData.valueVi}
+                            displayType={"text"}
+                            thousandSeparator={true}
+                            suffix={`VND`} />
+                        : ''
+                    }
+
+                    {dataprofile && dataprofile.Doctor_infor &&
+                        language === LANGUAGES.EN ?
+                        < NumberFormat
+                            className="currency"
+                            value={dataprofile.Doctor_infor.priceTypeData.valueEn}
+                            displayType={"text"}
+                            thousandSeparator={true}
+                            suffix={`$`} />
+                        : ''
+                    }
                 </div>
             </div>);
     }
