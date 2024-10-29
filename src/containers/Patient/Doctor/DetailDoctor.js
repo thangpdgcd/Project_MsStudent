@@ -83,12 +83,12 @@ class DetailDoctor extends Component {
                     </div>
 
                     <div className="detail-infor-doctor">
-                        {
+                        {/* {
                             detailDoctor && detailDoctor.Markdown && detailDoctor.Markdown.contentHTML
                             &&
                             <div dangerouslySetInnerHTML={{ __html: detailDoctor.Markdown.contentHTML }}>
                             </div>
-                        }
+                        } */}
                     </div>
                     <div className="comment-doctor">
 

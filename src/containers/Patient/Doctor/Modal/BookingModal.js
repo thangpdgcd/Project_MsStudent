@@ -25,6 +25,7 @@ class BookingModal extends Component {
         if (dataTime && !_.isEmpty(dataTime)) {
             doctorId = dataTime.doctorId;
         }
+        console.log("check dataTime", dataTime);
         //code rut gon
         // let doctorId = dataTime && !_.isEmpty(dataTime)? dataTime.doctorId :""
         console.log("check data modal: ", this.props)
@@ -52,6 +53,8 @@ class BookingModal extends Component {
                         <div className="doctor-infor">
                             <ProfileDoctor
                                 doctorId={doctorId}
+                                isShowDescriptionDoctor={false}
+                                dataTime={dataTime}
                             />
                         </div>
                         <div className="prices">
