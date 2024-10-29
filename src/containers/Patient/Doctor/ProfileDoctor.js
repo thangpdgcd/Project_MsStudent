@@ -38,7 +38,7 @@ class ProfileDoctor extends Component {
         }
         if (this.props.doctorId !== prevProps.doctorId) {
 
-        }
+        };
     }
     RenderTimeBooking = (dataTime) => {
         let { language } = this.props;
