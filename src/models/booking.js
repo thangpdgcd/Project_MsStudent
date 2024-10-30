@@ -1,4 +1,6 @@
 'use strict';
+// Import the built-in data types
+
 const {
     Model
 } = require('sequelize');
@@ -17,7 +19,7 @@ module.exports = (sequelize, DataTypes) => {
         statusId: DataTypes.STRING,
         doctorId: DataTypes.INTEGER,
         patientID: DataTypes.INTEGER,
-        date: DataTypes.DATE,
+        date: DataTypes.STRING,
         timeType: DataTypes.STRING,
 
     }, {

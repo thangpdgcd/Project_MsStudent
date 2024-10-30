@@ -1,5 +1,4 @@
-import e from "express";
-import user from "../models/user";
+
 import userService from "../services/userService";
 
 let handleLoging = async (req, res) => {
