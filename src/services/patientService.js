@@ -1,6 +1,5 @@
-import { where } from "sequelize";
-import db from "../models/index";
 import { defaults } from "lodash";
+import db from "../models/index";
 require('dotenv').config();
 
 let postBookingAppointment = (data) => {
@@ -37,27 +36,23 @@ let postBookingAppointment = (data) => {
 
                 // // create a booking
                 if (user && user[0]) {
-
-                    await db.Booking.create({
+                    await db.Booking.findOrCreate({
                         where: {
-                            patientID: user[0].id,
+                            patientId: user[0].id,
                         },
                         defaults: {
                             statusId: 'S1',
                             doctorId: data.doctorId,
-                            patientID: user[0].id,
+                            patientId: user[0].id,
                             date: data.date,
                             timeType: data.timeType
-                        },
-
+                        }
                     })
-
                 }
                 //1. if (user && user[0]):
                 //Điều kiện này kiểm tra xem biến user có tồn tại
                 // và có ít nhất một phần tử(tức là user[0] không phải là undefined).
                 //Điều này thường có nghĩa là bạn đang kiểm tra xem có người dùng nào đã được tìm thấy trong cơ sở dữ liệu không.
-
                 //2.where: { patientID: user[0].id }:
                 // chỉ định tới user tồn tại 
 
