@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F3F4F6"
+    tools:context=".Fragment.AddHikeFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardContainer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            app:cardCornerRadius="16dp"
+            app:cardUseCompatPadding="true"
+            app:cardElevation="4dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp">
+
+                <!-- Title -->
+                <TextView
+                    android:id="@+id/textTitle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/edit_hike"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="#111827"
+                    android:gravity="center"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+                <!-- Sub title -->
+                <TextView
+                    android:id="@+id/textSubtitle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/lable_7"
+                    android:textSize="13sp"
+                    android:textColor="#6B7280"
+                    android:gravity="center"
+                    app:layout_constraintTop_toBottomOf="@id/textTitle"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+                <!-- Label 1: Name -->
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/lable_1"
+                    android:textSize="14sp"
+                    android:textColor="#374151"
+                    app:layout_constraintTop_toBottomOf="@id/textSubtitle"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <EditText
+                    android:id="@+id/name"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/border_input"
+                    android:ems="10"
+                    android:hint="@string/son_dong"
+                    android:inputType="textCapSentences"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:textColor="#111827"
+                    android:textColorHint="#9CA3AF"
+                    android:textSize="14sp"
+                    android:textStyle="italic"
+                    app:layout_constraintTop_toBottomOf="@id/textView3"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+                <!-- Label 2: Location -->
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/lable_2"
+                    android:textSize="14sp"
+                    android:textColor="#374151"
+                    app:layout_constraintTop_toBottomOf="@id/name"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <EditText
+                    android:id="@+id/location"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/border_input"
+                    android:ems="10"
+                    android:hint="@string/quang_binh"
+                    android:inputType="textCapSentences"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:textColor="#111827"
+                    android:textColorHint="#9CA3AF"
+                    android:textSize="14sp"
+                    android:textStyle="italic"
+                    app:layout_constraintTop_toBottomOf="@id/textView4"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+                <!-- Label 3: Date -->
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/lable_3"
+                    android:textSize="14sp"
+                    android:textColor="#374151"
+                    app:layout_constraintTop_toBottomOf="@id/location"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <!-- Date field -->
+                <EditText
+                    android:id="@+id/date"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/border_input"
+                    android:ems="10"
+                    android:hint="14/08/2000"
+                    android:inputType="text"
+                    android:focusable="false"
+                    android:focusedByDefault="false"
+                    android:focusableInTouchMode="false"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:textColor="#111827"
+                    android:textColorHint="#9CA3AF"
+                    android:textSize="14sp"
+                    android:textStyle="italic"
+                    app:layout_constraintTop_toBottomOf="@id/textView5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+
+                <Button
+                    android:id="@+id/dateButton"
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:background="@android:color/transparent"
+                    android:foreground="?attr/selectableItemBackgroundBorderless"
+                    android:onClick="onOpenDatePicker"
+                    app:layout_constraintTop_toTopOf="@id/date"
+                    app:layout_constraintBottom_toBottomOf="@id/date"
+                    app:layout_constraintStart_toStartOf="@id/date"
+                    app:layout_constraintEnd_toEndOf="@id/date" />
+
+                <!-- Label 4: Circular -->
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/lable_4"
+                    android:textSize="14sp"
+                    android:textColor="#374151"
+                    app:layout_constraintTop_toBottomOf="@id/date"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <RadioGroup
+                    android:id="@+id/radioGroup"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintTop_toTopOf="@id/textView6"
+                    app:layout_constraintBottom_toBottomOf="@id/textView6"
+                    app:layout_constraintStart_toEndOf="@id/textView6"
+                    app:layout_constraintEnd_toEndOf="parent">
+
+                    <RadioButton
+                        android:id="@+id/radioButton_yes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Yes" />
+
+                    <RadioButton
+                        android:id="@+id/radioButton_no"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:text="No" />
+                </RadioGroup>
+
+                <!-- Label 5: Length -->
+                <TextView
+                    android:id="@+id/textView7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:text="@string/lable_5"
+                    android:textSize="14sp"
+                    android:textColor="#374151"
+                    app:layout_constraintTop_toBottomOf="@id/textView6"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <EditText
+                    android:id="@+id/length"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/border_input"
+                    android:ems="10"
+                    android:hint="100"
+                    android:inputType="number"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:textColor="#111827"
+                    android:textColorHint="#9CA3AF"
+                    android:textSize="14sp"
+                    android:textStyle="italic"
+                    app:layout_constraintTop_toBottomOf="@id/textView7"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+                <!-- Label 6: Level -->
+                <TextView
+                    android:id="@+id/textView8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:text="@string/lable_6"
+                    android:textSize="14sp"
+                    android:textColor="#374151"
+                    app:layout_constraintTop_toBottomOf="@id/length"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+
+                <EditText
+                    android:id="@+id/level"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/border_input"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:focusable="false"
+                    android:focusedByDefault="false"
+                    android:focusableInTouchMode="false"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:textColor="#111827"
+                    android:textColorHint="#9CA3AF"
+                    android:textSize="14sp"
+                    android:textStyle="italic"
+                    app:layout_constraintTop_toBottomOf="@id/textView8"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+                <Spinner
+                    android:id="@+id/levelSpinner"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="16dp"
+                    app:layout_constraintTop_toTopOf="@id/level"
+                    app:layout_constraintBottom_toBottomOf="@id/level"
+                    app:layout_constraintStart_toStartOf="@id/level"
+                    app:layout_constraintEnd_toEndOf="@id/level" />
+
+                <!-- Label 7: Description -->
+                <TextView
+                    android:id="@+id/textView9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:text="@string/lable_7"
+                    android:textSize="14sp"
+                    android:textColor="#374151"
+                    app:layout_constraintTop_toBottomOf="@id/level"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <EditText
+                    android:id="@+id/description"
+                    android:layout_width="0dp"
+                    android:layout_height="120dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/border_input"
+                    android:ems="10"
+                    android:hint="Description about the hike"
+                    android:inputType="textMultiLine"
+                    android:gravity="top|start"
+                    android:lines="5"
+                    android:minLines="5"
+                    android:scrollHorizontally="false"
+                    android:scrollbars="vertical"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:paddingTop="12dp"
+                    android:textColor="#111827"
+                    android:textColorHint="#9CA3AF"
+                    android:textSize="14sp"
+                    android:textStyle="italic"
+                    app:layout_constraintTop_toBottomOf="@id/textView9"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+
+                <Button
+                    android:id="@+id/save_btn"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="24dp"
+                    android:text="@string/save_button"
+                    android:textAllCaps="false"
+                    android:textSize="15sp"
+                    android:textColor="@android:color/white"
+                    android:backgroundTint="#2563EB"
+                    android:fontFamily="sans-serif-medium"
+                    app:layout_constraintTop_toBottomOf="@id/description"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+                <Button
+                    android:id="@+id/observation_btn"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginBottom="4dp"
+                    android:text="@string/open_observation"
+                    android:textAllCaps="false"
+                    android:textSize="15sp"
+                    android:textColor="#2563EB"
+                    android:backgroundTint="#E5EDFF"
+                    android:fontFamily="sans-serif-medium"
+                    app:layout_constraintTop_toBottomOf="@id/save_btn"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
